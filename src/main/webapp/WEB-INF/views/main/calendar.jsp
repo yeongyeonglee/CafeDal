@@ -33,22 +33,16 @@
 			editable: true,
 			events: [
 				{
-					title: 'All Day Event',
-					start: new Date(y, m, 1)
-				},
-				{
-					title: 'Long Event',
+					title: '이디야 누꽃빙수 할인 쿠폰 증정 이벤트',
 					start: new Date(y, m, d-5),
 					end: new Date(y, m, d-2)
 				},
 				{
-					id: 999,
-					title: 'Repeating Event',
-					start: new Date(y, m, d-3, 16, 0),
-					allDay: false
+					title: '이디야 신한카드 발급 이벤트',
+					start: new Date(y, m, d-3),
+					end: new Date(y, m, d-2)
 				},
-				{
-					id: 999,
+				/* {
 					title: 'Repeating Event',
 					start: new Date(y, m, d+4, 16, 0),
 					allDay: false
@@ -75,7 +69,7 @@
 					start: new Date(y, m, 28),
 					end: new Date(y, m, 29),
 					url: 'http://google.com/'
-				}
+				} */
 			]
 		});
 		

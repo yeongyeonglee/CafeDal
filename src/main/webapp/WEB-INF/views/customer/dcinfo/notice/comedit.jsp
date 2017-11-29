@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -8,8 +9,14 @@
 	pageContext.setAttribute("cn", "\n");
 %>
 <c:set var="path" value="${pageContext.request.contextPath}" />
+
 <link type="text/css" rel="stylesheet"
 	href="${path}/resource/css/liststyle.css">
+
+<script>
+
+
+</script>
 <main>
 <div class="main-tit">
 	<!-- 카페 이용정보 -->
@@ -24,24 +31,25 @@
          </ul> -->
 </div>
 
+
 <div style="margin-bottom: 40px; margin-top: -10px;">
 	<label
-		style="margin-left: 460px; font-size: 30px; font-weight: bolder; margin-top: -50px;">이용
-		방법</label>
+		style="margin-left: 460px; font-size: 30px; font-weight: bolder; margin-top: -50px;">할인
+		정보</label>
 
 </div>
 
 <div class="tit-content">
 
-	<h2 style="padding-left: 20px;">${n.utitle}</h2>
+	<h2 style="padding-left: 20px;">${n.dtitle}</h2>
 	<div class="tit-content2">
 		<ul class="info">
 			<li class="part">${n.cname}</li>
-			<li class="inq_cnt part">카페 달</li>
-			<li class="inq_cnt part"><c:forEach var="clist" items="${clist}">
-						댓글 ${clist.count}
-					</c:forEach></li>
-			<li style="margin-left: 780px;">조회수 &nbsp; ${n.hit}</li>
+			<li class="inq_cnt part"><fmt:formatDate pattern="yyyy-MM-dd"
+					value="${n.startdate}" /></li>
+			<li class="inq_cnt"><fmt:formatDate pattern="yyyy-MM-dd"
+					value="${n.finishdate}" /></li>
+			<li class="part2">조회수 &nbsp; ${n.hit}</li>
 		</ul>
 	</div>
 </div>
@@ -52,54 +60,64 @@
 	<table class="table-garo2">
 		<tbody>
 
-
+			<%-- 	<th>첨부파일</th>
+				<td colspan="3"><c:forEach var="f" items="${files}"
+						varStatus="s">
+						<a href="../download?f=${f.src}">${f.src}</a>
+						<c:if test="${!s.last}">,</c:if>
+					</c:forEach></td>
+			</tr>
+			 --%>
 			<tr class="content">
 				<td colspan="4" style="height: 400px; text-align: left;"><c:forEach
 						var="f" items="${files}" varStatus="s">
 
-					</c:forEach> ${fn:replace(n.ucontent, cn, br)}<br /></td>
+					</c:forEach> ${fn:replace(n.dcontent, cn, br)}<br /></td>
 			</tr>
+
+
 		</tbody>
 	</table>
 </div>
-<!-- <!-- /*--------------------댓글------------------------------*/ -->
 
 
+<!--  댓글 -->
 
-<table class="listcom">
 
-	<tbody>
-		<c:forEach var="comn" items="${comlist}">
-			<tr class="com1">
-				<td>${comn.writerid}</td>
-			</tr>
-			<tr class="com2">
-				<td>${comn.content}</td>
-			</tr>
-			<tr class="com3">
-				<td><fmt:formatDate pattern="yyyy-MM-dd hh:mm:ss"
-						value="${comn.date}" /></td>
-				<td><a href="comedit?num=${comn.noticenum}&nnum=${comn.num}">수정</a>
-					<a href="comdelete?num=${comn.noticenum}&nnum=${comn.num}">삭제</a></td>
-				<td></td>
-			</tr>
-		</c:forEach>
-	</tbody>
-</table>
+<form action="?${_csrf.parameterName}=${_csrf.token}" method="post"
+	enctype="multipart/form-data">
+	<fieldset>
+		<legend class="hidden">카페 할인정보 수정 필드</legend>
+		<table class="table-garo2">
+			<tbody>
 
-<div>
-	<form name="form1" action="?${_csrf.parameterName}=${_csrf.token}"
-		method="post" enctype="multipart/form-data">
-		<div class="comform">
-			<br>
-			<!-- **로그인 한 회원에게만 댓글 작성폼이 보이게 처리 -->
-			<c:if test="${sessionScope.userId != null}"></c:if>
-			<textarea class="comcontent" name="content" placeholder="댓글을 작성해주세요"></textarea>
-			<button class="combtn" type="submit">등록</button>
+				<tr>
+					<td colspan="4"><textarea name="content">${comnum.content}</textarea>
 
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+		<div class="buttons">
+			<input style="color: white; background: #7b4122; border-style: none;"
+				type="hidden" name="num" value="${comnum.num}" /> 
+				<input style="color: white; background: #7b4122; border-style: none;"
+				type="hidden" name="nnum" value="${comnum.noticenum}" />  <input
+				style="color: white; background: #7b4122; border-style: none;"
+				type="submit" value="저장" /> <a href="${n.num}">취소</a> 
 		</div>
-	</form>
-</div>
+	</fieldset>
+</form>
+
+
+
+
+
+
+
+
+<!--  댓글 -->
 
 <div class="path3">
 	<ul>
@@ -113,7 +131,7 @@
 	</ul>
 </div>
 
-<div class="prep-next2">
+<div class="prep-next">
 	<table class="table-list">
 		<tbody>
 			<tr>
@@ -131,7 +149,7 @@
 					<td></td>
 					<td></td>
 					<td colspan="3" class="text-align-left text-indent"><a
-						class="text-blue text-strong" href="${prev.num}">${prev.utitle}</a></td>
+						class="text-blue text-strong" href="${prev.num}">${prev.dtitle}</a></td>
 
 				</c:if>
 			</tr>
@@ -150,7 +168,7 @@
 					<td></td>
 					<td></td>
 					<td colspan="3" class="text-align-left text-indent"><a
-						class="text-blue text-strong" href="${next.num}">${next.utitle}</a></td>
+						class="text-blue text-strong" href="${next.num}">${next.dtitle}</a></td>
 
 				</c:if>
 			</tr>

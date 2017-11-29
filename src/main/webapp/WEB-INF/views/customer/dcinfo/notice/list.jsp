@@ -87,6 +87,7 @@
    <a class="eff-1" href="notice/reg">등록</a>
 </div> -->
 
+
 <h3 class="hidden">공지사항 검색폼</h3>
 <div class="d1">
    <form >

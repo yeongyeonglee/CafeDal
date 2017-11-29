@@ -6,7 +6,7 @@
 <c:set var="path" value="${pageContext.request.contextPath}" />
 
 <link type="text/css" rel="stylesheet"
-   href="${path}/resource/css/liststyle.css">
+   href="${path}/resource/css/adminliststyle.css">
 <style>
 .listnum ul{  
       padding-left: 900px;
@@ -38,7 +38,11 @@
 
 <div style="margin-top:30px; margin-bottom: -10px;">
 
-<label class="list-tit" > 카페 할인 정보</label>
+   <label class="list-tit" style="padding-right:30px;">공지 관리</label>
+     <a href="../useinfo/notice">  
+        <img src="${path}/resource/images/menu1.png" style="width: 50px; height: 40px; padding-right: 10px; margin-bottom: -10px" alt="이용"/></a>
+     <a href="notice">  
+        <img src="${path}/resource/images/menu2.png" style="width: 50px; height: 40px; padding-right: 10px; margin-bottom: -10px" alt="할인"/></a>
 
 </div>
 
