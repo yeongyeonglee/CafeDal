@@ -60,7 +60,7 @@ public class MemberController {
 		String cafes = member.getCafes();
 		String[] cafecode = cafes.split(",");
 		
-		//memberDao.insert(member);
+		memberDao.insert(member);
 		
 		for(int i=0; i<cafecode.length; i++)
 			memberCafeDao.insert(member.getId(), cafecode[i]);
