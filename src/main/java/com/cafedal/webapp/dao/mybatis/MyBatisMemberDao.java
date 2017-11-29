@@ -94,5 +94,18 @@ public class MyBatisMemberDao implements MemberDao {
 	    return list;
 	}
 
+	@Override
+	public int MemberInsert(String id, String name, String pwd, String mail, String birth, String role, String cafes) {
+		int result = insert(new Member(id, name, pwd, mail, birth, role, cafes));
+		return result;
+	}
+
+	@Override
+	public int MemberInsert(Member member) {
+		MemberDao memberDao = sqlSession.getMapper(MemberDao.class);
+		int result = memberDao.MemberInsert(member);
+		return result;
+	}
+
 
 }

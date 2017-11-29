@@ -42,14 +42,12 @@ public class MemberController {
 		
 		return "member.login2";
 	}
-	 
+
 	@RequestMapping(value="idpwdFind")
 	public String idpwdFind() { 
 		
 		return "member.idpwdFind";
 	}
-	
-
 	
 	@RequestMapping(value="join", method=RequestMethod.POST)
 	public String join( Member member, MemberCafe memberCafe, HttpServletRequest request) throws IOException {

@@ -41,6 +41,7 @@
             <td colspan="2">${list.birth}</td>
          </tr>
 
+<<<<<<< HEAD
          <tr>
             <th><label>이벤트 정보를 받고 싶은 카페를 선택해 주세요</label></th>
             <td colspan="2">
@@ -72,5 +73,38 @@
          <!-- <a class="eff-2" href="../mypage/edit">취소</a> -->
       </div>
    </form>
+=======
+			<tr>
+				<th><label>이벤트 정보를 받고 싶은 카페를 선택해 주세요</label></th>
+				<td colspan="2">
+					<form name="check">
+						<div class="cm-check">
+							<input type="checkbox" id="cafes" name="cafes" value="1" /> <label
+								class="cm-check2">공차</label> <input type="checkbox" id="cafes"
+								name="cafes" value="2" /> <label class="cm-check2">스타벅스</label>
+							<input type="checkbox" id="cafes" name="cafes" value="3" /> <label
+								class="cm-check2">이디야</label> <input type="checkbox" id="cafes"
+								name="cafes" value="4" /> <label class="cm-check2">커피빈</label> <input
+								type="checkbox" id="cafes" name="cafes" value="5" /> <label
+								class="cm-check2">투썸플레이스</label> <input type="checkbox"
+								id="cafes" name="cafes" value="6" /> <label class="cm-check2">할리스커피</label>
+						</div>
+					</form>
+				</td>
+			</tr>
+		</table>
+		<%-- <input type="hidden" name="id" value="${list.id}" />
+		<input class="eff-2" type="submit" value="저장"></input>
+		<div class="button">
+			<a class="eff-1" href="../mypage/edit">취소</a>
+		</div> --%>
+		<div class="button">
+		<input type="hidden" name="id" value="${list.id}" />
+		<input class="eff" type="submit" value="저장" />
+		<input type="button" onclick="location.href='edit'" class="eff" value="취소" />
+			<!-- <a class="eff-2" href="../mypage/edit">취소</a> -->
+		</div>
+	</form>
+>>>>>>> refs/remotes/origin/master
 </div>
 </html>

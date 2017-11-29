@@ -20,10 +20,17 @@ table.table-garo2 {
 }
 
 table.table-garo2 {
+<<<<<<< HEAD
    width: 1000px;
    border-bottom: 1px solid #a9a9a9;
    margin-left: 450px;
    margin-top: 0px;
+=======
+	width: 1000px;
+	border-bottom: 1px solid #a9a9a9;
+	margin-left: 450px;
+	margin-top: 0px;
+>>>>>>> refs/remotes/origin/master
 }
 
 table .table-garo2 :hover a {
@@ -39,7 +46,11 @@ table.table-garo2 .tit :hover {
 }
 
 .table-garo2 tr th, .tabe-garo2 .tr .th {
+<<<<<<< HEAD
    background: #f8eae2 url("../images/bg-title-sp.png") no-repeat left center;
+=======
+	background: #f8eae2 url("../images/bg-title-sp.png") no-repeat left center;
+>>>>>>> refs/remotes/origin/master
 }
 
 table.table-garo2 th {
@@ -51,19 +62,46 @@ table.table-garo2 th {
 }
 
 table.table-garo2 td {
+<<<<<<< HEAD
    border-bottom: 1px solid #ccc;
    color: black;
    cursor: pointer;
    padding: 6px 8px;
+=======
+	border-bottom: 1px solid #ccc;
+	color: black;
+	cursor: pointer;
+	padding: 6px 8px;
+>>>>>>> refs/remotes/origin/master
 }
 
 .button {
+<<<<<<< HEAD
    width: 600px; 
    padding:10px 0px; 
    text-align:right;   
    margin-left: 850px;
+=======
+	width: 600px; 
+	padding:10px 0px; 
+	text-align:right;	
+	margin-left: 850px;
 }
 
+.eff{
+	border-radius: 2px; 
+	width: 165px; 
+	height: 35px; 
+	border: 1px solid #e8bfaa; 
+	background: #e8bfaa; 
+	font-family: 'Jeju Gothic', 'dotum', serif; 
+	font-size: 1.2em; 
+	font-color: black; 
+	cursor: pointer;
+>>>>>>> refs/remotes/origin/master
+}
+
+<<<<<<< HEAD
 .eff{
    border-radius: 2px; 
    width: 165px; 
@@ -84,4 +122,18 @@ table.table-garo2 td {
 }
 
 
+=======
+.eff:hover {
+	background-color: #7b4122;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+>>>>>>> refs/remotes/origin/master
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> refs/remotes/origin/master
