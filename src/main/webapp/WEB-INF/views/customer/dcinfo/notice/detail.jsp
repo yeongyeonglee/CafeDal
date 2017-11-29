@@ -73,19 +73,44 @@
 </div>
 <!-- 댓글 ------------------------------------- -->
 
-<c:forEach var="replylist" items="${replylist}" varStatus="status">
-    <div style="border: 1px solid gray; width: 600px; padding: 5px; margin-top: 5px;
-          margin-left: <c:out value="${20*replylist.redepth}"/>px; display: inline-block">    
-        <c:out value="${replylist.writerid}"/> <c:out value="${replylist.date}"/>
-        <a href="#" onclick="fn_replyDelete('<c:out value="${replylist.num}"/>')">삭제</a>
-        <a href="#" onclick="fn_replyUpdate('<c:out value="${replylist.num}"/>')">수정</a>
-        <a href="#" onclick="fn_replyReply('<c:out value="${replylist.num}"/>')">댓글</a>
-        <br/>
-        <div id="reply<c:out value="${replylist.num}"/>"><c:out value="${replylist.content}"/></div>
-    </div><br/>
-</c:forEach>
+<!-- <!-- /*--------------------댓글------------------------------*/ --> 
 
+	<!--  댓글 -->
 
+<table  class="listcom">
+  
+   <tbody>
+     <c:forEach var="comn" items="${comlist}">
+			<tr class="com1">
+				<td>${comn.writerid}</td>
+			</tr>
+			<tr class="com2">
+				<td>${comn.content}</td>
+			</tr>
+			<tr class="com3">
+				<td><fmt:formatDate pattern="yyyy-MM-dd hh:mm:ss"
+						value="${comn.date}" /></td>
+				<td ><a href="comedit?num=${comn.noticenum}&nnum=${comn.num}">수정</a>
+				<a href="comdelete?num=${comn.noticenum}&nnum=${comn.num}">삭제</a></td>
+				<td></td>
+			</tr>
+		</c:forEach>
+   </tbody>
+</table>
+
+<div>
+<form name="form1" action="?${_csrf.parameterName}=${_csrf.token}"
+	method="post" enctype="multipart/form-data">
+	<div class="comform" >
+		<br>
+		<!-- **로그인 한 회원에게만 댓글 작성폼이 보이게 처리 -->
+		<c:if test="${sessionScope.userId != null}"></c:if>
+		<textarea class="comcontent"  name="content" placeholder="댓글을 작성해주세요"></textarea>
+		 <button class="combtn" type="submit">등록</button>
+
+	</div>
+</form>
+</div>
  
 
 

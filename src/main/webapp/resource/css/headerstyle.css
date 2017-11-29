@@ -10,6 +10,8 @@
 	left: 0;
 }
 
+
+
 #header>.content-container {
 	position: relative;
 }
@@ -23,6 +25,35 @@
 	height: 134px;
 	margin-left: 850px;
 }
+
+
+
+/*-------------관리자 페이지---------------------------------*/
+
+#admin-header {
+	min-height: 200px;
+	z-index: 100;
+	width: 100%;
+	top: 100;
+	left: 0;
+}
+
+
+
+#admin-header>.content-container {
+	position: relative;
+}
+
+#admin-header>.content-container>#member-menu, #logo {
+	position: absolute;
+}
+
+#admin-header #logo img {
+	width: 80px;
+	height: 80px;
+	margin-left: 850px;
+}
+
 
 /* ----------------member-menu--------------------------------------  */
 

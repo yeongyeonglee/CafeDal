@@ -6,9 +6,9 @@
 <mapper namespace="com.cafedal.webapp.dao.UseNoticeDao">
 	<select id="getUseList" resultType="com.cafedal.webapp.entity.UseNotice">
 		select * from useinfo
-		where ${param2} like '%${param3}%'
-		order by num asc
-		limit ${(param1-1)*10}, 10
+      where ${param2} like '%${param3}%' 
+      order by cafecode asc
+      limit ${(param1-1)*10}, 10
 	</select>
 
 	<select id="get" resultType="com.cafedal.webapp.entity.UseNotice">
