@@ -9,7 +9,7 @@
   </select>
   
   <select id="getListByMemberId2" resultType="com.cafedal.webapp.entity.MemberCafe">
-	       select * from membercafe where memberid=?;
+	       select * from membercafe where memberid=#{memberid};
   </select>
   
   <insert id="insert" parameterType="com.cafedal.webapp.entity.MemberCafe">

@@ -86,10 +86,10 @@ public class MypageController {
    }
    
    @RequestMapping(value="edit2", method = RequestMethod.POST)
-	public String edit2(@RequestParam("id") String id, Member member, 
+	public String edit2(@RequestParam("id") String id, Member member, MemberCafe memberCafe,
 			String memberid, Mypage mypage, HttpServletRequest request) throws IOException {
 		
-	   int row = memberDao.update(member);
+	    int row = memberDao.update(member);
 	  
 		String cafes = member.getCafes();
 		String[] cafecode = cafes.split(",");
@@ -100,7 +100,6 @@ public class MypageController {
 		for(int i=0; i<cafecode.length; i++) {
 			memberCafeDao.insert(member.getId(), cafecode[i]);
 		}
-	   return "redirect:../mypage/edit";
-		
+	   return "redirect:../mypage/edit";		
 	}
 }

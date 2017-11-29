@@ -7,7 +7,12 @@
   <insert id="insert" parameterType="com.cafedal.webapp.entity.Member">
 	insert into member(id, name, pwd, mail, birth, role, cafes)
 	values(#{id}, #{name}, #{pwd}, #{mail}, #{birth}, "ROLE_USER", #{cafes})
-  </insert>	
+  </insert>
+  
+  <insert id="MemberInsert" parameterType="com.cafedal.webapp.entity.Member">
+  	insert into member(id, name, pwd, mail, birth, role, cafes)
+	values(#{id}, #{name}, #{pwd}, #{mail}, #{birth}, "ROLE_USER", #{cafes})
+  </insert>
   
   <select id="Login" resultType="com.cafedal.webapp.entity.Member">
   	select id, pwd from member where id=#{id} and pwd=#{pwd}

@@ -48,8 +48,8 @@
 					<td>${n.cafename}</td>
 				</c:forEach>
 			</table>
-			<div class="buttons">
-				<a class="eff-1" href="edit2?id=${m.id}">수정</a> 
+			<div class="button">
+				<input type="button" onclick="location.href='edit2?id=${m.id}'" class="eff" value="수정" />
 			</div>
 		</c:forEach>
 	</form>

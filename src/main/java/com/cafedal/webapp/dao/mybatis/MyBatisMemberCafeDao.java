@@ -29,16 +29,16 @@ public class MyBatisMemberCafeDao implements MemberCafeDao {
 	    return list;
 	}
 	
-	@Override
-	public List<MemberCafe> getListByMemberId2(String memberid) {
-		
-		MemberCafeDao memberCafeDao = sqlSession.getMapper(MemberCafeDao.class);
-		
-		List<MemberCafe> list = memberCafeDao.getListByMemberId(memberid);
-	      
-	    return list;
-	}
-	
+//	@Override
+//	public List<MemberCafe> getListByMemberId2(String memberid) {
+//		
+//		MemberCafeDao memberCafeDao = sqlSession.getMapper(MemberCafeDao.class);
+//		
+//		List<MemberCafe> list = memberCafeDao.getListByMemberId(memberid);
+//	      
+//	    return list;
+//	}
+//	
 	@Override
 	public int insert(MemberCafe memberCafe) {
 		
@@ -91,7 +91,12 @@ public class MyBatisMemberCafeDao implements MemberCafeDao {
 		return result;
 	}
 
-
+	@Override
+	public int MemberInsert(String memberid, String cafecode) {
+		int result = insert(new MemberCafe(memberid, cafecode));
+		
+		return result;
+	}
 }
 
 	

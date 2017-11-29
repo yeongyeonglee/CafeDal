@@ -60,10 +60,16 @@
 				</td>
 			</tr>
 		</table>
-		<input type="hidden" name="id" value="${list.id}" />
-		<button class="eff-2" type="submit">저장</button>
+		<%-- <input type="hidden" name="id" value="${list.id}" />
+		<input class="eff-2" type="submit" value="저장"></input>
 		<div class="button">
 			<a class="eff-1" href="../mypage/edit">취소</a>
+		</div> --%>
+		<div class="button">
+		<input type="hidden" name="id" value="${list.id}" />
+		<input class="eff" type="submit" value="저장" />
+		<input type="button" onclick="location.href='edit'" class="eff" value="취소" />
+			<!-- <a class="eff-2" href="../mypage/edit">취소</a> -->
 		</div>
 	</form>
 </div>

@@ -21,7 +21,7 @@ public interface MemberCafeDao  {
 
 	int insert(String memberid, String cafecode);
 
-	List<MemberCafe> getListByMemberId2(String memberid);
+	/*List<MemberCafe> getListByMemberId2(String memberid);*/
 
 	int delete(String memberid, String cafecode);
 
@@ -29,7 +29,6 @@ public interface MemberCafeDao  {
 
 	int delete(MemberCafe memberCafe);
 
-
-
+	int MemberInsert(String memberid, String cafecode);
 }
 
