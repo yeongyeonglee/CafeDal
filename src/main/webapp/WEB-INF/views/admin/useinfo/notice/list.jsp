@@ -7,7 +7,7 @@
 
 
 <link type="text/css" rel="stylesheet"
-   href="${path}/resource/css/liststyle.css">
+   href="${path}/resource/css/adminliststyle.css">
 
 <style>
 .listnum ul {
@@ -42,19 +42,18 @@
 <main class="main">
 
 
-<div style="margin-top:30px; margin-bottom: -10px;">
+<div style="margin-top:30px; margin-bottom: 40px;">
 
    <label class="list-tit" style="padding-right:30px;">공지 관리</label>
      <a href="../useinfo/notice">  
         <img src="${path}/resource/images/menu1.png" style="width: 50px; height: 40px; padding-right: 10px; margin-bottom: -10px" alt="이용"/></a>
-     <a href="notice">  
+     <a href="../dcinfo/notice">  
         <img src="${path}/resource/images/menu2.png" style="width: 50px; height: 40px; padding-right: 10px; margin-bottom: -10px" alt="할인"/></a>
 
 </div>
 
 
-
-<div class="ph-heart-nav nav">
+<!-- <div class="ph-heart-nav nav">
    <a href="notice">All</a> <a href="notice?f=cafecode&q=1">GongCha</a> <a
       href="notice?f=cafecode&q=2">Starbucks</a> <a
       href="notice?f=cafecode&q=3">Ediya</a> <a href="notice?f=cafecode&q=4">CoffeeBean</a>
@@ -63,7 +62,7 @@
    <div class="effect"></div>
 </div>
 
-
+ -->
 
 
 
@@ -146,4 +145,3 @@
 
 
 </main>
-
