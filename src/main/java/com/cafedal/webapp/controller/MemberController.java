@@ -42,9 +42,12 @@ public class MemberController {
 		
 		return "member.login2";
 	}
-	 
-	
 
+	@RequestMapping(value="idpwdFind")
+	public String idpwdFind() { 
+		
+		return "member.idpwdFind";
+	}
 	
 	@RequestMapping(value="join", method=RequestMethod.POST)
 	public String join( Member member, MemberCafe memberCafe, HttpServletRequest request) throws IOException {
@@ -55,7 +58,7 @@ public class MemberController {
 		String cafes = member.getCafes();
 		String[] cafecode = cafes.split(",");
 		
-		//memberDao.insert(member);
+		memberDao.insert(member);
 		
 		for(int i=0; i<cafecode.length; i++)
 			memberCafeDao.insert(member.getId(), cafecode[i]);

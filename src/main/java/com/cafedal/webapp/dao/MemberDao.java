@@ -12,8 +12,12 @@ import com.cafedal.webapp.entity.NoticeFile;
 public interface MemberDao  {
 
 	int insert(String id, String name, String pwd, String mail, String birth, String role, String cafes);
+	
+	int MemberInsert(String id, String name, String pwd, String mail, String birth, String role, String cafes);
 
 	int insert(Member member);
+	
+	int MemberInsert(Member member);
 	
 	Member get(String id);
 	

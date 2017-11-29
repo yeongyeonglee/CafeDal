@@ -25,7 +25,7 @@
 							<input type="submit" value="LOGOUT"  id="logout"/>
 						</form>
 					</li>
-					<li><a id="mypage" href="../mypage/edit">MY PAGE</a></li>
+					<li><a id="mypage" href="${path}/mypage/edit">MY PAGE</a></li>
 				</security:authorize>
 			</ul>
 		</div>
