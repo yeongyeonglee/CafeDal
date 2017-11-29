@@ -30,6 +30,7 @@
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
    </definition>
    
+   
    <definition name="member.*"  template="/WEB-INF/views/inc/login-layout.jsp" >
       <put-attribute name="title" value="Tiles tutorial homepage" />
       <put-attribute name="path" value="/" />

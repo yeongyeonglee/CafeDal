@@ -49,6 +49,12 @@ public class MemberController {
 		return "member.idpwdFind";
 	}
 	
+	@RequestMapping(value="joinHello")
+	public String joinHello() { 
+		
+		return "member.joinHello";
+	}
+	
 	@RequestMapping(value="join", method=RequestMethod.POST)
 	public String join( Member member, MemberCafe memberCafe, HttpServletRequest request) throws IOException {
 
@@ -63,7 +69,7 @@ public class MemberController {
 		for(int i=0; i<cafecode.length; i++)
 			memberCafeDao.insert(member.getId(), cafecode[i]);
 		
-		return "redirect:login";
+		return "redirect:joinHello";
 
 	}
 	

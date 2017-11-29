@@ -103,7 +103,7 @@
 
 		 <div> 
               <input  class="btn cancel-btn"  type="submit"  onclick="location.href='login'" value="취소"  /> 
-              <input  class="btn join-btn"  type="submit"  onclick="location.href='login'" value="확인"  /> 
+              <input  class="btn join-btn"  type="submit"  onclick="location.href='joinHello'" value="확인"  /> 
          </div> 
 	</div>
 
@@ -175,3 +175,7 @@ $('#id').keyup(function() {
 
 
 </script>
+
+
+
+
