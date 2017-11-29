@@ -43,6 +43,11 @@ public class MemberController {
 		return "member.login2";
 	}
 	 
+	@RequestMapping(value="idpwdFind")
+	public String idpwdFind() { 
+		
+		return "member.idpwdFind";
+	}
 	
 
 	

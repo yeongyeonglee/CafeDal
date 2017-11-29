@@ -8,16 +8,15 @@
 <head>
 <meta charset="UTF-8">
 <title>CafeDal</title>
-<link type="text/css" rel="stylesheet"
-	href="${path}/resource/css/login.css">
+<link type="text/css" rel="stylesheet" href="${path}/resource/css/login.css">
 </head>
 
 <body>
-	<video autoplay loop
+<%-- 	<video autoplay loop
 		poster="${path}/resource/images/login-bg-coffee.jpg">
 		<source src="${path}/resource/images/login-bg-coffee.mp4"
 			type="video/mp4">
-	</video>
+	</video> --%>
 	<br /><br /><br /><br />
 	<div class="wrapper">
 		<div class="main">
@@ -39,17 +38,7 @@
 					<div class="login">
 						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
 						<input type="submit" value="로그인" />
-					</div>
-					
-					<!-- <div class="last">
-						<div class="join">
-							<a class="join" href="join">회원가입</a>
-						</div>
-						<div class="id_pwd_search">
-							<a class="id_pwd_search" href="">아이디/비밀번호 찾기</a>
-						</div>
-					</div> -->
-					
+					</div>					
 				</div>
 			</form>
 		</div>
