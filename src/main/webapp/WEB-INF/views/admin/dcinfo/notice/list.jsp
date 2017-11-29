@@ -36,18 +36,18 @@
 </style>
 <main class="main">
 
-<div style="margin-top:30px; margin-bottom: -10px;">
+<div style="margin-top:30px; margin-bottom: 40px;">
 
    <label class="list-tit" style="padding-right:30px;">공지 관리</label>
      <a href="../useinfo/notice">  
         <img src="${path}/resource/images/menu1.png" style="width: 50px; height: 40px; padding-right: 10px; margin-bottom: -10px" alt="이용"/></a>
-     <a href="notice">  
+     <a href="../dcinfo/notice">  
         <img src="${path}/resource/images/menu2.png" style="width: 50px; height: 40px; padding-right: 10px; margin-bottom: -10px" alt="할인"/></a>
 
 </div>
 
 
-   <div class="ph-heart-nav nav">
+<!--    <div class="ph-heart-nav nav">
       <a href="notice">All</a>
       <a href="notice?f=cafecode&q=1">GongCha</a>
       <a href="notice?f=cafecode&q=2">Starbucks</a>
@@ -58,7 +58,7 @@
       <div class="effect"></div>
    </div>   
    
-
+ -->
 
 
 
@@ -79,14 +79,14 @@
          <tr>           
          <c:forEach var="a" items="${nlist}">
             <td class="con w100"><a href="notice/${a.num}">${a.dtitle}</td>
-           	<%-- <c:forEach var="cmtlist" items="${cmtlist}">
-				<td>댓글 ${cmtlist.count}</td>
-			</c:forEach> --%>
+              <%-- <c:forEach var="cmtlist" items="${cmtlist}">
+            <td>댓글 ${cmtlist.count}</td>
+         </c:forEach> --%>
       
  
 
       
-	</c:forEach>
+   </c:forEach>
       </tr>
       
      <!------------------------------------------------------- -->
@@ -96,10 +96,10 @@
             <td class="con w100"><a href="notice/${n.num}">${n.dtitle} 
                 <%-- <c:forEach var="cmtlist" items="${cmtlist}">[${cmtlist.count}]</c:forEach> --%>
             <%--     <c:forEach var="cmtlist" items="${cmtlist}">
-	                <c:if test="${cmtlist.count != 0}">
-	    			[${cmtlist.count}]
-	    			</c:if>
-	    	    </c:forEach> --%>
+                   <c:if test="${cmtlist.count != 0}">
+                [${cmtlist.count}]
+                </c:if>
+              </c:forEach> --%>
             </a></td>
             <td><fmt:formatDate pattern="yyyy-MM-dd" value="${n.startdate}"/></td>   
                <td><fmt:formatDate pattern="yyyy-MM-dd" value="${n.finishdate}"/></td>   

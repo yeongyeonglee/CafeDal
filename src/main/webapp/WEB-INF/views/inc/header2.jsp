@@ -7,13 +7,7 @@
 
 <header id="admin-header">
    <div class="content-container">
-      <h1 id="logo">
-
-         <a href="${path}/admin/manage/list">
-            <img src="${path}/resource/images/logo.png" alt="CafeDal" />
-
-         </a>
-      </h1>
+ 
 
       <div id="member-menu">
          <ul>
