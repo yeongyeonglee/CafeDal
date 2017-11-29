@@ -20,6 +20,7 @@ import com.cafedal.webapp.dao.UseComDao;
 import com.cafedal.webapp.dao.UseNoticeDao;
 import com.cafedal.webapp.entity.CmtView1;
 import com.cafedal.webapp.entity.CmtView2;
+import com.cafedal.webapp.entity.DcCom;
 import com.cafedal.webapp.entity.UseCom;
 import com.cafedal.webapp.entity.UseNotice;
 
@@ -69,6 +70,9 @@ public class UseInfoController {
 		
 		
 		System.out.print(num);
+
+	      List<UseCom> comlist = usecomDao.getComList(num);
+	      model.addAttribute("comlist", comlist);
 
 
 		model.addAttribute("comnum", usecomDao.get(usecom));
