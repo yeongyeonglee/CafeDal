@@ -37,7 +37,6 @@
 	
 }
 
-
 /*-------------관리자 페이지---------------------------------*/
 
 #admin-header {
@@ -101,6 +100,11 @@
 	margin-right: 100px;
 	background: black;
 	width: 5000px;
+	
+}
+
+#member-menu>.aboutus{
+	height: 24px;
 }
 
 #member-menu  li {
