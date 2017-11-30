@@ -95,11 +95,11 @@
    </tbody>
 </table>
 
-
-<div class="reg-admin">
-   <a class="eff-1" href="notice/reg">등록</a>
+<div class="regs">
+	<div class="reg-admin">
+	   <a class="eff-1" href="notice/reg">등록</a>
+	</div>
 </div>
-
 
 
 <h3 class="hidden">공지사항 검색폼</h3>

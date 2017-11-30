@@ -105,6 +105,13 @@ public class UseInfoController {
 
 		return "redirect:../notice/{num}";
 	}
+	
+
+	   @RequestMapping(value = "notice/reg", method = RequestMethod.GET)
+	   public String noticeReg() {
+
+	      return "admin.useinfo.notice.reg";
+	   }
 
 	@RequestMapping(value = "notice/reg", method = RequestMethod.POST)
 	/* public String noticeReg(String title, String content) */
