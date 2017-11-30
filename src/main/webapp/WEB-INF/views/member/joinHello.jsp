@@ -1,97 +1,77 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="path" value="${pageContext.request.contextPath}" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+<!DOCTYPE html>
+<html>
 <head>
 <meta charset="UTF-8">
 <title>CafeDal</title>
-<link type="text/css" rel="stylesheet"  	href="${path}/resource/css/joinHello.css">
+<link type="text/css" rel="stylesheet" href="${path}/resource/css/joinHello.css">
 </head>
 
-<div id="div_activate" class="container2">
-	<div class="logo">
-				<img src="${path}/resource/images/logo2.png" alt="회원가입 로고" />
-	</div>
-	
-	
-	<div class="Hi"> 회원가입을 축하합니다! </div>
-	<div class="Hi"> CafeDal과 함께 카페 스케줄을 받아 보세요 </div>
-	
-	<div> 
-         <input  class="btn join-btn"  onclick="location.href='login'" value="확인"  /> 
-   </div> 
-         
-	
+<body>
+<section class="container">
+		    <article class="half">
+			        <h1><img src="${path}/images/logo2.png" alt="cafedal" width="130px" height="100px"></h1>
+			        <div class="tabs">
+				            <span class="tab signin active"><a href="#signin">회원가입 성공</a></span>
+				            <!-- <span class="tab signup"><a href="#signup">비밀번호 찾기</a></span> -->
+			        </div>
+			        <div class="content">
+				            <div class="signin-cont cont">
+					                <form action="#" method="post" enctype="multipart/form-data">
+						                    <!-- <input type="text" name="name" id="name" class="inpt" required="required" > -->
+						                    	회원가입을 축하합니다!
+						                    	<br/>                
+						                    <!-- <input type="text" name="email" id="email" class="inpt" required="required" > -->
+						                    	CAFEDAL과 함께 카페 정보를 받아 보세요               						 
+						                    <div class="submit-wrap">
+							                        <input onclick="location.href='login'"  value="확인" class="submit">
+						                    </div>
+        					        </form>
+    				        </div>
 
-</div>
+				<!-- <div class="signup-cont cont">
+					<form action="#" method="post" enctype="multipart/form-data">
+						<input type="text" name="id" id="id" class="inpt" 	 required="required" placeholder="아이디를 입력하세요"> 
+						<input 	 type="text" name="name" id="name" class="inpt"	 required="required" placeholder="이름을 입력하세요"> 
+						<input	type="email" name="email" id="email" class="inpt" required="required" placeholder="이메일을 입력하세요">
+						<div class="submit-wrap">
+							<input type="submit" value="비밀번호 찾기" class="submit">
+						</div>
+					</form>
+				</div> -->
+			</div>
+		    </article>
+		    <div class="half bg"></div>
+	</section>
 
 
-<script>
 
-$(document).ready(function() {
-
-var cfmId = "";		// 중복 체크 완료된 아이디 저장
-
-
-$('#id').keyup(function() {
-
-	var inputId = $('#id').val();
-
-		$.ajax({
-
-			url: "sameCheckId?${_csrf.parameterName}=${_csrf.token}",
-			type: "POST",
-			data: { "id" : inputId },
-			success: function(result) {
-
-				if ( result.message == "true" )	{
-					$('#checkId').html('<strong>이미 존재하는 아이디입니다!</strong>');
-					$('#checkId').css("color","red");
-					cfmId = '';
-				} else {
-					$('#checkId').html('<strong>사용 가능한 아이디입니다.</strong>');
-					$('#checkId').css("color","green");
-					cfmId = inputId;
-				}
-
-				$('#id_cfm').text("중복 체크").attr('disabled', false);
-			},
-			error: function(result) {
-				alert("잠시 후 다시 이용해주세요.");
-			}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script type="text/javascript">
+$('.tabs .tab').click(function(){
+    if ($(this).hasClass('signin')) {
+        $('.tabs .tab').removeClass('active');
+        $(this).addClass('active');
+        $('.cont').hide();
+        $('.signin-cont').show();
+    } 
+    if ($(this).hasClass('signup')) {
+        $('.tabs .tab').removeClass('active');
+        $(this).addClass('active');
+        $('.cont').hide();
+        $('.signup-cont').show();
+    }
 });
-
+$('.container .bg').mousemove(function(e){
+    var amountMovedX = (e.pageX * -1 / 30);
+    var amountMovedY = (e.pageY * -1 / 9);
+    $(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
 });
-
-
-		// 비밀번호 확인 검사
-		$('#pwd').blur(checkPwCfm);
-		$('#pwdchk').keyup(checkPwCfm);
-
-		function checkPwCfm() {
-			var inputPw = $('#pwd').val();
-			var inputPwCfm = $('#pwdchk').val();
-
-			if ( inputPw != inputPwCfm ) {
-				$('#guidepwdchk').text("비밀번호가 일치하지 않습니다.");
-				$('#guidepwdchk').css("color","red");
-				$('#guidepwdchk').show();
-
-				completePwCfm = false;
-			} else {
-				$('#guidepwdchk').hide();
-				completePwCfm = true;
-			}
-		}
-
-
-
-	});
-
-
 </script>
 
-
-
-
+</body>
+</html>
