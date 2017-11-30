@@ -22,22 +22,23 @@
 	<input type="checkbox" id="menu_state" checked>
 	<nav>
 
-	
-
-		<div class="profile">
-			<h1 id="logo">
+		<h1 id="logo">
 
 			<a href="${path}/admin/manage/list"> <img
-				src="${path}/resource/images/bono(2).jpg" alt="CafeDal" />
+				src="${path}/resource/images/hyelin.png" alt="CafeDal" />
 
 			</a>
 		</h1>
+
+		<div class="profile">
+			<li>Admin</li>
+
 			<security:authorize access="hasRole('ROLE_USER')">
-				<li>
+				<li >
 					<form action="${path}/logout" method="post">
 						<input type="hidden" name="${_csrf.parameterName}"
 							value="${_csrf.token}" /> <input type="submit" value="LOGOUT"
-							id="logout" />
+							class ="id" />
 					</form>
 				</li>
 				<!-- <li><a id="mypage" href="../mypage/edit">MY PAGE</a></li> -->
@@ -52,7 +53,7 @@
 						<span class="icon-dashboard"></span>회원 관리
 					</h3>
 					<ul>
-						<li><a href="#">정보 조회</a></li>
+						<li><a href="${path}/admin/manage/list">정보 조회</a></li>
 						<!-- 	<li><a href="#">Search</a></li> -->
 
 					</ul>
@@ -62,8 +63,8 @@
 						<span class="icon-tasks"></span>공지관리
 					</h3>
 					<ul>
-						<li><a href="#">이용 정보 관리</a></li>
-						<li><a href="#">할인 정보 관리</a></li>
+						<li><a href="${path}/admin/useinfo/notice">이용 정보 관리</a></li>
+						<li><a href="${path}/admin/dcinfo/notice">할인 정보 관리</a></li>
 					</ul>
 				</li>
 				<li class="active">
@@ -71,7 +72,7 @@
 						<span class="icon-tasks"></span>카페 관리
 					</h3>
 					<ul>
-						<li><a href="#">카페 정보 조회</a></li>
+						<li><a href="${path}/admin/cafe/manage">카페 정보 조회</a></li>
 
 					</ul>
 				</li>

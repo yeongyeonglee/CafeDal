@@ -41,7 +41,7 @@ nav {
 	bottom: 0;
 	background: #404653;
 	color: #9aa3a8;
-	width: 65px;
+	width: 75px;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: lighter;
 	transition: all 0.15s ease-in-out;
@@ -90,72 +90,7 @@ nav ul li {
 	position: relative;
 }
 
-nav ul li.unread:after {
-	content: attr(data-content);
-	position: absolute;
-	top: 10px;
-	left: 25px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
-	color: #fff;
-	background: #ef5952;
-	font-size: 8px;
-}
 
-nav
-
-
- 
-
-
-ul
-
-
- 
-
-
-li
-
-
-
-
-:not
-
-
- 
-
-
-(
-:last-child
-
-
- 
-
-
-)
-{
-border-bottom
-
-
-
-
-:
-
-
- 
-
-
-none
-
-
-
-
-;
-}
 nav ul li.active a {
 	background: #4c515d;
 	color: #fff;
@@ -199,9 +134,9 @@ nav ul li a span {
 }
 
 #accordian {
-	padding-top: 120px;
+	margin-top: -50px;
 	width: 250px;
-	margin: 100px auto 0 auto;
+	margin: 60px auto 0 auto;
 	
 
 }
@@ -231,7 +166,7 @@ nav ul li a span {
 
 /* 서브메뉴 스타일 */
 #accordian ul ul li a {
-	color: white;
+	
 	text-decoration: none;
 	font-size: 11px;
 	line-height: 50px;
@@ -245,7 +180,7 @@ nav ul li a span {
 }
 
 #accordian ul ul li a:hover {
-	background: #003545;
+	background:#758297;
 	border-left: 5px solid #09c;
 }
 
@@ -259,15 +194,38 @@ nav ul li a span {
 }
 
 #logo img {
-	width: 80px;
-	height: 80px;
-	margin-left: 69px;
+	width: 100px;
+	height: 100px;
+	margin-top:60px;
+	margin-left: 70px;
 	background-color: white;
-	border-radius: 40px;
+	border-radius: 50px;
 
 }
 
 
 .profile{
-	margin-top: 45px;
+	margin-top: 200px;
+	margin-bottom: -10px;
+	color: #ffff00;
+}
+
+
+.profile li{
+	list-style-type: none;
+	margin-left: 95px;
+}
+
+.id{
+	margin-left:-3px;
+	border:none;
+	background:#404653;
+	color: silver;
+	cursor: pointer;
+	font-size: 10px;
+}
+
+
+
+
 	

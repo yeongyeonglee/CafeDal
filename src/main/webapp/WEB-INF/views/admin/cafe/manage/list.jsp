@@ -5,7 +5,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <c:set var="path" value="${pageContext.request.contextPath}" />
 
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script type="text/javascript">
  
     $(document).ready(function(){
@@ -48,9 +48,9 @@
  
 </script>
 
-
 <link type="text/css" rel="stylesheet"
-	href="${path}/resource/css/liststyle.css">
+   href="${path}/resource/css/adminliststyle.css">
+
 <style>
 .listnum ul {
 	padding-left: 900px;
@@ -85,14 +85,14 @@
 
 <div style="margin-top: 30px; margin-bottom: -10px;">
 
-	<label class="list-tit"> 카페 관리 페이지</label>
-
+	<label class="list-tit">카페 관리</label>
+    
 </div>
 
 
-<h3 class="hidden">할인정보 목록</h3>
+<h3 class="hidden">카페 목록</h3>
 
- <table class="table-garo-admin">
+ <table class="table-cafe">
         <tr>
             <th>
                
@@ -119,16 +119,14 @@
     </form>    
     
     </table>
-  
-    <span id="massiveDeleteBtn" class="reg-admin" style="cursor: pointer;">삭제</span>
+<div class="ons">  
+   <span id="massiveDeleteBtn" class="reg-admin" style="cursor: pointer;">삭제</span>
 
 
+	<div class="reg-admin">
+	
+		<a class="eff-1" href="manage/reg">등록</a>
 
-
-
-
-
-<div class="reg-admin">
-	<a class="eff-1" href="manage/reg">등록</a>
+</div>
 </div>
 </main>
