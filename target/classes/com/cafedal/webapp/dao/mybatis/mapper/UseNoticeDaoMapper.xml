@@ -5,7 +5,7 @@
 
 <mapper namespace="com.cafedal.webapp.dao.UseNoticeDao">
 	<select id="getUseList" resultType="com.cafedal.webapp.entity.UseNotice">
-		select * from useinfo
+	  select * from useinfo
       where ${param2} like '%${param3}%' 
       order by cafecode asc
       limit ${(param1-1)*10}, 10
@@ -32,7 +32,7 @@
 			select ifnull(max(cast(num as unsigned)),0) +1 from useinfo
 		</selectKey>
 
-		insert into useinfo(num, utitle, ucontent, cname,cafecode,hit)
+		insert into useinfo(num, utitle, ucontent, cname, cafecode, hit)
 		value(#{num}, #{utitle}, #{ucontent}, #{cname},#{cafecode},"0")
 	</insert>
 	<update id="update" parameterType="com.cafedal.webapp.entity.UseNotice">
