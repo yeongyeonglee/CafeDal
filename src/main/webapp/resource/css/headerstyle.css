@@ -21,6 +21,7 @@
 #logo{
 	margin-top: 40px;
 }
+<<<<<<< HEAD
 
 #logo img {
 	width: 202px;
@@ -28,15 +29,29 @@
 	margin-left: 850px;
 	margin-top: 98px;
 }
+=======
+#logo2 img {
+	width: 75px;
+	height: 25px;
+	margin-left: 1300px;
+	margin-top: 25px;
+	
+}
+
+>>>>>>> refs/remotes/origin/master
 
 /*-------------관리자 페이지---------------------------------*/
 
 #admin-header {
-	min-height: 200px;
+	margin-top:-20px;
+	height: 35px;
 	z-index: 100;
 	width: 100%;
 	top: 100;
 	left: 0;
+	
+	margin-bottom: 100px;
+	border-bottom:1px solid #bbbbbb; 
 }
 
 
@@ -55,6 +70,31 @@
 	margin-left: 850px;
 }
 
+
+#admin-header #logologo {
+	width: 25px;
+	height: 28px;
+	margin-left: 200px;
+	margin-top: 5px;
+	border-right:1px solid #bbbbbb; 
+
+}
+
+
+
+#admin-header #logo2   ul {
+	list-style: none;
+}
+
+#admin-header #logo2  li {
+	float: left;
+
+}
+
+#admin-header #logo3 {
+	margin-top: -20px;
+
+}
 
 /* ----------------member-menu--------------------------------------  */
 
