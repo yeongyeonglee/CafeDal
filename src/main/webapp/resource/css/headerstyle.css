@@ -24,7 +24,7 @@
 
 #logo img {
 	width: 202px;
-    height: 182px;
+    height: 202px;
 	margin-left: 850px;
 	margin-top: 98px;
 }
@@ -99,8 +99,7 @@
 	/* display: inline-block; */
 	margin-right: 100px;
 	background: black;
-	width: 5000px;
-	
+	width: 100%;
 }
 
 #member-menu>.aboutus{
