@@ -4,13 +4,21 @@
 <c:set var="path" value="${pageContext.request.contextPath}" />
 <link type="text/css" rel="stylesheet" href="${path}/resource/css/visualstyle.css">
 
-<div id="visual-info">
+<div id="visual">
+
+		<img src="${path}/resource/images/line.PNG" alt="line" />
 	<div class="content-container">
-		<div>
-			<a class="btn-info use-button-info" href="${path}/mypage/edit">정보수정</a>		
-			<a class="btn-info sale-button-info" href="${path}/admin/dcinfo/notice">회원탈퇴</a>	
-		</div>	
+			<li>
+				<a class="btn aboutus" href="${path}/mypage/edit">정보수정</a>
+			</li>
+			<li>
+				<a class="btn dcinfo" href="${path}/mypage/mydcinfo">나의 카페할인정보</a>		
+			</li>
+			<li>
+				<a class="btn dcinfo" href="${path}/customer/dcinfo/notice">회원탈퇴</a>		
+			</li>
 	</div>
+	
 </div>
 
 

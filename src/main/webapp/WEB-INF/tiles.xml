@@ -10,6 +10,15 @@
       <put-attribute name="main" value="/WEB-INF/views/{1}.jsp" />
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
    </definition>
+    
+    
+    <definition name="main.aboutus" template="/WEB-INF/views/inc/sub-layout3.jsp">
+      <put-attribute name="path" value="/" />
+      <put-attribute name="css" value="aboutus.css" />
+      <put-attribute name="header" value="/WEB-INF/views/inc/header3.jsp" />
+      <put-attribute name="main" value="/WEB-INF/views/main/aboutus.jsp" />
+      <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+   </definition>
    
    <definition name="main.*" template="/WEB-INF/views/inc/sub-layout.jsp">
       <put-attribute name="path" value="/" />
@@ -30,6 +39,15 @@
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
    </definition>
    
+   <definition name="customer.dcinfo.sub.*" template="/WEB-INF/views/inc/sub-layout.jsp">
+      <put-attribute name="title" value="Tiles tutorial homepage" />
+      <put-attribute name="css" value="{1}.css" />
+      <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+      <put-attribute name="visual" value="/WEB-INF/views/customer/inc/visual.jsp" />
+      <put-attribute name="aside" value="/WEB-INF/views/customer/inc/aside.jsp" />
+      <put-attribute name="main" value="/WEB-INF/views/customer/{1}/{2}/{3}.jsp" />
+      <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" /> 
+   </definition>
    
    <definition name="member.*"  template="/WEB-INF/views/inc/login-layout.jsp" >
       <put-attribute name="title" value="Tiles tutorial homepage" />
@@ -38,10 +56,11 @@
       <put-attribute name="body" value="/WEB-INF/views/member/{1}.jsp" />
    </definition>
    
-   <definition name="mypage.*"  template="/WEB-INF/views/inc/root-layout.jsp" >
+    <definition name="mypage.*"  template="/WEB-INF/views/inc/root-layout.jsp" >
       <put-attribute name="path" value="/" />
       <put-attribute name="css" value="{1}.css" />
       <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+      <put-attribute name="visual" value="/WEB-INF/views/mypage/inc/visual.jsp" />
       <put-attribute name="main" value="/WEB-INF/views/mypage/{1}.jsp" />
       <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
    </definition>

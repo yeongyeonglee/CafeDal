@@ -14,6 +14,7 @@ import com.cafedal.webapp.dao.UseNoticeDao;
 import com.cafedal.webapp.entity.CalendarView;
 import com.cafedal.webapp.entity.DcInfo;
 import com.cafedal.webapp.entity.Member;
+import com.cafedal.webapp.entity.MyDcInfoView;
 import com.cafedal.webapp.entity.Mypage;
 
 
@@ -48,8 +49,13 @@ public class MyBatisMypageDao implements MypageDao {
       return listcafe;
    }
 
-
-	
+	@Override
+	public List<MyDcInfoView> myDcInfoList(String id) {
+		MypageDao mypageDao = sqlSession.getMapper(MypageDao.class);
+	    List<MyDcInfoView> list = mypageDao.myDcInfoList(id);
+	 
+	    return list;
+	}
 
 }
 

@@ -86,11 +86,11 @@
 									<label class="cm-check2" for="cafes2" >스타벅스</label> 
 								<input type="checkbox" id="cafes3" name="cafes"  value="3 "/> 
 								    <label class="cm-check2"  for="cafes3" >이디야</label>
-								 <br />
+								 <!-- <br />
 							   <input type="checkbox"  id="cafes4" name="cafes"  value="4 "/> 
 									<label class="cm-check2" for="cafes4" >커피빈</label> 
 							   <input type="checkbox"  id="cafes5"name="cafes"  value="5 "/> 
-							       <label class="cm-check2" for="cafes5" >투썸플레이스</label>
+							       <label class="cm-check2" for="cafes5" >투썸플레이스</label> -->
 							   <input type="checkbox"  id="cafes6" name="cafes"  value="6 "/> 
 							       <label class="cm-check2" for="cafes6" >할리스커피</label>
 							</div>

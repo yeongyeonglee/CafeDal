@@ -23,6 +23,7 @@ import com.cafedal.webapp.entity.DcCom;
 import com.cafedal.webapp.entity.DcInfo;
 import com.cafedal.webapp.entity.Member;
 import com.cafedal.webapp.entity.MemberCafe;
+import com.cafedal.webapp.entity.MyDcInfoView;
 import com.cafedal.webapp.entity.Mypage;
 
 
@@ -39,21 +40,7 @@ public class MypageController {
    @Autowired
    private MemberCafeDao memberCafeDao;
 
-   /*@RequestMapping("edit")
-   public String edit(Mypage mypage, Principal principal, Model model, HttpServletRequest request) throws IOException {
-      
-     String id = principal.getName();
-     
-     List<Member> list = memberDao.getUseList(id);
-     List<Mypage> listcafe = mypageDao.getUseListCafe(id);
 
-     model.addAttribute("list", list);
-     model.addAttribute("listcafe", listcafe);
-     
-     System.out.println(id);
-         return "mypage.edit";
-   }*/
-    
    @RequestMapping(value="edit", method = RequestMethod.GET)
    public String edit(Mypage mypage, Principal principal, Model model, HttpServletRequest request) throws IOException {
       
@@ -102,4 +89,17 @@ public class MypageController {
 		}
 	   return "redirect:../mypage/edit";		
 	}
+   
+   @RequestMapping(value="mydcinfo", method = RequestMethod.GET)
+   public String mydcinfo(String id, Model model, HttpServletRequest request, Principal principal) throws IOException {
+	   
+	   String id1 = principal.getName();
+	   List<MyDcInfoView> list = mypageDao.myDcInfoList(id);
+	   model.addAttribute("list", list);
+	   
+	   System.out.println(id1);
+       return "mypage.mydcinfo";
+   }
+
 }
+   
