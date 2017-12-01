@@ -5,11 +5,13 @@ import java.util.List;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.cafedal.webapp.dao.MemberCafeDao;
 import com.cafedal.webapp.dao.MemberDao;
 import com.cafedal.webapp.dao.NoticeFileDao;
 import com.cafedal.webapp.dao.UseNoticeDao;
 import com.cafedal.webapp.entity.DcInfo;
 import com.cafedal.webapp.entity.Member;
+import com.cafedal.webapp.entity.MemberCafe;
 
 public class MyBatisMemberDao implements MemberDao {
 
@@ -104,6 +106,30 @@ public class MyBatisMemberDao implements MemberDao {
 	public int MemberInsert(Member member) {
 		MemberDao memberDao = sqlSession.getMapper(MemberDao.class);
 		int result = memberDao.MemberInsert(member);
+		return result;
+	}
+
+	@Override
+	public int delete(String id, String name, String pwd, String mail, String birth, String role, String cafes) {
+		
+		int result = delete(new Member(id, name, pwd, mail, birth, role, cafes));
+		
+	    return result;
+	}
+
+	@Override
+	public int delete(Member member) {
+		MemberDao memberDao = sqlSession.getMapper(MemberDao.class);
+		
+	    int result = memberDao.delete(member);
+	      
+	    return result;
+	}
+
+	@Override
+	public int delete(String id) {
+		int result = delete(new Member(id));
+		
 		return result;
 	}
 

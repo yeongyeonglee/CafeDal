@@ -39,8 +39,19 @@ public class MypageController {
    
    @Autowired
    private MemberCafeDao memberCafeDao;
-
-
+   
+   /*@RequestMapping(value="my", method = RequestMethod.GET)
+	public String my(Principal principal) throws IOException { 
+	    String id = principal.getName();
+		return "mypage.my";
+	}
+   
+   @RequestMapping(value="my", method = RequestMethod.POST)
+	public String my(@RequestParam("id") String id, Model model, HttpServletRequest request) { 
+	    
+		return "mypage.my";
+	}*/
+	
    @RequestMapping(value="edit", method = RequestMethod.GET)
    public String edit(Mypage mypage, Principal principal, Model model, HttpServletRequest request) throws IOException {
       
@@ -90,16 +101,74 @@ public class MypageController {
 	   return "redirect:../mypage/edit";		
 	}
    
-   @RequestMapping(value="mydcinfo", method = RequestMethod.GET)
-   public String mydcinfo(String id, Model model, HttpServletRequest request, Principal principal) throws IOException {
+   /*@RequestMapping(value="mydcinfo", method = RequestMethod.GET)
+   public String mydcinfo(Model model, HttpServletRequest request, Principal principal) throws IOException {
 	   
-	   String id1 = principal.getName();
+	   String id = principal.getName();
 	   List<MyDcInfoView> list = mypageDao.myDcInfoList(id);
 	   model.addAttribute("list", list);
 	   
-	   System.out.println(id1);
+	   System.out.println(id);
+       return "mypage.mydcinfo";
+   }*/
+   
+   @RequestMapping(value="mydcinfo", method = RequestMethod.GET)
+   public String mydcinfo(@RequestParam(value = "p", defaultValue = "1") Integer page,
+		   @RequestParam(value = "f", defaultValue = "title") String field,
+		   @RequestParam(value = "q", defaultValue = "") String query,
+		   Model model, HttpServletRequest request, Principal principal) throws IOException {
+	   
+	   
+	   List<MyDcInfoView> list = mypageDao.myDcInfoList(page, field, query, principal.getName());
+	   model.addAttribute("list", list);
+	   
+
        return "mypage.mydcinfo";
    }
+   
+   @RequestMapping(value="mydcinfo", method = RequestMethod.POST)
+   public String mydcinfo(@RequestParam("id") String id, Model model, HttpServletRequest request) {
+         
+	   return "redirect:../mydcinfo";
+   }
+   
+   @RequestMapping(value="delete", method = RequestMethod.GET)
+   public String delete(Model model, HttpServletRequest request, Principal principal) throws IOException {
+	   
+	   String id = principal.getName();
+	   
+	   List<Member> list = memberDao.getUseList(id);
+	   List<Mypage> listcafe = mypageDao.getUseListCafe(id);
+	   
+	   model.addAttribute("list", list);
+	   model.addAttribute("listcafe", listcafe);
 
+       return "mypage.delete";
+   }
+   
+   @RequestMapping(value="delete", method = RequestMethod.POST)
+   public String delete(Member member, MemberCafe memberCafe, Model model, HttpServletRequest request, Principal principal) throws IOException {
+	   
+	   String id = principal.getName();
+	   
+	  /* List<Member> list = memberDao.getUseList(id);
+	   List<Mypage> listcafe = mypageDao.getUseListCafe(id);
+	   
+	   model.addAttribute("list", list);
+	   model.addAttribute("listcafe", listcafe);*/
+	   
+	   int row = memberCafeDao.delete(id);
+	   int row2 = memberDao.delete(id);
+	   
+	   System.out.println(id);
+
+	   return "redirect:../mypage/deleteOk";
+   }
+   
+   @RequestMapping(value="deleteOk")
+	public String deleteOk() { 
+		
+		return "mypage.deleteOk";
+	}
 }
    

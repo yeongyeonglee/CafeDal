@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.cafedal.webapp.entity.Member;
+import com.cafedal.webapp.entity.MemberCafe;
 import com.cafedal.webapp.entity.NoticeFile;
 
 
@@ -37,7 +38,11 @@ public interface MemberDao  {
 
 	Member getib(String id);
 
+	int delete(String id, String name, String pwd, String mail, String birth, String role, String cafes);
 
+	int delete(Member member);
+
+	int delete(String id);
 
 }
 

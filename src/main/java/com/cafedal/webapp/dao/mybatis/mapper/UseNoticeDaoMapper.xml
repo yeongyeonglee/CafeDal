@@ -26,7 +26,6 @@
 		order by num asc
 		limit 1
 	</select>
-
 	<insert id="insert" parameterType="com.cafedal.webapp.entity.UseNotice">
 		<selectKey order="BEFORE" keyProperty="num" resultType="int">
 			select ifnull(max(cast(num as unsigned)),0) +1 from useinfo

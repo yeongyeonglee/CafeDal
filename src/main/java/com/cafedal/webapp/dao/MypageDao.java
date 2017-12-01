@@ -16,5 +16,5 @@ public interface MypageDao {
 
    List<Mypage> getUseListCafe(String id);
    
-   List<MyDcInfoView> myDcInfoList(String id);
+   List<MyDcInfoView> myDcInfoList(int page, String field, String query, String id);
 }

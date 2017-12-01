@@ -9,6 +9,11 @@ public class MemberCafe {
 	public MemberCafe() {
 	}
 
+	public MemberCafe(String memberid) {
+		super();
+		this.memberid = memberid;
+	}
+
 	public MemberCafe(String num, String memberid, String cafecode) {
 		super();
 		this.num = num;

@@ -12,6 +12,10 @@ public class Member {
 	
 	public Member() {
 	}
+	
+	public Member(String id) {
+		this.id = id;
+	}
 
 	public Member(String id, String name, String pwd, String mail, String birth, String role, String cafes) {
 		super();

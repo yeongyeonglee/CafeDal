@@ -48,11 +48,11 @@ public class MyBatisMypageDao implements MypageDao {
    
       return listcafe;
    }
-
-	@Override
-	public List<MyDcInfoView> myDcInfoList(String id) {
+   
+   @Override
+	public List<MyDcInfoView> myDcInfoList(int page, String field, String query, String id) {
 		MypageDao mypageDao = sqlSession.getMapper(MypageDao.class);
-	    List<MyDcInfoView> list = mypageDao.myDcInfoList(id);
+	    List<MyDcInfoView> list = mypageDao.myDcInfoList(page, field, query, id);
 	 
 	    return list;
 	}

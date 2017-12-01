@@ -91,12 +91,10 @@
 	<form name="form1" action="?${_csrf.parameterName}=${_csrf.token}"
 		method="post" enctype="multipart/form-data">
 		<div class="comform">
-			<br>
 			<!-- **로그인 한 회원에게만 댓글 작성폼이 보이게 처리 -->
 			<c:if test="${sessionScope.userId != null}"></c:if>
-			<textarea class="comcontent" name="content" placeholder="댓글을 작성해주세요"></textarea>
-			<button class="combtn" type="submit">등록</button>
-
+				<textarea class="comcontent" name="content" placeholder="댓글을 작성해주세요"></textarea>
+				<button class="combtn" type="submit">등록</button>
 		</div>
 	</form>
 </div>
