@@ -16,6 +16,9 @@
 			<li>
 				<a class="btn dcinfo" href="${path}/customer/dcinfo/notice">카페할인정보</a>		
 			</li>
+			<li>
+				<a class="btn dcinfo" href="${path}/main/today">오늘의 카페</a>		
+			</li>
 	</div>
 	
 </div>

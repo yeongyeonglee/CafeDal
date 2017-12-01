@@ -89,4 +89,10 @@ public class CalendarController {
 
       return "main.calendar";
    }
+   
+   @RequestMapping(value="today")
+	public String today() { 
+		
+		return "main.today";
+	}
 }

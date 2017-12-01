@@ -36,11 +36,12 @@ section h1 {
   white-space: nowrap;
 }
 
-#section01 { background: url(http://localhost/CafeDal/resource/images/coffee1.jpg )center center / cover no-repeat;}
+#section01 { background: url(src"${path}/resource/images/louisdog.PNG") center center / cover no-repeat;}
 #section02 { background: url(http://localhost/CafeDal/resource/images/coffee10.jpg) center center / cover no-repeat;}
 #section03 { background: url(http://localhost/CafeDal/resource/images/coffee3.JPG) center center / cover no-repeat;}
 #section04 { background: url(http://localhost/CafeDal/resource/images/coffee9.jpg) center center / cover no-repeat;}
 #section05 { background: url(http://localhost/CafeDal/resource/images/coffee5.jpg) center center / cover no-repeat;}
+
 
 
 #thanks {

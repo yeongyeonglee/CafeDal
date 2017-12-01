@@ -16,12 +16,18 @@
 	margin-top: 50px;
 }
 
+<<<<<<< HEAD
 /* .content-container{
 	display: flex;
 } */
+=======
+.content-container{
+	/* display: flex; */
+}
+>>>>>>> refs/remotes/origin/master
 
 #visual img{
-	margin-left: 400px;
+	margin-left: 460px;
 	width: 1000px;
 }
 
@@ -72,7 +78,7 @@
 
 .aboutus{
 	float :left;
-	margin-left: 684px;
+	margin-left: 590px;
     margin-top: 10px;
 }
 
