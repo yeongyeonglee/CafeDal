@@ -1,176 +1,182 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="path" value="${pageContext.request.contextPath}" />
-<!DOCTYPE html>
-<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <head>
 <meta charset="UTF-8">
-<title>puppyfood101JOIN</title>
-<link href="${path}/css/style-newmember-join.css" type="text/css"
-   rel="stylesheet" />
+<title>CafeDal</title>
+<link type="text/css" rel="stylesheet" href="${path}/resource/css/join.css">
 </head>
+
 <body>
-   
-   
-   <div class="join-wrapper">
-      <div class="main">
-         <div class="join-logo">
-            <img src="${path}/images/logo.png" alt="로고" />
-         </div>
-         
-         <form action="?${_csrf.parameterName}=${_csrf.token}"  class="center" method="post" name="addjoin" enctype="multipart/form-data">
-      
-            <legend>개인 정보</legend>
-            <br> <br>
-            <ol>
-              <li>
-                 <label for="id">아이디</label> 
-                 <input type="text"   id="id"   name="id"   placeholder="아이디를 입력해주세요"  autocomplete="off" size=30 style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px; height: 30px;" />
-                     <div class="check">
-                       <button class="btn join-button" onclick="idCheck()" type="button" style="width: 80px;font-size: 12px; margin-left: 60px;">중복체크</button>
-                     </div>
-               </li>
-               <li>
-                 <label for="pwd1">비밀번호</label> 
-                 <input type="password"  id="password" name="pwd" placeholder="비밀번호를 입력하세요" autocomplete="off" onkeyup="chkPassword"  size=30 style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px; height: 30px;"  />
-                 <c:if test="">
-						<!-- 체크가 안되어있을때만 뜨는 화면창 -->
-						<div style="color: red">모든 내용에 동의를 하셔야 합니다.<br><br></div>
-					</c:if>
-               </li>
-               <!-- <li>
-                 <label for="pwd2">비밀번호 확인</label> 
-                 <input type="password" id="passwordCheck" name="pwdCheck" placeholder="비밀번호를 한번 더 입력해주세요" autocomplete="off" onkeyup="chkPassword"  size=30 style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px; height: 30px;"/>
-               </li> -->
-               <li>
-                 <label for="username">이름</label> 
-                 <input type="text" id="name" name="name" placeholder="이름을 입력해주세요" autocomplete="off"  size=30 style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px; height: 30px;" />
-               </li>               
-               <li>
-                 <label for="birth">생년월일</label> 
-                 <input type="text" id="birth" name="birth" placeholder="YYMMDD로 입력해주세요" autocomplete="off"  size=30 style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px; height: 30px;"/>
-               </li>
-               
-               <li>
-                 <label for="email">이메일 주소</label>
-                 <input type="text" id="mail" name="mail" placeholder="이메일을 입력하세요" autocomplete="off"    size=30 style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px; height: 30px;"/>     
-                  <div class="check">
-                     </div>
-               </li>
-               
-               <legend>카페 선택</legend><br/><br/>
-						<table class="table-basic-cm">
-							<tr>
-								<th><label class="q-text">이벤트 정보를 받고 싶은 카페를 선택해 주세요</label></th>
-								<td colspan="3">
-								<form name="check">
-									<div class="cm-check">
-										<input type="checkbox"  id="cafes" name="cafes"  value="1 "/> 
-										 	<label class="cm-check2">공차</label> 
-										<input type="checkbox"  id="cafes" name="cafes"  value="2 "/> 
-											<label class="cm-check2">스타벅스</label> 
-										<input type="checkbox" id="cafes" name="cafes"  value="3 "/> 
-										    <label class="cm-check2">이디야</label>
-									   <input type="checkbox"  id="cafes" name="cafes"  value="4 "/> 
-											<label class="cm-check2">커피빈</label> 
-									   <input type="checkbox"  id="cafes"name="cafes"  value="5 "/> 
-									       <label class="cm-check2">투썸플레이스</label>
-									   <input type="checkbox"  id="cafes" name="cafes"  value="6 "/> 
-									       <label class="cm-check2">할리스커피</label>
-										</div>
-									</form>
-								</td>
-							</tr>
-						</table>
+
+<div id="div_activate" class="container">
+	<%-- <div class="logo">
+				<img src="${path}/resource/images/logo2.png" alt="회원가입 로고" />
+	</div> --%>
+	<!-- <div class="title">
+		<h2 class="head">CafeDal 회원가입</h2>
+	</div> -->
+	<!-- 회원가입 폼 -->
+	<article class="half">
+	<h1><img src="${path}/images/logo2.png" alt="cafedal 회원가입" width="130px" height="100px"></h1>
+	<!-- <div class="row"> -->
+		<form action="?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data">
+			<table id="tbl_info" class="table jointb" style="table-layout: fixed; margin-left: -30px;">
+				<tr id="tr_id">
+					<th>아이디</th>
+					<td>
+						<input name="id" id="id" type="text" placeholder="아이디" /><br />
+						<!-- <br />아이디를 입력해주세요.<br /> -->
+						<span id="checkId"></span>
+					</td>
+				</tr>
+				
+				<tr id="tr_pw">
+					<th>비밀번호</th>
+					<td>
+						<div id="div_password_Y">
+							<input name="pwd" id="pwd" type="password" placeholder="비밀번호" />
+							<div id="guidepwd"></div>
+						</div>
+					</td>
+				</tr>
+				
+				<tr id="tr_pw">
+					<th>비밀번호 확인</th>
+					<td>
+						<div id="div_password_Y">
+							<input name="pwdchk" id="pwdchk" type="password" placeholder="비밀번호 확인" />
+							<div id="guidepwdchk"></div>
+						</div>
+					</td>
+				</tr>
+				
+				<tr id="tr_name">
+					<th>이름</th>
+					<td>
+						<input name="name" id="name" type="text" placeholder="이름" />
+					</td>
+				</tr>
+					
+				<tr id="tr_mail">
+					<th>이메일</th>
+					<td>
+						<input name="mail" id="mail" type="text" placeholder="이메일" />
+					</td>
+				</tr>
+				
+				<tr id="tr_birth">
+					<th>생일</th>
+					<td>
+						<input name="birth" id="birth" type="text" placeholder="YYMMDD" />
+					</td>
+				</tr>
+
+				<tr>
+					<th>카페 선택</th>
+					<br/>
+					<td>
+						<form name="check" class="cm-check"  id="chbox">
+							<div class="cm-check">
+								<input type="checkbox"  id="cafes1" name="cafes"  value="1 "/> 
+								 	<label class="cm-check2" for="cafes1">공차</label> 
+								<input type="checkbox"  id="cafes2" name="cafes"  value="2 "/> 
+									<label class="cm-check2" for="cafes2" >스타벅스</label> 
+								<input type="checkbox" id="cafes3" name="cafes"  value="3 "/> 
+								    <label class="cm-check2"  for="cafes3" >이디야</label>
+								 <!-- <br />
+							   <input type="checkbox"  id="cafes4" name="cafes"  value="4 "/> 
+									<label class="cm-check2" for="cafes4" >커피빈</label> 
+							   <input type="checkbox"  id="cafes5"name="cafes"  value="5 "/> 
+							       <label class="cm-check2" for="cafes5" >투썸플레이스</label> -->
+							   <input type="checkbox"  id="cafes6" name="cafes"  value="6 "/> 
+							       <label class="cm-check2" for="cafes6" >할리스커피</label>
+							</div>
+						</form>
+					</td>
+				</tr>
 				<c:if test="${not empty param.error}">
 						<!-- 체크가 안되어있을때만 뜨는 화면창 -->
 						<div style="color: red">
 							하나라도 체크를 하셔야 합니다.<br> <br>
 						</div>
-					</c:if>
-            </ol>
-    
-         <br> <br>
-         
-         <!-- <fieldset id="button"> -->
-            <div id="center">
-               <input class="btn1 join-button"  type="button"  onclick="location.href='login'" value="이전">
-               <input class="btn1 join-button"  type="reset"  value="다시작성">
-               <%-- <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />  --%>
-               <input  class="btn1 join-button"  type="submit"  onclick="location.href='joinCafe'" value="다음"  />
-               <!-- 나중에 디비연동과 같이 수정 -->
-            </div>
-        </form>
-      </div>
-   </div>
-   
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
-/*     function chkEmail() {
-        var chkblank = /[\s]/g;
-        var chkEmail = $("#email").val();
-        
-        if(chkEmail==""){
-           alert("이메일을 입력하지 않았습니다.");
-           $("#email").focus();
-        }else if(chkblank.test(chkEmail)==true){
-           alert("공백은 입력할 수 없습니다.");
-           $("#email").focus();
-        } else {
-        $.ajax({
-           type : "POST",
-           url : "../../checkEmailController",
-           data : {
-              chkEmail : chkEmail
-           },
-           success : function(result) {
-              if (result == 1) {
-                 alert("사용 가능한 이메일입니다.");
-                 $("#id").focus();
-              } else if(result == 0){
-                 alert("중복된 이메일입니다.");
-                 $("#email").focus();
-                 
-              } 
-           }
-        })
-        }
-     } */
+				</c:if>
+			</table>
+		</form>
 
-       function idCheck() {
-         var chkBlank = /[\s]/g;
-         var chkId = $("#id").val();
-         if(chkId==""){
-            alert("아이디를 입력하지 않았습니다.");
-            $("#id").focus();
-         }else if(chkBlank.test(chkId)==true){
-            alert("공백은 입력할 수 없습니다.");
-            $("#id").focus();
-            
-         }else{
-         $.ajax({
-            type : "POST",
-            url : "../../IdCheckController",
-            data : {
-             chkId : chkId
-            },
-            success : function(result) {
-               if (result == 1) {
-                  alert("사용 가능한 아이디입니다.");
-                  $("#mail").focus();
-               } else{
-                  alert("중복된 아이디입니다.");
-                  $("#id").focus();
-               } 
-            }
-         })
-         }
-      }
-   </script>
-   
-   
-   
+
+		<div class="submit-wrap" style="display: flex;">
+			<input class="submit2	" type="submit" onclick="location.href='login'" value="취소" 
+			style="margin-top: 50px; margin-left: 105px; width: 150px; height: 50px;"/>
+			<input class="submit2" type="submit" onclick="location.href='joinHello'" value="확인"
+			style="margin-top: 50px; margin-left: 75px; width: 150px; height: 50px;" />
+		</div>
+
+		</div>
+	</article>
+
+
+<!-- </div> -->
+
+<script>
+	$(document).ready(function() {
+
+		var cfmId = ""; // 중복 체크 완료된 아이디 저장
+
+		$('#id').keyup(function() {
+
+			var inputId = $('#id').val();
+
+			$.ajax({
+
+				url : "sameCheckId?${_csrf.parameterName}=${_csrf.token}",
+				type : "POST",
+				data : {
+					"id" : inputId
+				},
+				success : function(result) {
+
+					if (result.message == "true") {
+						$('#checkId').html('<strong>이미 존재하는 아이디입니다!</strong>');
+						$('#checkId').css("color", "red");
+						cfmId = '';
+					} else {
+						$('#checkId').html('<strong>사용 가능한 아이디입니다.</strong>');
+						$('#checkId').css("color", "green");
+						cfmId = inputId;
+					}
+
+					$('#id_cfm').text("중복 체크").attr('disabled', false);
+				},
+				error : function(result) {
+					alert("잠시 후 다시 이용해주세요.");
+				}
+			});
+
+		});
+
+		// 비밀번호 확인 검사
+		$('#pwd').blur(checkPwCfm);
+		$('#pwdchk').keyup(checkPwCfm);
+
+		function checkPwCfm() {
+			var inputPw = $('#pwd').val();
+			var inputPwCfm = $('#pwdchk').val();
+
+			if (inputPw != inputPwCfm) {
+				$('#guidepwdchk').text("비밀번호가 일치하지 않습니다.");
+				$('#guidepwdchk').css("color", "red");
+				$('#guidepwdchk').show();
+
+				completePwCfm = false;
+			} else {
+				$('#guidepwdchk').hide();
+				completePwCfm = true;
+			}
+		}
+
+	});
+</script>
 </body>
-</html> 

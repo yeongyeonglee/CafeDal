@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700'); */
+
+/* * {
+  margin:0px;
+  padding:0px;
+  text-align:center;
+} */
+
+
+
+.box img {
+  width: 250px; 
+  height: 250px;
+}
+
+html, body{
+  height:100%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  
+}
+
+h2, h4, h3 {
+  letter-spacing:4px;
+  text-align:center;
+  text-transform:uppercase;
+}
+
+h2 {
+  font-weight:300;
+  font-size:2.5em;
+  padding-top:1em;
+  color: #000000;
+}
+
+/* h2:hover {
+  color: #ffffff;
+  cursor: pointer;
+} */
+
+h3 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	/* padding-bottom: 15px; */
+}
+
+h4 {
+	font-weight: 300;
+	font-size: 2.5em;
+	padding-top: 1em;
+	color: #000000;
+	/* padding:2em; */
+	color: #666;
+	text-shadow: 1px 3px 3px rgba(211, 209, 209, 1);
+}
+
+h5 {
+  letter-spacing:3px;
+  font-weight:300;
+  color: #CCC;
+}
+
+.range {	
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:   border-box;
+  box-sizing:        border-box;
+  /* max-width:900px; */
+  /* margin:0 auto 5em auto; */
+  margin-left:480px;
+  padding: 0em;
+  display: flex;
+}
+
+.con{
+	list-style: none;
+	display: flex;
+	margin-left: 705px;
+	text-align: center;
+    font-size: 16px;
+}
+
+.con li{
+	list-style: none;
+    text-align: center;
+    font-size: 16px;
+}
+
+#map_canvas{
+	margin-left: 650px;
+}
+
+.box {
+  /* position: relative; */
+  width: 300px;
+  height: 0px;
+  left: 7.5%;
+  /* margin-left: 220px; */
+  padding-bottom: 353px;
+  float: left;
+  /* opacity: 0.65; */
+}
+
+.flip,
+.bar {
+  /* position: absolute; */
+}
+
+.flip {
+  /* top:0px;
+  left:0px; */
+  width:250px;
+  height:250px;
+  overflow:hidden;
+  /* background:rgba(255,255,255,0.5); */
+  /* cursor: pointer;
+  -webkit-animation :flipout 0.5s ease forwards;
+  -moz-animation:   flipout 0.5s ease forwards;
+  -o-animation:     flipout 0.5s ease forwards;
+  animation:        flipout 0.5s ease forwards;*/
+}
+
+.bar {
+  bottom:0px;
+  left:0px;
+  width:100%;
+  background: white;
+}
+
+.bar h3 {
+  font-size:1.5rem;
+  font-weight:300;
+  text-transform:uppercase;
+  letter-spacing:3px;
+}
+
+.box:hover {
+   opacity: 1; 
+   
+}
+
+.box:hover > .flip {
+  background: rgba(255,255,255,0.3);
+  /* -webkit-animation:flipin 0.5s ease forwards;
+  -moz-animation:   flipin 0.5s ease forwards;
+  -o-animation:     flipin 0.5s ease forwards;
+  animation:        flipin 0.5s ease forwards; */
+}
+
+
+@-webkit-keyframes flipout {
+  0% {-webkit-transform: translate(0px, 0px) scale(1);}
+  30% {-webkit-transform: translate(0px, -30px) scale(0.98);}
+  100% {-webkit-transform: translate(0px, 0px) scale(0.9);}
+}
+
+@-o-keyframes flipout {
+  0% {-o-transform: translate(0px, 0px) scale(1);}
+  30% {-o-transform: translate(0px, -30px) scale(0.98);}
+  100% {-o-transform: translate(0px, 0px) scale(0.9);}
+}
+
+@-moz-keyframes flipout {
+  0% {-moz-transform: translate(0px, 0px) scale(1);}
+  30% {-moz-transform: translate(0px, -30px) scale(0.98);}
+  100% {-moz-transform: translate(0px, 0px) scale(0.9);}
+}
+
+@keyframes flipout {
+  0% {transform: translate(0px, 0px) scale(1);}
+  30% {transform: translate(0px, -30px) scale(0.98);}
+  100% {transform: translate(0px, 0px) scale(0.9);}
+}
+
+@-webkit-keyframes flipin {
+  0% {-webkit-transform: translate(0px, 0px) scale(0.9);}
+  30% {-webkit-transform: translate(0px, -30px) scale(0.98);}
+  100% {-webkit-transform: translate(0px, 0px) scale(1);}
+}
+
+@-o-keyframes flipin {
+  0% {-o-transform: translate(0px, 0px) scale(0.9);}
+  30% {-o-transform: translate(0px, -30px) scale(0.98);}
+  100% {-o-transform: translate(0px, 0px) scale(1);}
+}
+
+@-moz-keyframes flipin {
+  0% {-moz-transform: translate(0px, 0px) scale(0.9);}
+  30% {-moz-transform: translate(0px, -30px) scale(0.98);}
+  100% {-moz-transform: translate(0px, 0px) scale(1);}
+}
+
+@keyframes flipin {
+  0% {transform: translate(0px, 0px) scale(0.9);}
+  30% {transform: translate(0px, -30px) scale(0.98);}
+  100% {transform: translate(0px, 0px) scale(1);}
+}

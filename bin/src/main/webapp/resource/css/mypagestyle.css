@@ -1,41 +1,142 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
 
-.pw-check-form {
-	margin-left: 15%;
-	margin-top: 5%;
-	background: #ffffff;
-	counter-reset: fieldsets;
-	padding: 60px;
-	width: 550px;
-	height: 400px;
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+.imgbox {
+	max-width: 400px;
+	min-height: 160px;
+	margin: auto;
+	margin-top: 20px;
+	padding-top: 60px;
 }
 
-.pw-check {
+.container {
+	box-shadow: 0 0 20px black;
+	max-width: 1000px;
+	min-height: 700px;
+	margin: auto;
+	margin-top: 70px;
+	padding-top: 60px;
+    padding-left: 30px;
+}
+
+table.table-garo2 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 13px;
+	background: #fff;
+	margin: 60px;
+	border-collapse: collapse;
 	text-align: center;
-	font-family: 맑은 고딕, 고딕, sans-serif;
+	border-bottom: 5px solid #592d00;
+	top: 50%;
+	table-layout: fixed;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 1px 2px #d1d1d1;
+	-webkit-box-shadow: 0 1px 2px #d1d1d1;
+	box-shadow: 0 1px 2px #d1d1d1;
+}
+
+table.table-garo2 {
+	width: 800px;
+	height: 320px;
+	border-bottom: 1px solid #a9a9a9;
+	margin-left: 83px;
+	margin-top: 0px;
+}
+
+table .table-garo2 :hover a {
+	background-color: #fff;
+}
+
+table.table-garo2 :hover {
+	color: black;
+}
+
+table.table-garo2 .tit :hover {
 	font-weight: bold;
-	font-size: 17px;
 }
 
-#center {
-	text-align: center;
+.table-garo2 tr th, .tabe-garo2 .tr .th {
+	background: #f8eae2 url("../images/bg-title-sp.png") no-repeat left center;
 }
 
-#mypage-logo {
-	width: 240px;
-	height: 200px;
-	margin-left: 170px;
+table.table-garo2 th {
+	font-size: 15px;
+	font-weight: bold;
+	color: black;
+	padding: 5px 3px;
+	border-bottom: 1px solid #a9a9a9;
 }
 
-#body {
-	margin-top: 3px;
-	min-height: 1800px;
+table.table-garo2 td {
+	border-bottom: 1px solid #ccc;
+	color: black;
+	cursor: pointer;
+	padding: 6px 8px;
 }
 
-#body .content-container {
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	background: white;
+.button {
+	width: 600px; 
+	padding:10px 0px; 
+	text-align:right;	
+	margin-left: 285px;
+}
+
+.eff{
+	border-radius: 2px; 
+	width: 165px; 
+	height: 35px; 
+	border: 1px solid #e8bfaa; 
+	background: #e8bfaa; 
+	font-family: 'Jeju Gothic', 'dotum', serif; 
+	font-size: 1.2em; 
+	font-color: black; 
+	cursor: pointer;
+}
+
+.eff1{
+	border-radius: 2px; 
+	width: 165px; 
+	height: 35px; 
+	border: 1px solid #c0c0c0; 
+	background: #c0c0c0; 
+	font-family: 'Jeju Gothic', 'dotum', serif; 
+	font-size: 1.2em; 
+	font-color: black; 
+	cursor: pointer;
+}
+
+.eff:hover {
+	background-color: #7b4122;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+.list-tit {
+	font-family: 'Jeju Gothic', serif;
+	/* margin-left: 450px; */
+	font-size: 30px;
+	/* font-weight: bold; */
+	margin-top: -20px;
+}
+
+#underbar {
+	border-top: 2px solid #7a2c14;
+    margin-top: 15px;
+}
+
+#name-d {
+	font-family: 'Jeju Gothic', 'dotum', serif; 
+	font-size: 1.2em;
+	letter-spacing: 3px;
+	line-height: 0.8;​
+}
+
+#name-dd {
+	font-family: 'Jeju Gothic', 'dotum', serif; 
+	font-size: 1.4em;
+	letter-spacing: 3px;
+	line-height: 0.8;​
 }

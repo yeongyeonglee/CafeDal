@@ -34,7 +34,7 @@
          <!-- --------------------------- main --------------------------------------- -->
          
          <!-- content 부분 -->
-         <tiles:insertAttribute name="main" />
+         <tiles:insertAttribute name="main"/>
          
       </div>
    </div>
