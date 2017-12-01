@@ -34,7 +34,7 @@ public class CalendarController {
       
       String id = principal.getName();
       
-/*      Calendar cal = Calendar.getInstance();
+      Calendar cal = Calendar.getInstance();
       DateData calendarData;
       //검색 날짜
             if(dateData.getDate().equals("")&&dateData.getMonth().equals("")){
@@ -78,7 +78,7 @@ public class CalendarController {
             //배열에 담음
             model.addAttribute("dateList", dateList);      //날짜 데이터 배열
             model.addAttribute("today_info", today_info);
-      */
+      
 
 
       List<CalendarView> list = calendarDao.getUseList(id);
@@ -89,4 +89,10 @@ public class CalendarController {
 
       return "main.calendar";
    }
+   
+   @RequestMapping(value="today")
+	public String today() { 
+		
+		return "main.today";
+	}
 }

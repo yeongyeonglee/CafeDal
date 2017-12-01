@@ -46,7 +46,7 @@ public class CustomerDcInfoController  {
 	      
 	      model.addAttribute("list", list);
 	      
-	      return "customer.dcinfo.notice.list";
+	      return "customer.dcinfo.notice.gongcha";
 	   }
 	   
 	   @RequestMapping(value = "notice/{num}", method = RequestMethod.GET)

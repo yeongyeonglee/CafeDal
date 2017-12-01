@@ -34,6 +34,14 @@ public class CustomerUseInfoController {
 	  @Autowired
 		private UseComDao usecomDao;
 	  
+	  
+		@RequestMapping("cafelist")
+		public String cafelist() {
+
+			
+
+			return "customer.useinfo.notice.cafelist";
+		}
 
 	@RequestMapping("notice")
 	public String notice(@RequestParam(value = "p", defaultValue = "1") Integer page,

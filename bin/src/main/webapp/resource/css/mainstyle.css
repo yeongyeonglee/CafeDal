@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+li{
+	text-align:center;
+	display:inline;
+}
+
 /* 달력 */
 .main {
 	scrollbar-face-color: #F6F6F6;
@@ -179,4 +184,40 @@ A:link {
 
 .this_month {
 	margin: 10px;
+}
+
+
+#cafe1{
+	text-decoration:none;
+	background:#fef4d1;
+}
+
+#cafe2{
+	text-decoration:none;
+	background:green;
+	color:white;
+}
+
+#cafe3{
+	text-decoration:none;
+	background:#5151ff;
+	color:white;
+}
+
+#cafe4{
+	text-decoration:none;
+	background:purple;
+	color:white;
+}
+
+#cafe5{
+	text-decoration:none;
+	background:black;
+	color:white;
+}
+
+#cafe6{
+	text-decoration:none;
+	background:red;
+	color:white;
 }

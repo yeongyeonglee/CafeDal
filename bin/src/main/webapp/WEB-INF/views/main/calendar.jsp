@@ -5,119 +5,83 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="path" value="${pageContext.request.contextPath}" />
-<link type="text/css" rel="stylesheet" href="${path}/resource/css/mainstyle.css">
+
+<link type="text/css" rel="stylesheet" href="${path}/resource/css/fullcalendar.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.min.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.min.js"></script>
+
+<script type='text/javascript'>
+
+	$(document).ready(function() {
+	
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+		
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			},
+			editable: true,
+			events: [
+				{
+					title: '이디야 누꽃빙수 할인 쿠폰 증정 이벤트',
+					start: new Date(y, m, d-5),
+					end: new Date(y, m, d-2)
+				},
+				{
+					title: '이디야 신한카드 발급 이벤트',
+					start: new Date(y, m, d-3),
+					end: new Date(y, m, d-2)
+				},
+				/* {
+					title: 'Repeating Event',
+					start: new Date(y, m, d+4, 16, 0),
+					allDay: false
+				},
+				{
+					title: 'Meeting',
+					start: new Date(y, m, d, 10, 30),
+					allDay: false
+				},
+				{
+					title: 'Lunch',
+					start: new Date(y, m, d, 12, 0),
+					end: new Date(y, m, d, 14, 0),
+					allDay: false
+				},
+				{
+					title: 'Birthday Party',
+					start: new Date(y, m, d+1, 19, 0),
+					end: new Date(y, m, d+1, 22, 30),
+					allDay: false
+				},
+				{
+					title: 'Click for Google',
+					start: new Date(y, m, 28),
+					end: new Date(y, m, 29),
+					url: 'http://google.com/'
+				} */
+			]
+		});
+		
+	});
+
+</script>
 
 
 
-<main class="main" >
-<form name="calendarFrm" id="calendarFrm" action="" method="GET">
-
-<div class="calendar" >
-
-	<!--날짜 네비게이션  -->
-	<div class="navigation">
-		<a class="before_after_year" href="./calendar.do?year=${today_info.search_year-1}&month=${today_info.search_month-1}">
-			&lt;&lt;
-		<!-- 이전해 -->
-		</a> 
-		<a class="before_after_month" href="./calendar.do?year=${today_info.before_year}&month=${today_info.before_month}">
-			&lt;
-		<!-- 이전달 -->
-		</a> 
-		<span class="this_month">
-			&nbsp;${today_info.search_year}. 
-			<c:if test="${today_info.search_month<10}">0</c:if>${today_info.search_month}
-		</span>
-		<a class="before_after_month" href="./calendar.do?year=${today_info.after_year}&month=${today_info.after_month}">
-		<!-- 다음달 -->
-			&gt;
-		</a> 
-		<a class="before_after_year" href="./calendar.do?year=${today_info.search_year+1}&month=${today_info.search_month-1}">
-			<!-- 다음해 -->
-			&gt;&gt;
-		</a>
-	</div>
-
-<!-- <div class="today_button_div"> -->
-<!-- <input type="button" class="today_button" onclick="javascript:location.href='/calendar.do'" value="go today"/> -->
-<!-- </div> -->
-<table class="calendar_body">
-
-<thead>
-	<tr bgcolor="#CECECE">
-		<td class="day sun" >
-			일
-		</td>
-		<td class="day" >
-			월
-		</td>
-		<td class="day" >
-			화
-		</td>
-		<td class="day" >
-			수
-		</td>
-		<td class="day" >
-			목
-		</td>
-		<td class="day" >
-			금
-		</td>
-		<td class="day sat" >
-			토
-		</td>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<c:forEach var="dateList" items="${dateList}" varStatus="date_status"> 
-			<c:choose>
-				<c:when test="${dateList.value=='today'}">
-					<td class="today">
-						<div class="date">
-							${dateList.date}
-						</div>
-						<div>
-						</div>
-					</td>
-				</c:when>
-				<c:when test="${date_status.index%7==6}">
-					<td class="sat_day">
-						<div class="sat">
-							${dateList.date}
-						</div>
-						<div>
-						</div>
-					</td>
-				</c:when>
-				<c:when test="${date_status.index%7==0}">
-	</tr>
-	<tr>	
-		<td class="sun_day">
-			<div class="sun">
-				${dateList.date}
-			</div>
-			<div>
-			</div>
-		</td>
-				</c:when>
-				<c:otherwise>
-		<td class="normal_day">
-			<div class="date">
-				${dateList.date}
-			</div>
-			<div>
-			
-			</div>
-		</td>
-				</c:otherwise>
-			</c:choose>
-		</c:forEach>
-</tbody>
-
-</table>
-</div>
-</form>
+<main class="main">
+	<form name="calendarFrm" id="calendarFrm" action="" method="GET">
+		<div class="calendar" id="calendar">
+		</div>
+	</form>
 </main>
 
 
