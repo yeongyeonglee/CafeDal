@@ -2,7 +2,7 @@
 
 @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
-a{
+.content-container a{
 	text-decoration: none;
 	color: black;
 }
@@ -16,9 +16,9 @@ a{
 	margin-top: 50px;
 }
 
-.content-container{
+/* .content-container{
 	display: flex;
-}
+} */
 
 #visual img{
 	margin-left: 400px;

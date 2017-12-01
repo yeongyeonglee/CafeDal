@@ -8,7 +8,7 @@
 		<img src="${path}/resource/images/line.PNG" alt="line" />
 	<div class="content-container">
 			<li>
-				<a class="btn aboutus" >ABOUT US</a>
+				<a class="btn aboutus"  href="${path}/main/aboutus" >ABOUT US</a>
 			</li>
 			<li>
 				<a class="btn useinfo" href="${path}/customer/useinfo/notice">카페이용방법</a>
