@@ -2,15 +2,47 @@
 
 @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
+.content-container a{
+	text-decoration: none;
+	color: black;
+}
+
 
 /* 메인 비주얼 이댱 */
 #visual {
-	height: 150px;
-	background: #e3b197;
+	height: 50px;
+	/* background: #e3b197; */
 	list-style: none;
+	margin-top: 50px;
 }
 
-.btn {
+
+/* .content-container{
+	display: flex;
+} */
+
+.content-container{
+	/* display: flex; */
+}
+
+
+#visual img{
+	margin-left: 460px;
+	width: 1000px;
+}
+
+#info{
+	display: flex;
+}
+
+.btn{
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	/* margin-top: 30px; */
+}
+
+/* .btn {
 	width: 92px;
 	font-size: 20px;
 	color: white;
@@ -25,9 +57,9 @@
 	overflow: hidden;
 
 	margin-top: 10px;
-}
+} */
 
-.btn:hover {
+/* .btn:hover {
 	width: 92px;
 	font-size: 20px;
 	color: white;
@@ -42,20 +74,25 @@
 	overflow: hidden;
 	background-color: #d58b64;
 	
+} */
+
+.aboutus{
+	float :left;
+	margin-left: 590px;
+    margin-top: 10px;
 }
 
-.use-button{
+.useinfo{
 	float :left;
-	margin-left: 800px;
-	margin-top: 53px;
-	text-align: center;
+	margin-left: 100px;
+	margin-top: 10px;
 }
 
-.sale-button{
+.dcinfo{
 	float :left;
-	margin-left: 977px;
-	margin-top: -47px;
-	text-align: center;
+	margin-left: 100px;
+	margin-top: 10px;
+
 }
 
 /*-------------------------------------------------------------------------------------------------*/

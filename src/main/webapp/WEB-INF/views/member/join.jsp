@@ -6,20 +6,24 @@
 <head>
 <meta charset="UTF-8">
 <title>CafeDal</title>
-<link type="text/css" rel="stylesheet"  	href="${path}/resource/css/join.css">
+<link type="text/css" rel="stylesheet" href="${path}/resource/css/join.css">
 </head>
 
+<body>
+
 <div id="div_activate" class="container">
-	<div class="logo">
+	<%-- <div class="logo">
 				<img src="${path}/resource/images/logo2.png" alt="회원가입 로고" />
-	</div>
-	<div class="title">
+	</div> --%>
+	<!-- <div class="title">
 		<h2 class="head">CafeDal 회원가입</h2>
-	</div>
+	</div> -->
 	<!-- 회원가입 폼 -->
-	<div class="row">
+	<article class="half">
+	<h1><img src="${path}/images/logo2.png" alt="cafedal 회원가입" width="130px" height="100px"></h1>
+	<!-- <div class="row"> -->
 		<form action="?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data">
-			<table id="tbl_info" class="table jointb" style="table-layout: fixed;">
+			<table id="tbl_info" class="table jointb" style="table-layout: fixed; margin-left: -30px;">
 				<tr id="tr_id">
 					<th>아이디</th>
 					<td>
@@ -72,6 +76,7 @@
 
 				<tr>
 					<th>카페 선택</th>
+					<br/>
 					<td>
 						<form name="check" class="cm-check"  id="chbox">
 							<div class="cm-check">
@@ -81,11 +86,11 @@
 									<label class="cm-check2" for="cafes2" >스타벅스</label> 
 								<input type="checkbox" id="cafes3" name="cafes"  value="3 "/> 
 								    <label class="cm-check2"  for="cafes3" >이디야</label>
-								 <br />
+								 <!-- <br />
 							   <input type="checkbox"  id="cafes4" name="cafes"  value="4 "/> 
 									<label class="cm-check2" for="cafes4" >커피빈</label> 
 							   <input type="checkbox"  id="cafes5"name="cafes"  value="5 "/> 
-							       <label class="cm-check2" for="cafes5" >투썸플레이스</label>
+							       <label class="cm-check2" for="cafes5" >투썸플레이스</label> -->
 							   <input type="checkbox"  id="cafes6" name="cafes"  value="6 "/> 
 							       <label class="cm-check2" for="cafes6" >할리스커피</label>
 							</div>
@@ -101,53 +106,56 @@
 			</table>
 		</form>
 
-		 <div> 
-              <input  class="btn cancel-btn"  type="submit"  onclick="location.href='login'" value="취소"  /> 
-              <input  class="btn join-btn"  type="submit"  onclick="location.href='joinHello'" value="확인"  /> 
-         </div> 
-	</div>
+
+		<div class="submit-wrap" style="display: flex;">
+			<input class="submit2	" type="submit" onclick="location.href='login'" value="취소" 
+			style="margin-top: 50px; margin-left: 105px; width: 150px; height: 50px;"/>
+			<input class="submit2" type="submit" onclick="location.href='joinHello'" value="확인"
+			style="margin-top: 50px; margin-left: 75px; width: 150px; height: 50px;" />
+		</div>
+
+		</div>
+	</article>
 
 
-</div>
-
+<!-- </div> -->
 
 <script>
+	$(document).ready(function() {
 
-$(document).ready(function() {
+		var cfmId = ""; // 중복 체크 완료된 아이디 저장
 
-var cfmId = "";		// 중복 체크 완료된 아이디 저장
+		$('#id').keyup(function() {
 
+			var inputId = $('#id').val();
 
-$('#id').keyup(function() {
+			$.ajax({
 
-	var inputId = $('#id').val();
+				url : "sameCheckId?${_csrf.parameterName}=${_csrf.token}",
+				type : "POST",
+				data : {
+					"id" : inputId
+				},
+				success : function(result) {
 
-		$.ajax({
+					if (result.message == "true") {
+						$('#checkId').html('<strong>이미 존재하는 아이디입니다!</strong>');
+						$('#checkId').css("color", "red");
+						cfmId = '';
+					} else {
+						$('#checkId').html('<strong>사용 가능한 아이디입니다.</strong>');
+						$('#checkId').css("color", "green");
+						cfmId = inputId;
+					}
 
-			url: "sameCheckId?${_csrf.parameterName}=${_csrf.token}",
-			type: "POST",
-			data: { "id" : inputId },
-			success: function(result) {
-
-				if ( result.message == "true" )	{
-					$('#checkId').html('<strong>이미 존재하는 아이디입니다!</strong>');
-					$('#checkId').css("color","red");
-					cfmId = '';
-				} else {
-					$('#checkId').html('<strong>사용 가능한 아이디입니다.</strong>');
-					$('#checkId').css("color","green");
-					cfmId = inputId;
+					$('#id_cfm').text("중복 체크").attr('disabled', false);
+				},
+				error : function(result) {
+					alert("잠시 후 다시 이용해주세요.");
 				}
+			});
 
-				$('#id_cfm').text("중복 체크").attr('disabled', false);
-			},
-			error: function(result) {
-				alert("잠시 후 다시 이용해주세요.");
-			}
-});
-
-});
-
+		});
 
 		// 비밀번호 확인 검사
 		$('#pwd').blur(checkPwCfm);
@@ -157,9 +165,9 @@ $('#id').keyup(function() {
 			var inputPw = $('#pwd').val();
 			var inputPwCfm = $('#pwdchk').val();
 
-			if ( inputPw != inputPwCfm ) {
+			if (inputPw != inputPwCfm) {
 				$('#guidepwdchk').text("비밀번호가 일치하지 않습니다.");
-				$('#guidepwdchk').css("color","red");
+				$('#guidepwdchk').css("color", "red");
 				$('#guidepwdchk').show();
 
 				completePwCfm = false;
@@ -169,13 +177,6 @@ $('#id').keyup(function() {
 			}
 		}
 
-
-
 	});
-
-
 </script>
-
-
-
-
+</body>
