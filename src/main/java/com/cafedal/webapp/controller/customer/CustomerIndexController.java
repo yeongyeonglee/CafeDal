@@ -25,8 +25,8 @@ import com.cafedal.webapp.entity.DcInfo;
 
 
 @Controller
-@RequestMapping("/customer/dcinfo/*")
-public class CustomerDcInfoController  {
+@RequestMapping("/customer/dcinfo/sub/*")
+public class CustomerIndexController  {
 
 	  @Autowired
 	   private DcInfoDao dcinfoDao;
@@ -35,7 +35,7 @@ public class CustomerDcInfoController  {
 	  @Autowired
 	   private CmtDao1 cmtDao1;
 	  
-	   @RequestMapping("notice")
+	   @RequestMapping("gongcha")
 	   public String notice(
 	         @RequestParam(value="p", defaultValue="1") Integer page,
 	         @RequestParam(value="f", defaultValue="dtitle") String field,
@@ -46,10 +46,70 @@ public class CustomerDcInfoController  {
 	      
 	      model.addAttribute("list", list);
 	      
-	      return "customer.dcinfo.notice.gongcha";
+	      
+	      
+	      return "customer.dcinfo.sub.gongcha";
 	   }
 	   
-	   @RequestMapping(value = "notice/{num}", method = RequestMethod.GET)
+	   @RequestMapping("starbucks")
+	   public String notice2(
+	         @RequestParam(value="p", defaultValue="1") Integer page,
+	         @RequestParam(value="f", defaultValue="dtitle") String field,
+	         @RequestParam(value="q", defaultValue="") String query, Model model
+	         ){
+	      
+	      List<DcInfo> list = dcinfoDao.getUseList(page, field, query);
+	      
+	      model.addAttribute("list", list);
+	      
+	      
+	      
+	      return "customer.dcinfo.sub.starbucks";
+	   }
+	   
+	   @RequestMapping("ediya")
+	   public String notice3(
+	         @RequestParam(value="p", defaultValue="1") Integer page,
+	         @RequestParam(value="f", defaultValue="dtitle") String field,
+	         @RequestParam(value="q", defaultValue="") String query, Model model
+	         ){
+	      
+	      List<DcInfo> list = dcinfoDao.getUseList(page, field, query);
+	      
+	      model.addAttribute("list", list);
+	      
+	      
+	      
+	      return "customer.dcinfo.sub.ediya";
+	   }
+	   
+	   @RequestMapping("hollys")
+	   public String notice4(
+	         @RequestParam(value="p", defaultValue="1") Integer page,
+	         @RequestParam(value="f", defaultValue="dtitle") String field,
+	         @RequestParam(value="q", defaultValue="") String query, Model model
+	         ){
+	      
+	      List<DcInfo> list = dcinfoDao.getUseList(page, field, query);
+	      
+	      model.addAttribute("list", list);
+	      
+	      
+	      
+	      return "customer.dcinfo.sub.hollys";
+	   }
+	   
+	  @RequestMapping("index/*")
+	   public String noticeDetail( Model model, DcCom dccom,Principal principal) {
+
+	      
+		  
+	      return "customer.dcinfo.notice.index.ediya";
+	   }
+	   
+	   
+	   
+	 @RequestMapping(value = "notice/{num}", method = RequestMethod.GET)
 	   public String noticeDetail(@PathVariable("num") int num, Model model, DcCom dccom,Principal principal) {
 
 	      
