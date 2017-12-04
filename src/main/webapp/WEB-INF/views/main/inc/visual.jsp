@@ -14,7 +14,7 @@
 				<a class="btn useinfo" href="${path}/customer/useinfo/cafelist">카페이용방법</a>
 			</li>
 			<li>
-				<a class="btn dcinfo" href="${path}/customer/dcinfo/notice">카페할인정보</a>		
+				<a class="btn dcinfo" href="${path}/customer/dcinfo/sub/gongcha">카페할인정보</a>		
 			</li>
 			<li>
 				<a class="btn dcinfo" href="${path}/main/today">오늘의 카페</a>		
