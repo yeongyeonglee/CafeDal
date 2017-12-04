@@ -14,7 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.min.js"></script>
 
 <script type='text/javascript'>
-
+ 
 	$(document).ready(function() {
 	
 		var date = new Date();
@@ -22,7 +22,15 @@
 		var m = date.getMonth();
 		var y = date.getFullYear();
 		
-		$('#calendar').fullCalendar({
+	 	/* var name_by_id = $('#test_id').attr('dtitle');
+		alert(name_by_id); */
+		
+		var value = $('#test_id').val();
+		var value2 = $('#test_id2').val();
+		var value3 = $('#test_id3').val();
+		var value4 = $('#test_id4').val();
+		
+ 		$('#calendar').fullCalendar({
 			header: {
 				left: 'prev,next today',
 				center: 'title',
@@ -31,47 +39,14 @@
 			editable: true,
 			events: [
 				{
-					title: '이디야 누꽃빙수 할인 쿠폰 증정 이벤트',
-					start: new Date(y, m, d-5),
-					end: new Date(y, m, d-2)
-				},
-				{
-					title: '이디야 신한카드 발급 이벤트',
-					start: new Date(y, m, d-3),
-					end: new Date(y, m, d-2)
-				},
-				/* {
-					title: 'Repeating Event',
-					start: new Date(y, m, d+4, 16, 0),
-					allDay: false
-				},
-				{
-					title: 'Meeting',
-					start: new Date(y, m, d, 10, 30),
-					allDay: false
-				},
-				{
-					title: 'Lunch',
-					start: new Date(y, m, d, 12, 0),
-					end: new Date(y, m, d, 14, 0),
-					allDay: false
-				},
-				{
-					title: 'Birthday Party',
-					start: new Date(y, m, d+1, 19, 0),
-					end: new Date(y, m, d+1, 22, 30),
-					allDay: false
-				},
-				{
-					title: 'Click for Google',
-					start: new Date(y, m, 28),
-					end: new Date(y, m, 29),
-					url: 'http://google.com/'
-				} */
-			]
+					title: value,
+					start: new Date(value2),
+					end: new Date(value3)
+				}
+		]
 		});
 		
-	});
+	}); 
 
 </script>
 
@@ -80,6 +55,14 @@
 <main class="main">
 	<form name="calendarFrm" id="calendarFrm" action="" method="GET">
 		<div class="calendar" id="calendar">
+            <div>
+            	<c:forEach var="n" items="${list}">
+            		<input type="hidden" id="test_id" value="${n.dtitle}">
+            		<input type="hidden" id="test_id2" value="${n.startdate}">
+            		<input type="hidden" id="test_id3" value="${n.finishdate}">
+            	</c:forEach>
+            </div>
+            
 		</div>
 	</form>
 </main>
