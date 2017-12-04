@@ -1642,7 +1642,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 	border-bottom: 1px solid #eee
 }
 
-ol, ul {
+ol{
 	margin-top: 0;
 	margin-bottom: 10px
 }
@@ -7423,4 +7423,15 @@ button.close {
 	.hidden-print {
 		display: none !important
 	}
+}
+
+
+#logouts {
+	border: none;
+	background: black;
+	color: white;
+	margin-top: -1px;
+	font-weight: bolder;
+	text-decoration: none;
+	font-size: 14px;
 }

@@ -53,6 +53,7 @@
 	background-color: #808080;
 }
 
+
 #logout {
 	border: none;
 	background: black;
@@ -61,6 +62,17 @@
 	/* font-weight: bolder; */
 	text-decoration: none;
 	font-size: 14px;
+}
+
+
+
+.list-tit {
+	font-family: 'Jeju Gothic', serif;
+	margin-left: 490px;
+	font-size: 30px;
+	/* font-weight: bold; */
+	margin-top: -20px;
+	
 }
 </style>
 <main class="main"> 
