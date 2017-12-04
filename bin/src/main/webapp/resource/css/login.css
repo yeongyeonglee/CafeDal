@@ -143,6 +143,12 @@ body {
 }
 
 .login_box .last .id_pwd_search {
-   float: right;
+   float: left;
    margin-left: 24px; 
+}
+
+.login_box .admin_login{
+	float:right;
+	margin-left: 24px;
+	margin-top: -8px;
 }

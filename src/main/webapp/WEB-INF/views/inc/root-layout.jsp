@@ -18,7 +18,7 @@
 <body>
    <!-- header 부분 -->
    <tiles:insertAttribute name="header" />
-   
+   <tiles:insertAttribute name="visual" />
          <!-- content 부분 -->
          <tiles:insertAttribute name="main" />
    <!-- ------------------- <footer> --------------------------------------- -->

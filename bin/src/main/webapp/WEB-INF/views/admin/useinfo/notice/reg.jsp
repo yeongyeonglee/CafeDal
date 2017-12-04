@@ -6,9 +6,23 @@
 <c:set var="path" value="${pageContext.request.contextPath}" />
 <link type="text/css" rel="stylesheet" href="${path}/resource/css/liststyle.css">
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<body>
+<script src="${path}/resource/ckeditor/ckeditor.js"></script>
+<script>
+    var editor;
+    CKEDITOR.on( 'instanceReady', function( ev ) {
+        editor = ev.editor;
+        document.getElementById( 'readOnlyOn' ).style.display = '';
+        editor.on( 'readOnly', function() {
+            document.getElementById( 'readOnlyOn' ).style.display = this.readOnly ? 'none' : '';
+            document.getElementById( 'readOnlyOff' ).style.display = this.readOnly ? '' : 'none';
+        });
+    });
+   
+    function toggleReadOnly( isReadOnly ) {
+        editor.setReadOnly( isReadOnly );
+    }
+</script>
+ <body>
 	<div class="reg-tit">카페 이용정보 등록</div>
 	<form action="?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data">
 		<fieldset class="reg-field">
@@ -29,7 +43,7 @@
 					</tr>					
 					
 					<tr>
-						<td colspan="2"><textarea style="overflow: auto; " name="ucontent" rows="40" cols="100"></textarea>
+						<td colspan="2"><textarea  class="ckeditor" style="overflow: auto; " name="ucontent" rows="40" cols="100"></textarea>
 
 						</td>
 					</tr>
@@ -37,14 +51,18 @@
 			</table>
 			<div class="buttons">
 				<input style="color:white; background: #7b4122; border-style: none;" type="submit" value="등록" />
-				<a href="notice">취소</a>				
+				<a href="../notice">취소</a>				
 			</div>
 		</fieldset>
 	</form>
 </body>
-</html>
 
-
-
+<script type="text/javascript">
+    CKEDITOR.replace('Contents',{
+            toolbar: 'Full',
+            uiColor: '#9AB8F3',
+        }
+    );
+</script>
 
 

@@ -50,4 +50,7 @@
        select id,pwd,name,mail,birth,cafes from member where role='ROLE_USER'
   </select>
   
+  <delete id="delete" parameterType="com.cafedal.webapp.entity.Member">
+	       delete from member where id=#{id}
+  </delete>
 </mapper>

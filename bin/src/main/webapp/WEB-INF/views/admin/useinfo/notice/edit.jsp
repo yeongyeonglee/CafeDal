@@ -6,6 +6,24 @@
 <c:set var="path" value="${pageContext.request.contextPath}" />
 <link type="text/css" rel="stylesheet"
 	href="${path}/resource/css/liststyle.css">
+	
+<script src="${path}/resource/ckeditor/ckeditor.js"></script>
+<script>
+    var editor;
+    CKEDITOR.on( 'instanceReady', function( ev ) {
+        editor = ev.editor;
+        document.getElementById( 'readOnlyOn' ).style.display = '';
+        editor.on( 'readOnly', function() {
+            document.getElementById( 'readOnlyOn' ).style.display = this.readOnly ? 'none' : '';
+            document.getElementById( 'readOnlyOff' ).style.display = this.readOnly ? '' : 'none';
+        });
+    });
+   
+    function toggleReadOnly( isReadOnly ) {
+        editor.setReadOnly( isReadOnly );
+    }
+</script>
+
 
 <div class="reg-tit">카페 이용정보 수정</div>
 <form action="?${_csrf.parameterName}=${_csrf.token}" method="post"
@@ -28,21 +46,28 @@
 					</tr>
 
 				<tr>
-					<td colspan="4"><textarea style="overflow: auto;"
+					<td colspan="4"><textarea class="ckeditor" style="overflow: auto;"
 							name="ucontent" rows="40" cols="100">${n.ucontent}</textarea></td>
 				</tr>
 			</tbody>
 		</table>
 		<div class="buttons">
 			<input style="color: white; background: #7b4122; border-style: none;"
-				type="hidden" name="num" value="${n.num}" /> <input
-				style="color: white; background: #7b4122; border-style: none;"
-				type="submit" value="저장" /> <a href="${n.num}">취소</a>
+				type="hidden" name="num" value="${n.num}" /> 
+				<input style="color: white; background: #7b4122; border-style: none;"
+				type="submit" value="저장" /> 
+				<a href="${n.num}">취소</a>
 		</div>
 	</fieldset>
 </form>
 
 
-
+<script type="text/javascript">
+    CKEDITOR.replace('Contents',{
+            toolbar: 'Full',
+            uiColor: '#9AB8F3',
+        }
+    );
+</script>
 
 

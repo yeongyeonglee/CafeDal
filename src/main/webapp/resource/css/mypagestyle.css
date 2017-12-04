@@ -2,8 +2,8 @@
 @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
 
 .imgbox {
-	max-width: 400px;
-	min-height: 160px;
+	width: 400px;
+	height: 160px;
 	margin: auto;
 	margin-top: 20px;
 	padding-top: 60px;
@@ -11,15 +11,16 @@
 
 .container {
 	box-shadow: 0 0 20px black;
-	max-width: 1000px;
-	min-height: 700px;
+	width: 1000px;
+	height: 700px;
 	margin: auto;
+	margin-left: 395px;
 	margin-top: 70px;
 	padding-top: 60px;
     padding-left: 30px;
 }
 
-table.table-garo2 {
+/* table.table-garo2 {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 	font-size: 13px;
 	background: #fff;
@@ -74,6 +75,100 @@ table.table-garo2 td {
 	color: black;
 	cursor: pointer;
 	padding: 6px 8px;
+} */
+
+table.table-garo2 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 13px;
+	background: #fff;
+	margin: 60px;
+	border-collapse: collapse;
+	text-align: center;
+	border-bottom: 5px solid #592d00;
+	top: 50%;
+	table-layout: fixed;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 1px 2px #d1d1d1;
+	-webkit-box-shadow: 0 1px 2px #d1d1d1;
+	box-shadow: 0 1px 2px #d1d1d1;
+}
+
+table.table-garo2 {
+	width: 900px;
+	border-bottom: 1px solid #a9a9a9;
+	margin-left: 37px;
+	margin-top: 0px;
+}
+
+table .table-garo2 :hover a {
+	background-color: #fff;
+}
+
+table.table-garo2 :hover {
+	color: black;
+}
+
+table.table-garo2 .tit :hover {
+	font-weight: bold;
+}
+
+.table-garo2 tr th, .tabe-garo2 .tr .th {
+	background: #f8eae2 
+		center;
+}
+
+table.table-garo2 th {
+	font-size: 15px;
+	font-weight: bold;
+	color: black;
+	padding: 5px 3px;
+	border-bottom: 1px solid #a9a9a9;
+}
+
+table.table-garo2 td {
+	border-bottom: 1px solid #ccc;
+	color: black;
+	cursor: pointer;
+	padding: 6px 8px;
+}
+
+.tit {
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+
+.con {
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   text-align: left;
+}
+
+.con a {
+   margin-left: 45px;
+   text-decoration: none;
+   color: black;
+   font-size: 14px;
+}
+
+.con a:hover {
+   color: black;
+   font-weight: bold;
+}
+
+.w60 {
+   min-width: 20px;
+}
+
+.w100 {
+   width: 400px;
+}
+
+.w70 {
+   width: 300px;
 }
 
 .button {
@@ -139,4 +234,6 @@ table.table-garo2 td {
 	font-size: 1.4em;
 	letter-spacing: 3px;
 	line-height: 0.8;​
+}
+
 }

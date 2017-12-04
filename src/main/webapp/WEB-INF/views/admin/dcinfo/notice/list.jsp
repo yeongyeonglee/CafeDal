@@ -78,7 +78,7 @@
     
          <tr>           
          <c:forEach var="a" items="${nlist}">
-            <td class="con w100"><a href="notice/${a.num}">${a.dtitle}</td>
+            <td class="con w100"><a href="notice/${a.num}">${a.dtitle}</a></td>
               <%-- <c:forEach var="cmtlist" items="${cmtlist}">
             <td>댓글 ${cmtlist.count}</td>
          </c:forEach> --%>
@@ -110,9 +110,9 @@
    </tbody>
 </table>
 <div class="regs">
-<div class="reg-admin">
-   <a class="eff-1" href="notice/reg">등록</a>
-</div>
+	<div class="reg-admin">
+	   <a class="eff-1" href="notice/reg">등록</a>
+	</div>
 </div>
 <h3 class="hidden">공지사항 검색폼</h3>
 <div class="d1">

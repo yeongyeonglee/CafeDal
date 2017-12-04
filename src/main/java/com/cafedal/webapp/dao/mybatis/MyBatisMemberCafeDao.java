@@ -97,6 +97,13 @@ public class MyBatisMemberCafeDao implements MemberCafeDao {
 		
 		return result;
 	}
+
+	@Override
+	public int delete(String memberid) {
+		int result = delete(new MemberCafe(memberid));
+		
+		return result;
+	}
 }
 
 	

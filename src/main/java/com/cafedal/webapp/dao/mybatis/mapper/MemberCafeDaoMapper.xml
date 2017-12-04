@@ -20,6 +20,6 @@
 		   #{cafecode})
   </insert>	
   <delete id="delete" parameterType="com.cafedal.webapp.entity.MemberCafe">
-	       delete from membercafe where memberid=#{memberid};
+	       delete from membercafe where memberid=#{memberid}
   </delete>
 </mapper>

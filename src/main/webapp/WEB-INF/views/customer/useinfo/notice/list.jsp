@@ -45,7 +45,7 @@
 
 <div style="margin-top: 30px; margin-bottom: -10px;">
 
-   <label class="list-tit"> 카페 이용 방법</label>
+<!--    <label class="list-tit"> 카페 이용 방법</label> -->
 
 </div>
 

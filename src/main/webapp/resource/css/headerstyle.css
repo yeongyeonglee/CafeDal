@@ -10,12 +10,24 @@
 	left: 0;
 }
 
+#header-1 {
+	height: 54px;
+	z-index: 100;
+	width: 100%;
+	top: 100;
+	left: 0;
+}
+
 #header>.content-container {
 	position: relative;
 }
 
 #header>.content-container>#member-menu, #logo {
 	position: absolute;
+}
+
+#header>.content-container>#member-menu{
+	height: 54px;
 }
 
 #logo{

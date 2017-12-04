@@ -30,5 +30,7 @@ public interface MemberCafeDao  {
 	int delete(MemberCafe memberCafe);
 
 	int MemberInsert(String memberid, String cafecode);
+
+	int delete(String id);
 }
 
