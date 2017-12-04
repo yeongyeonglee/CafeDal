@@ -25,18 +25,10 @@
 			<li><a style="font-weight: bold; font-size: 20px;"
 				class="btn dcinfo" href="${path}/customer/dcinfo/notice">카페할인정보</a>
 			</li>
-<<<<<<< HEAD
-			<li><a style="font-weight: bold; font-size: 20px;"
-				class="btn dcinfo" href="${path}/main/today">오늘의 카페</a></li>
+
+			<li><a style="font-weight: bold; font-size: 20px;"				class="btn dcinfo" href="${path}/main/today">오늘의 카페</a></li>
 		</ul>
-=======
-			<li>
-				<a class="btn dcinfo" href="${path}/customer/dcinfo/sub/gongcha">카페할인정보</a>		
-			</li>
-			<li>
-				<a class="btn dcinfo" href="${path}/main/today">오늘의 카페</a>		
-			</li>
->>>>>>> refs/remotes/origin/master
+
 	</div>
 
 </div>
