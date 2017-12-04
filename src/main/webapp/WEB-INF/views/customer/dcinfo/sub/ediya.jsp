@@ -115,7 +115,7 @@
 									</div>
 									<div class="meta">
 										<time class="published">2017. 11. 28</time>
-										<time class="published">2017. 12. -- </time> 
+										<time class="published">2017. 12. 18 </time> 
 										<a class="author"><span class="name">Ediya</span><img src="${path}/resource/images/logo-ediya.PNG" alt="" /></a>
 									</div>
 								</header>
@@ -124,6 +124,42 @@
 								<img class="image featured" src="${path}/resource/images/b-ediya2.PNG" alt="" style="width:650px; margin-left: 100px" />
 
 			
+							</article>
+							
+							<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2>이디야 신한카드 발급 이벤트</h2>
+										<p>지금 이디야 신한카드를 신청하시면 이디야 모바일 상품권 1만원 또는 아메리카노 쿠폰 1매를 추가로 제공! </p>
+									</div>
+									<div class="meta">
+										<time class="published">2017. 09. 01</time>
+										<time class="published">2017. 11. 30 </time> 
+										<a class="author"><span class="name">Ediya</span><img src="${path}/resource/images/logo-ediya.PNG" alt="" /></a>
+									</div>
+								</header>
+								<img class="image featured" src="${path}/resource/images/b-ediya5.PNG" alt="" style="width:650px;" />
+								
+							</article>
+							
+							<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2>눈꽃빙수 할인쿠폰 증정 이벤트</h2>
+										<p>이디야 멤버스만의 혜택 -눈꽃빙수 1000원 쿠폰 증정!</p>
+									</div>
+									<div class="meta">
+										<time class="published">2017. 08. 10</time>
+										<time class="published">2017. 08. 30 </time> 
+										<a class="author"><span class="name">Ediya</span><img src="${path}/resource/images/logo-ediya.PNG" alt="" /></a>
+									</div>
+								</header>
+								<img class="image featured" src="${path}/resource/images/b-ediya4.PNG" alt="" style="width:650px;" />
+								<p class="p">- 이디야 멤버스 우수회원 70만명과 신규 이디야 멤버스 회원분들께 빙수 1,000원 할인 쿠폰을 드립니다. <br />
+					
+								</p>
 							</article>
 
 					</div>
@@ -135,11 +171,10 @@
 							<section id="intro">
 								<!-- <a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a> -->
 								<header>
-								<header>
-									<h2 style="margin-top: -2px; margin-bottom: -2px; font-size: 23px;"><a href="${path}/customer/useinfo/notice">■</a>
-									    <a href="${path}/customer/dcinfo/sub/gongcha">■</a>
-									    <a href="${path}/main/today">■</a></h2>
-									<h2>Starbucks</h2>
+									<h2 style="margin-top: -2px; margin-bottom: -2px; font-size: 15px;">
+										<a style=" padding-right: 20px;" href="${path}/customer/useinfo/notice">이용정보</a>
+									    <a style=" padding-right: 20px;" href="${path}/customer/dcinfo/sub/gongcha">할인정보</a>
+									    <a href="${path}/main/today">오늘의 카페</a></h2>
 									<h2>Ediya</h2>
 									<p>토피넛 라떼(+샷추가) & 바닐라라떼</p>
 								</header>
