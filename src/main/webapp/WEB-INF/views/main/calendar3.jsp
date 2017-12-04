@@ -24,15 +24,11 @@
 		
 	 	/* var name_by_id = $('#test_id').attr('dtitle');
 		alert(name_by_id); */
-		var array = new Array($('.test_id').length);
-		for(var i=0; i<array.length; i++){
-			array[i] = {
-					title: $('.test_id').eq(i).val(),
-					start: new Date($('.test_id2').eq(i).val()),
-					end: new Date($('.test_id3').eq(i).val())
-				}
-		}
-
+		
+		var value = $('#test_id').val();
+		var value2 = $('#test_id2').val();
+		var value3 = $('#test_id3').val();
+		var value4 = $('#test_id4').val();
 		
  		$('#calendar').fullCalendar({
 			header: {
@@ -41,49 +37,29 @@
 				right: 'month,basicWeek,basicDay'
 			},
 			editable: true,
-			events: array 
-				/* [
-				/* for(var i=0; i<$('#test_id').length; i++) */
-			 	/*{
-					title: $('.test_id').eq(0).val(),
-					start: new Date($('.test_id2').eq(0).val()),
-					end: new Date($('.test_id3').eq(0).val())
-				},
+			events: [
 				{
-					title: $('.test_id').eq(1).val(),
-					start: new Date($('.test_id2').eq(1).val()),
-					end: new Date($('.test_id3').eq(1).val())
-				},
-				{
-					title: $('.test_id').eq(2).val(),
-					start: new Date($('.test_id2').eq(2).val()),
-					end: new Date($('.test_id3').eq(2).val())
+					title: value,
+					start: new Date(value2),
+					end: new Date(value3)
 				}
-			] */
+		]
 		});
 		
-	/* 	$('#calendar').change(function(){
-			alert($("#calendar").val());
-			$.post("/getUseList", {"dtitle": $('#calendar').val() }, function(result) {
-				for(var i=0 in result.length){
-					alert(result[i] ["id"]);
-				}
-			})
-		}); */
-
-	});
-	
+	}); 
 
 </script>
+
+
 
 <main class="main">
 	<form name="calendarFrm" id="calendarFrm" action="" method="GET">
 		<div class="calendar" id="calendar">
             <div>
             	<c:forEach var="n" items="${list}">
-            		<input type="hidden" class="test_id" value="${n.dtitle}">
-            		<input type="hidden" class="test_id2" value="${n.startdate}">
-            		<input type="hidden" class="test_id3" value="${n.finishdate}">
+            		<input type="hidden" id="test_id" value="${n.dtitle}">
+            		<input type="hidden" id="test_id2" value="${n.startdate}">
+            		<input type="hidden" id="test_id3" value="${n.finishdate}">
             	</c:forEach>
             </div>
             
