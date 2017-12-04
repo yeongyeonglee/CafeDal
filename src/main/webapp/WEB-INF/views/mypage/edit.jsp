@@ -6,8 +6,6 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link type="text/css" rel="stylesheet"
 	href="${path}/resource/css/mypagestyle.css">
-<br />
-<br />
 
 <main class="main"> <!-- 회원가입 폼 -->
 <div id="div_activate" class="container">

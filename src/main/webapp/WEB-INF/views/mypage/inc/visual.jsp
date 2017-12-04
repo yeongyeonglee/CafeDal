@@ -12,10 +12,10 @@
 				<a class="btn aboutus" href="${path}/mypage/edit">정보수정</a>
 			</li>
 			<li>
-				<a class="btn dcinfo" href="${path}/mypage/mydcinfo">나의 카페할인정보</a>		
+				<a class="btn dcinfo" href="${path}/mypage/mydcinfo">카페할인정보</a>		
 			</li>
 			<li>
-				<a class="btn dcinfo" href="${path}/customer/dcinfo/notice">회원탈퇴</a>		
+				<a class="btn dcinfo" href="${path}/mypage/delete">회원탈퇴</a>		
 			</li>
 	</div>
 	

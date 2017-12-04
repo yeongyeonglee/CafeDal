@@ -5,6 +5,7 @@ import java.util.Date;
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class MyDcInfoView {
+	private int dcinfonum;
 	private String id;
 	private String cafecode;
 	private String cafename;
@@ -13,13 +14,15 @@ public class MyDcInfoView {
 	@DateTimeFormat(pattern="yyyy-MM-dd")private Date startdate;
 	@DateTimeFormat(pattern="yyyy-MM-dd")private Date finishdate;
 	
+	
 	public MyDcInfoView() {
 
 	}
 
-	public MyDcInfoView(String id, String cafecode, String cafename, String title, String content, Date startdate,
+	public MyDcInfoView(int dcinfonum, String id, String cafecode, String cafename, String title, String content, Date startdate,
 			Date finishdate) {
 		super();
+		this.dcinfonum = dcinfonum;
 		this.id = id;
 		this.cafecode = cafecode;
 		this.cafename = cafename;
@@ -83,6 +86,14 @@ public class MyDcInfoView {
 
 	public void setFinishdate(Date finishdate) {
 		this.finishdate = finishdate;
+	}
+
+	public int getDcinfonum() {
+		return dcinfonum;
+	}
+
+	public void setDcinfonum(int dcinfonum) {
+		this.dcinfonum = dcinfonum;
 	}
 
 }

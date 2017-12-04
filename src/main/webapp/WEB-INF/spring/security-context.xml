@@ -7,7 +7,7 @@
 
 		<intercept-url pattern="/index" access="hasRole('ROLE_USER')" />
       <intercept-url pattern="/customer/**" access="hasRole('ROLE_USER')" />
-      <intercept-url pattern="/mypage/*" access="hasRole('ROLE_USER')" />
+      <!-- <intercept-url pattern="/mypage/*" access="hasRole('ROLE_USER')" /> -->
       <intercept-url pattern="/main/*" access="hasRole('ROLE_USER')" />
       <!-- <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/> -->
 

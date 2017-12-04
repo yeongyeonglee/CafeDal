@@ -1,41 +1,86 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="ctx" value="${pageContext.request.contextPath}" />
-         <aside class="aside">
-            <h1>ADMIN PAGE</h1>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="path" value="${pageContext.request.contextPath}" />
+<link type="text/css" rel="stylesheet"
+	href="${path}/resource/css/aside2.css">
 
-            <nav class="menu text-menu first margin-top">
-               <h1>마이페이지</h1>
-               <ul>
-                  <li><a href="${ctx}/admin/index">관리자홈</a></li>                  
-                  <li><a href="${ctx}/teacher/index">선생님페이지</a></li>
-                  <li><a href="${ctx}/student/index">수강생페이지</a></li>
-               </ul>
-            </nav>
-                     
 
-            <nav class="menu text-menu">
-               <h1>회원관리</h1>
-               <ul>
-                  <li><a href="${ctx}/admin/member/all">가입회원</a></li>
-                  <li><a href="${ctx}/admin/member/role">역할그룹</a></li>
-                  <li><a href="${ctx}/admin/member/admin">관리자</a></li>
-                  <li><a href="${ctx}/admin/member/teacher">선생님</a></li>
-                  <li><a href="${ctx}/admin/member/seller">판매담당자</a></li>
-               </ul>
-            </nav>
-            
-            <nav class="menu text-menu">
-               <h1>공지관리</h1>
-               <ul>
-                  <li><a href="">메인슬라이드</a></li>
-                  <li><a href="">공지사항</a></li>
-                  <li><a href="">팝업공지</a></li>                  
-               </ul>
-            </nav>
-            
-            
+<script type="text/javascript">
+	$(function() {
+		$("#accordian h3").click(function() {
+			$("#accordian ul ul").slideUp();
+			if (!$(this).next().is(":visible")) {
+				$(this).next().slideDown();
+			}
+		});
+	})
+</script>
 
-            
-         </aside>
+<aside>
+
+	<input type="checkbox" id="menu_state" checked>
+	<nav>
+
+		<h1 id="logo">
+
+			<a href="${path}/admin/manage/list"> <img
+				src="${path}/resource/images/hyelin.png" alt="CafeDal" />
+
+			</a>
+		</h1>
+
+		<div class="profile">
+			<li>Admin</li>
+
+			<security:authorize access="hasRole('ROLE_USER')">
+				<li >
+					<form action="${path}/logout" method="post">
+						<input type="hidden" name="${_csrf.parameterName}"
+							value="${_csrf.token}" /> <input type="submit" value="LOGOUT"
+							class ="id" />
+					</form>
+				</li>
+				<!-- <li><a id="mypage" href="../mypage/edit">MY PAGE</a></li> -->
+			</security:authorize>
+
+		</div>
+		<div id="accordian">
+
+			<ul>
+				<li class="active">
+					<h3>
+						<span class="icon-dashboard"></span>회원 관리
+					</h3>
+					<ul>
+						<li><a href="${path}/admin/manage/list">정보 조회</a></li>
+						<!-- 	<li><a href="#">Search</a></li> -->
+
+					</ul>
+				</li>
+				<li class="active">
+					<h3>
+						<span class="icon-tasks"></span>공지관리
+					</h3>
+					<ul>
+						<li><a href="${path}/admin/useinfo/notice">이용 정보 관리</a></li>
+						<li><a href="${path}/admin/dcinfo/notice">할인 정보 관리</a></li>
+					</ul>
+				</li>
+				<li class="active">
+					<h3>
+						<span class="icon-tasks"></span>카페 관리
+					</h3>
+					<ul>
+						<li><a href="${path}/admin/cafe/manage">카페 정보 조회</a></li>
+
+					</ul>
+				</li>
+
+			</ul>
+		</div>
+
+	</nav>
+</aside>
+
+

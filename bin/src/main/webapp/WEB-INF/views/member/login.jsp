@@ -46,7 +46,10 @@
 							<a class="join" href="join">회원가입</a>
 						</div>
 						<div class="id_pwd_search">
-							<a class="id_pwd_search" href="">아이디/비밀번호 찾기</a>
+							<a class="id_pwd_search" href="idpwdFind">아이디/비밀번호 찾기</a>
+						</div>
+						<div class="admin_login" >
+							<a class="admin_login" href="login2">관리자 로그인</a>
 						</div>
 					</div>
 					

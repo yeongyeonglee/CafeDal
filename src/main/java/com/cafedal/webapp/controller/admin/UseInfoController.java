@@ -196,9 +196,6 @@ public class UseInfoController {
 	@RequestMapping("notice/comdelete")
 	public String noticeComDel(@RequestParam("num") int num, @RequestParam("nnum") int nnum,Principal principal) {
 
-		
-
-		
 		usecomDao.delete(nnum);
 
 		return "redirect:../notice/" +num;

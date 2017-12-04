@@ -33,7 +33,7 @@ public class CalendarController {
          DateData dateData, Model model, HttpServletRequest request, Principal principal){
       
       String id = principal.getName();
-      
+   /*   
       Calendar cal = Calendar.getInstance();
       DateData calendarData;
       //검색 날짜
@@ -79,7 +79,7 @@ public class CalendarController {
             model.addAttribute("dateList", dateList);      //날짜 데이터 배열
             model.addAttribute("today_info", today_info);
       
-
+*/
 
       List<CalendarView> list = calendarDao.getUseList(id);
 

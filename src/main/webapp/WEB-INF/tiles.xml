@@ -55,7 +55,14 @@
       <put-attribute name="body" value="/WEB-INF/views/member/{1}.jsp" />
    </definition>
    
-    <definition name="mypage.*"  template="/WEB-INF/views/inc/root-layout.jsp" >
+   <definition name="mypage.deleteOk"  template="/WEB-INF/views/inc/login-layout.jsp" >
+      <put-attribute name="title" value="Tiles tutorial homepage" />
+      <put-attribute name="path" value="/" />
+      <put-attribute name="css" value="joinHello.css" />
+      <put-attribute name="body" value="/WEB-INF/views/mypage/deleteOk.jsp" />
+   </definition>
+   
+    <definition name="mypage.*"  template="/WEB-INF/views/inc/sub-layout.jsp" >
       <put-attribute name="path" value="/" />
       <put-attribute name="css" value="{1}.css" />
       <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
