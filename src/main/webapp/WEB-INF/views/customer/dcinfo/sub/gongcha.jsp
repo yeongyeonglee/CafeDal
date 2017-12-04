@@ -4,7 +4,8 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <c:set var="path" value="${pageContext.request.contextPath}" />
-<link rel="stylesheet" href="${path}/resource/css/dccss/main.css" />
+<link rel="stylesheet" href="${path}/resource/css/dccss/main.css" /> 
+<%-- <link rel="stylesheet" href="${path}/resource/css/dccss/subcss.css" />  --%>
 
 <%-- <link type="text/css" rel="stylesheet"
    href="${path}/resource/css/adminliststyle.css"> --%>
@@ -17,7 +18,7 @@
  <script src="${path}/resource/js/dcjs/main.js"></script>   	
 			
 			
-<main class="main">
+
 	<head>
 		<title>카페 할인 정보</title>
 		<meta charset="utf-8" />
@@ -27,83 +28,17 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="resource/css/dccss/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
-	<body>
+	<main>
+	<!-- <body class="code"> -->
 
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header -->
-				<!-- 	<header id="header">
-						<h1><a href="#">Cafe Dal</a></h1>
-						<nav class="links">
-							<ul>
-								<li><a href="#">GongCha</a></li>
-								<li><a href="#">Starbucks</a></li>
-								<li><a href="#">Ediya</a></li>
-								<li><a href="#">CoffeeBean</a></li>
-								<li><a href="#">TwoSome</a></li>
-								<li><a href="#">Hollys</a></li>
-							</ul>
-						</nav>
-						<nav class="main">
-							<ul>
-								<li class="search">
-									<a class="fa-search" href="#search">Search</a>
-									<form id="search" method="get" action="#">
-										<input type="text" name="query" placeholder="Search" />
-									</form>
-								</li>
-								<li class="menu">
-									<a class="fa-bars" href="#menu">Menu</a>
-								</li>
-							</ul>
-						</nav>
-					</header> -->
 
-				<!-- Menu -->
-					<section id="menu">
-
-						<!-- Search -->
-							<section>
-								<form class="search" method="get" action="#">
-									<input type="text" name="query" placeholder="Search" />
-								</form>
-							</section>
-
-						<!-- Links -->
-				<!-- 			<section>
-								<ul class="links">
-									<li>
-										<a href="#">
-											<h3>Lorem ipsum</h3>
-											<p>Feugiat tempus veroeros dolor</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Dolor sit amet</h3>
-											<p>Sed vitae justo condimentum</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Feugiat veroeros</h3>
-											<p>Phasellus sed ultricies mi congue</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Etiam sed consequat</h3>
-											<p>Porta lectus amet ultricies</p>
-										</a>
-									</li>
-								</ul>
-							</section>
- -->
 						<!-- Actions -->
 							<section>
 								<ul class="actions vertical">
-									<li><a href="#" class="button big fit">Log In</a></li>
+									<!-- <li><a href="#" class="button big fit">Log In</a></li> -->
 								</ul>
 							</section>
 
@@ -112,19 +47,19 @@
 				<!-- Main -->
 				
 				<%-- <c:forEach var="n" items="${list}"> --%>
-					<div id="main">
+				 <div id="main"> 
 
 						<!-- Post -->
-							<article class="post">
+						<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">제휴 - L.POINT 5% 추가 적립</a></h2>
+										<h2>제휴 - L.POINT 5% 추가 적립</h2>
 										<p>매 월 5/15/25일 L.POINT 5% 추가 적립 받으세요!</p>
 									</div>
 									<div class="meta">
 										<time class="published">2017. 09. 05</time>
 										<time class="published">2017. 12. 25</time> 
-										<a href="#" class="author"><span class="name">GongCha</span><img src="${path}/resource/images/logo-gongcha.PNG" alt="" /></a>
+										<a class="author"><span class="name">GongCha</span><img src="${path}/resource/images/logo-gongcha.PNG" alt="" /></a>
 									</div>
 								</header>
 								<img class="image featured" src="${path}/resource/images/b-gong1.PNG" alt="" />
@@ -137,13 +72,25 @@
 							</article>
 
 						<!-- Post -->
-						
+						<article class="post">
+								<header>
+									<div class="title">
+										<h2>멤버십 앱-신메뉴 따뜻한 밀크티 1+1 쿠폰</h2>
+										<p>공차 멤버십 앱 회원님께 신메뉴 따뜻한 신메뉴 따뜻한 밀크티 1+1 쿠폰을 드립니다.</p>
+									</div>
+									<div class="meta">
+										<time class="published">2017. 12. 01</time>
+										<time class="published">2017. 12. 19</time> 
+										<a class="author"><span class="name">GongCha</span><img src="${path}/resource/images/logo-gongcha.PNG" alt="" /></a>
+									</div>
+								</header>
+								<img class="image featured" src="${path}/resource/images/b-gong2.PNG" style="width:750px ; height: 350px" alt="" />
+								<p class="p">- 행사 메뉴: 신메뉴 따뜻한 밀크티 3종(HOT/ICED, L사이즈에 한함) 말차폼 초콜렛 밀크티, 초콜렛폼 타로 밀크티, 윈터폼 블랙 밀크티<br />
+									- 행사 대상: 공차 멤버십 앱 회원 (터칭 적립 제외) * 12월 19일까지 신규 가입자 포함 행사 유의사항 <br />
+									- 미진행 매장: NC부천점,NC서면점,NC송파점,NC평촌범계점,강남파이낸스센터점,강서구청점,갤러리아센터시티점,계산역점,고대안암점,고속터미널점,고척스카이돔점,고투몰점,공주휴게소점 당진/대잔방향
+								</p>
+							</article>
 
-						<!-- Pagination -->
-							<ul class="actions pagination">
-								<li><a href="" class="disabled button big previous">Previous Page</a></li>
-								<li><a href="#" class="button big next">Next Page</a></li>
-							</ul>
 
 					</div>
 
@@ -154,6 +101,11 @@
 							<section id="intro">
 								<!-- <a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a> -->
 								<header>
+									<h2 style="margin-top: -2px; margin-bottom: -2px; font-size: 15px;">
+										<a style=" padding-right: 20px;" href="${path}/customer/useinfo/notice">이용정보</a>
+									    <a style=" padding-right: 20px;" href="${path}/customer/dcinfo/sub/gongcha">할인정보</a>
+									    <a href="${path}/main/today">오늘의 카페</a></h2>
+					
 									<h2>GongCha</h2>
 									<p>망고스무디+펄 추가, 초코쿠앤크 스무디</p>
 								</header>
@@ -166,6 +118,7 @@
 									<!-- Mini Post -->
 									    <article class="mini-post">
 											<header>
+												
 												<h3><a href="gongcha">GongCha</a></h3>
 												<time class="published">밀크티 전문, 타피오카 펄 & 밀크폼</time>
 												<a href="gongcha" class="author"><img src="${path}/resource/images/logo-gongcha.PNG" alt="" /></a>
@@ -285,22 +238,11 @@
 									<li><a href="#" class="button">Learn More</a></li>
 								</ul>
 							</section> -->
-
-						<!-- Footer -->
-							<section id="footer">
-                         <!--  <ul class="icons">
-									<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
-									<li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-								<p class="copyright">&copy; Untitled. Crafted: <a href="http://designscrazed.org/">HTML5</a>.</p> -->
-							</section>
+						
 
 					</section>
 
 			</div>
 
-	</body>
+<!-- 	</body> -->
 </main>

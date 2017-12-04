@@ -70,36 +70,6 @@
 								</form>
 							</section>
 
-						<!-- Links -->
-				<!-- 			<section>
-								<ul class="links">
-									<li>
-										<a href="#">
-											<h3>Lorem ipsum</h3>
-											<p>Feugiat tempus veroeros dolor</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Dolor sit amet</h3>
-											<p>Sed vitae justo condimentum</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Feugiat veroeros</h3>
-											<p>Phasellus sed ultricies mi congue</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Etiam sed consequat</h3>
-											<p>Porta lectus amet ultricies</p>
-										</a>
-									</li>
-								</ul>
-							</section>
- -->
 						<!-- Actions -->
 							<section>
 								<ul class="actions vertical">
@@ -118,13 +88,13 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">시즌 음료 2잔 포함 총 7잔 구매 시 2018 플래너를 드립니다!</a></h2>
+										<h2>시즌 음료 2잔 포함 총 7잔 구매 시 2018 플래너를 드립니다!</h2>
 										<p>시즌 음료 2잔 포함 총 7잔 구매 시 2018 플래너 쿠폰이 발행됩니다. </p>
 									</div>
 									<div class="meta">
 										<time class="published">2017. 11. 01</time>
 										<time class="published">2017. 12. 31</time> 
-										<a href="" class="author"><span class="name">Hollys</span><img src="${path}/resource/images/logo-hollys.PNG" alt="" /></a>
+										<a class="author"><span class="name">Hollys</span><img src="${path}/resource/images/logo-hollys.PNG" alt="" /></a>
 									</div>
 								</header>
 								<img class="image featured" src="${path}/resource/images/b-hollys1.PNG" alt="" style="width:820px ; height: 280px" />
@@ -136,109 +106,6 @@
 			
 							</article>
 
-						<!-- Post -->
-						
-					<%-- 	<!-- Post 2 -->
-							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="#">2017 크리스마스 e-프리퀀시 이벤트</a></h2>
-										<p>크리스마스 음료 3잔 포함, 총 17잔의 음료를 구매하시면 2018 스타벅스 플래너(한정)를 드립니다.</p>
-									</div>
-									<div class="meta">
-										<time class="published">2017. 10. 27</time>
-										<time class="published">2017. 12. 31</time> 
-										<a href="#" class="author"><span class="name">Starbucks</span><img src="${path}/resource/images/logo-star.png" alt="" /></a>
-									</div>
-								</header>
-								<img class="image featured" src="${path}/resource/images/b-star3.PNG" alt="" style="width:820px ; height: 500px" />
-								<p>- e 스티커 적립기간: 2017년 10월 27일 - 12월 31일<br />
-								   - 플래너 증정기간: 2017년 10월 27일 - 2018년 1월 7일<br />
-								   </p>
-				<footer>
-									<ul class="actions">
-										<li><a href="#" class="button big">Continue Reading</a></li>
-									</ul>
-								<!-- 	<ul class="stats">
-										<li><a href="#">General</a></li>
-										<li><a href="#" class="icon fa-heart">28</a></li>
-										<li><a href="#" class="icon fa-comment">128</a></li>
-									</ul> -->
-								</footer>
-							</article>
-
-						<!-- Post 2 -->
-						
-						<!-- Post 3 -->
-						<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="#">신세계 면세점 이벤트</a></h2>
-										<p>골드,그린 회원님! 신세계 면세점에서 제공하는 혜택입니다!</p>
-									</div>
-									<div class="meta">
-										<time class="published">2017. 11. 9</time>
-										<time class="published">2018. 1. 31</time> 
-										<a href="#" class="author"><span class="name">Starbucks</span><img src="${path}/resource/images/logo-star.png" alt="" /></a>
-									</div>
-								</header>
-								<img class="image featured" src="${path}/resource/images/b-star4.PNG" alt="" style="width:820px ; height: 500px" />
-								<p>- 대상: 그린, 골드회원<br />
-								       신세계 인터넷면세점 적립금 1만원 + 신규가입시  스타벅스 아메리카노(tall) 기프티콘 추가증정<br />
-								   - 대상: 골드회원   <br />
-								     신세계 면세점 명동점, 부산점, 인천공항점 방문시 면세점 GOLD 멤버십 발급 + 1만원 선불카드 증정
-								      </p>
-				<footer>
-									<ul class="actions">
-										<li><a href="#" class="button big">Continue Reading</a></li>
-									</ul>
-							<!-- 		<ul class="stats">
-										<li><a href="#">General</a></li>
-										<li><a href="#" class="icon fa-heart">28</a></li>
-										<li><a href="#" class="icon fa-comment">128</a></li>
-									</ul> -->
-								</footer>
-							</article> 
-						<!-- Post 3 -->
-						
-						<!-- Post 4 -->
-						<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="#">현대카드 H-Coin 이벤트</a></h2>
-										<p>H-Coin 현금처럼 사용 & 사용한 H-Coin의 5% 할인</p>
-									</div>
-									<div class="meta">
-										<time class="published">2017. 11. 16</time>
-										<time class="published">2018. 11. 15</time> 
-										<a href="#" class="author"><span class="name">Starbucks</span><img src="${path}/resource/images/logo-star.png" alt="" /></a>
-									</div>
-								</header>
-								<img class="image featured" src="${path}/resource/images/b-star5.PNG" alt="" style="width:820px ; height: 350px" />
-								<p>- H-Coin: M포인트를 전환하여 다양한 제휴처에서 현금처럼 100% 사용하는 포인트<br /> 
-								   - 이용방법: 현대카드 앱에서 M포인트를 H-Coin으로 전환하여 사용   <br />
-								   - H-Coin 사용시 아메리카노(tall)기프티콘을 1000분께 추첨 증정
-								      </p>
-				<footer>
-									<ul class="actions">
-										<li><a href="#" class="button big">Continue Reading</a></li>
-									</ul>
-							<!-- 		<ul class="stats">
-										<li><a href="#">General</a></li>
-										<li><a href="#" class="icon fa-heart">28</a></li>
-										<li><a href="#" class="icon fa-comment">128</a></li>
-									</ul> -->
-								</footer>
-							</article> 
-						<!-- Post 4 -->
-						 --%>
-
-						<!-- Pagination -->
-					<!-- 		<ul class="actions pagination">
-								<li><a href="" class="disabled button big previous">Previous Page</a></li>
-								<li><a href="#" class="button big next">Next Page</a></li>
-							</ul> -->
-
 					</div>
 
 				<!-- Sidebar -->
@@ -248,6 +115,11 @@
 							<section id="intro">
 								<!-- <a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a> -->
 								<header>
+									<header>
+									<h2 style="margin-top: -2px; margin-bottom: -2px; font-size: 15px;">
+										<a style=" padding-right: 20px;" href="${path}/customer/useinfo/notice">이용정보</a>
+									    <a style=" padding-right: 20px;" href="${path}/customer/dcinfo/sub/gongcha">할인정보</a>
+									    <a href="${path}/main/today">오늘의 카페</a></h2>
 									<h2>Hollys</h2>
 									<p>바닐라 딜라이트, 벨지안 초코</a></p>
 								</header>

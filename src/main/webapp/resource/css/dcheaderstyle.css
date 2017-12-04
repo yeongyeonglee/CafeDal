@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+#header2 {
+	height: 50px;
+	z-index: 100;
+	width: 100%;
+	top: 100;
+	left: 0;
+}
+
+#header>.content-container {
+	position: relative;
+}
+
+#header>.content-container>#member-menu, #logo {
+	position: absolute;
+}
+
+
+/* ----------------member-menu--------------------------------------  */
+
+#member-menu {
+	/* display: inline-block; */
+	margin-right: 100px;
+	background: black;
+	width: 100%;
+}
+
+#member-menu>.aboutus{
+	height: 50px;
+	margin-top: -180px;
+}
+
+#member-menu  li {
+	float: left;
+	padding-left: 30px;
+	list-style: none;
+}
+
+#member-menu  a {
+	/* font-family: 맑은고딕, 고딕, sans-serif;  */
+	font-family: Arial; 
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	margin-top: 13.5px;
+} 
+
+#logouts{
+	margin-right: 30px;
+	margin-left : 30px;
+	font-family: 맑은고딕, 고딕, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+	display: inline-block;
+	border: none;
+	background : black;
+	cursor: pointer;
+	height: 50px;
+}
+
+#mypage{
+	margin-right: 30px;
+}
+
+#id a{
+	cursor: pointer;
+	text-decoration: none;
+}
+
