@@ -139,7 +139,7 @@
 	</div>
 </section>
 
-<label class="list-tit"> 카페 할인 정보</label>
+
 
 <section id="gongcha" class="pad-xl">
 
