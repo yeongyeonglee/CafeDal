@@ -5,6 +5,11 @@
 <link type="text/css" rel="stylesheet"
 	href="${path}/resource/css/headerstyle.css">
 
+<style>
+
+
+</style>
+
 <header id="header">
 	<div class="content-container">
 		<div id="member-menu">

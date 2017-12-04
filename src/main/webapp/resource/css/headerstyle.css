@@ -133,24 +133,4 @@
 	cursor: pointer;
 }
 
-#logout {
-	margin-right: 30px;
-	margin-left : 30px;
-	font-family: 맑은고딕, 고딕, sans-serif;
-	font-size: 15px;
-	font-weight: bold;
-	color: white;
-	display: inline-block;
-	border: none;
-	background : black;
-	cursor: pointer;
-}
-
-#mypage{
-	margin-right: 30px;
-}
-
-#id a{
-	cursor: pointer;
-}
 

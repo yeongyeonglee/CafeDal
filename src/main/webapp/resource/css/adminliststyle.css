@@ -671,6 +671,19 @@ fieldset .reg-field {
    margin-top: -30px;
 }
 
+.buttons55 {
+      margin-left: 860px;
+    margin-top: 70px;
+}
+
+.buttons55 a {
+   text-decoration: none;
+   font-size: 13.33px;
+   color: #ffffff;
+   background: #808080;
+   padding: 1.1px 5px 1.1px 5px;
+}
+
 .buttons a {
    text-decoration: none;
    font-size: 13.33px;
