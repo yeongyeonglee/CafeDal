@@ -49,7 +49,6 @@
 				<td colspan="6">
 					<form name="check">
 						<div class="cm-check">
-<<<<<<< HEAD
 							<input type="checkbox" id="cafes" name="cafes" value="1" /> <label
 								class="cm-check2">공차</label> <input type="checkbox" id="cafes"
 								name="cafes" value="2" /> <label class="cm-check2">스타벅스</label>
@@ -59,7 +58,6 @@
 								type="checkbox" id="cafes" name="cafes" value="5" /> <label
 								class="cm-check2">투썸플레이스</label> --> <input type="checkbox"
 								id="cafes" name="cafes" value="6" /> <label class="cm-check2">할리스커피</label>
-=======
 							<input type="checkbox" id="cafes" name="cafes" value="1" />
 								<label class="cm-check2">공차</label>
 							<input type="checkbox" id="cafes" name="cafes" value="2" /> 
@@ -72,7 +70,6 @@
 								<label class="cm-check2">투썸플레이스</label>  -->
 							<input type="checkbox" id="cafes" name="cafes" value="6" />
 								<label class="cm-check2">할리스커피</label>
->>>>>>> refs/remotes/origin/master
 						</div>
 					</form>
 				</td>
