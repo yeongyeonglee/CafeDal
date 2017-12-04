@@ -9,7 +9,7 @@
     font-family:Arial, Helvetica, sans-serif;
     }
 
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	#home, #mypage, html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, fieldset, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
 		border: 0;
@@ -19,10 +19,11 @@
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-		display: block;
+		/* display: block; */
 	}
 
 	body {
+	    margin-top:100px;
 		line-height: 1;
 	}
 
@@ -50,15 +51,15 @@
 
 /* Box Model */
 
-	*, *:before, *:after {
+/* 	*, *:before, *:after {
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 	}
-
+ */
 /* Grid */
 
-	.row {
+	/* .row {
 		border-bottom: solid 1px transparent;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
@@ -192,7 +193,7 @@
 	.\31 1u, .\31 1u\24 {
 		width: 91.6666666667%;
 		clear: none;
-		margin-left: 0;
+		mrgin-left: 0;
 	}
 
 	.\31 0u, .\31 0u\24 {
@@ -1387,7 +1388,7 @@
 			margin-left: 8.33333%;
 		}
 
-	}
+	} */
 
 /* Basic */
 
@@ -1424,7 +1425,7 @@
 
 /* Type */
 
-	body, input, select, textarea {
+	body, select, textarea {
 		color: #646464;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 14pt;
@@ -1434,7 +1435,7 @@
 
 		@media screen and (max-width: 1680px) {
 
-			body, input, select, textarea {
+			body, select, textarea {
 				font-size: 12pt;
 			}
 
@@ -1442,7 +1443,7 @@
 
 		@media screen and (max-width: 1280px) {
 
-			body, input, select, textarea {
+			body, select, textarea {
 				font-size: 12pt;
 			}
 
@@ -1450,7 +1451,7 @@
 
 		@media screen and (max-width: 980px) {
 
-			body, input, select, textarea {
+			body, select, textarea {
 				font-size: 12pt;
 			}
 
@@ -1458,7 +1459,7 @@
 
 		@media screen and (max-width: 736px) {
 
-			body, input, select, textarea {
+			body, select, textarea {
 				font-size: 12pt;
 			}
 
@@ -1466,7 +1467,7 @@
 
 		@media screen and (max-width: 480px) {
 
-			body, input, select, textarea {
+			body, select, textarea {
 				font-size: 12pt;
 			}
 
@@ -1477,7 +1478,7 @@
 		-webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		-ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
 		transition: color 0.2s ease, border-bottom-color 0.2s ease;
-		border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
+		/* border-bottom: dotted 1px rgba(160, 160, 160, 0.65); */
 		color: inherit;
 		text-decoration: none;
 	}
@@ -1491,12 +1492,12 @@
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #2ebaae !important;
+			color: #c0c0c0;
 		}
 
-			a:hover:before {
+	/* 		a:hover:before {
 				color: #2ebaae !important;
-			}
+			} */
 
 	strong, b {
 		color: #3c3b3b;
@@ -1695,7 +1696,7 @@
 
 /* Button */
 
-	input[type="submit"],
+	/* input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
 	button,
@@ -1828,11 +1829,11 @@
 			.button.disabled:before,
 			.button:disabled:before {
 				color: rgba(160, 160, 160, 0.3) !important;
-			}
+			} */
 
 /* Form */
 
-	form {
+	/* form {
 		margin: 0 0 2em 0;
 	}
 
@@ -1873,9 +1874,9 @@
 		font-size: 0.9em;
 		font-weight: 700;
 		margin: 0 0 1em 0;
-	}
+	} */
 
-	input[type="text"],
+	/* input[type="text"],
 	input[type="password"],
 	input[type="email"],
 	input[type="tel"],
@@ -1915,7 +1916,7 @@
 			border-color: #2ebaae;
 			box-shadow: inset 0 0 0 1px #2ebaae;
 		}
-
+ */
 	.select-wrapper {
 		text-decoration: none;
 		display: block;
@@ -1949,7 +1950,7 @@
 			display: none;
 		}
 
-	input[type="text"],
+/* 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
 	select {
@@ -2010,9 +2011,9 @@
 				text-align: center;
 				top: 0;
 				width: 1.65em;
-			}
+			} */
 
-		input[type="checkbox"]:checked + label:before,
+		/* input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
 			background: #3c3b3b;
 			border-color: #3c3b3b;
@@ -2053,7 +2054,7 @@
 	.formerize-placeholder {
 		color: #aaaaaa !important;
 		opacity: 1.0;
-	}
+	} */
 
 /* Icon */
 
@@ -2950,7 +2951,7 @@
 		padding-top: 3.5em;
 	}
 
-	#header {
+/* 	#header {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -2995,9 +2996,9 @@
 
 			#header h1 a {
 				font-size: 0.7em;
-			}
+			} */
 
-		#header .links {
+		/* #header .links {
 			-moz-flex: 1;
 			-webkit-flex: 1;
 			-ms-flex: 1;
@@ -3031,7 +3032,7 @@
 					letter-spacing: 0.25em;
 					text-transform: uppercase;
 				}
-
+ */
 		#header .main {
 			height: inherit;
 			line-height: inherit;
@@ -3090,13 +3091,13 @@
 			margin: 0;
 		}
 
-			#header form input {
+		/* 	#header form input {
 				display: inline-block;
 				height: 2.5em;
 				position: relative;
 				top: -2px;
 				vertical-align: middle;
-			}
+			} */
 
 		#header #search {
 			-moz-transition: all 0.5s ease;
@@ -3110,9 +3111,9 @@
 			white-space: nowrap;
 		}
 
-			#header #search input {
+		/* 	#header #search input {
 				width: 12em;
-			}
+			} */
 
 			#header #search.visible {
 				max-width: 12.5em;
