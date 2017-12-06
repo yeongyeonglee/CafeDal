@@ -37,12 +37,16 @@ public class ManageController {
    @Autowired
    private MemberDao memberDao;
       
-   @RequestMapping(value="list", method = RequestMethod.GET)
+   @RequestMapping("list")
    public String edit(@RequestParam(value = "p", defaultValue = "1") Integer page,
 		   @RequestParam(value = "f", defaultValue = "id") String field,
+		   @RequestParam(value = "q", defaultValue = "") String query,
 		   Manage manage, Model model, HttpServletRequest request) throws IOException {
-
+/*
 	   List<Member> list = memberDao.getUseListRole(page, field);
+*/
+	   List<Member> list = memberDao.getUseListRole(page, field, query);
+
 	   //List<Member> list = memberDao.getUseListRole(id);
 	   //List<Manage> listcafe = manageDao.getUseListCafe(id);
 	   
@@ -52,7 +56,19 @@ public class ManageController {
        return "admin.manage.list";
    }
    
-	@RequestMapping(value="delete", method = RequestMethod.GET)
+   /*@RequestMapping(value="list", method = RequestMethod.POST)
+   public String edit(@RequestParam(value = "p", defaultValue = "1") Integer page,
+		   @RequestParam(value = "f", defaultValue = "id") String field,
+		   @RequestParam(value = "f", defaultValue = "") String query,
+		   HttpServletRequest request) throws IOException {
+      
+	   
+       return "admin.manage.list";
+   }*/
+
+
+
+	@RequestMapping("delete")
 	public String noticeDel(HttpServletRequest request) {
 
 		  /*String deleteArticleIds = request.getParameter("deleteArticleId");
@@ -61,6 +77,7 @@ public class ManageController {
 
 		return "admin.manage.list" ;
 	}
+
 	
 	   @RequestMapping(value="delete", method = RequestMethod.POST)
 	   public String noticeDel(@RequestParam(value = "deleteArticleId", defaultValue = "") String id, Model model, Principal principal) throws IOException {
@@ -76,7 +93,6 @@ public class ManageController {
 		   return "redirect:list";
 	   }
 	   
-	
 
 
    

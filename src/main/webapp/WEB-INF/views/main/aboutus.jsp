@@ -116,15 +116,15 @@
 							alt="CafeDal" />
 						<div class="contentbox">
 							<header>
-								<h2>Cafe+Dal</h2>
+								<h2>CAFE+DAL</h2>
 							</header>
 							<br />
 							<p>안녕하세요. CAFEDAL입니다.</p>
 							<p>저희 홈페이지는 회원님이 즐겨 찾는 카페들의 이벤트를</p>
-							<p>달력 하나로 한 눈에 볼 수 있습니다 :)</p>
+							<p>달력으로 한 눈에 볼 수 있습니다 :)</p>
 							<br />
 							<br />
-							<p>카페 관리자인 회원님은</p>
+							<p>카페 관리자는</p>
 							<p>카페 등록 서비스를 통해 등록이 가능하고</p>
 							<p>타 회원들에게 이벤트 정보를 제공할 수 있습니다 :)</p>
 						</div>
@@ -139,17 +139,17 @@
 						<!-- <h1>informations</h1>
 						 <h1 class="header">Click Image to Enlarge</h1> -->
 						  <div class="imageContainer clearfix">
-						    <a class="imageLink" id="section03_1" src="${path}/resource/images/aboutus1.jpg" title="CALENDAR">
-						      <img class="image" style="width:338px; height:225px;" id="section03_1" src="${path}/resource/images/aboutus1.jpg" alt="CALENDAR">
+						    <a class="imageLink" id="section03_1" src="${path}/resource/images/aboutus01.jpg" title="CALENDAR">
+						      <img class="image" style="width:338px; height:225px;" id="section03_1" src="${path}/resource/images/aboutus01.jpg" alt="CALENDAR">
 						    </a>
-						    <a class="imageLink" id="section03_2" src="${path}/resource/images/aboutus2.jpg" title="USE INFO">
-						      <img class="image" style="width:338px; height:225px;" id="section03_2" src="${path}/resource/images/aboutus2.jpg" alt="USE INFO">
+						    <a class="imageLink" id="section03_2" src="${path}/resource/images/aboutus02.JPG" title="USE INFO">
+						      <img class="image" style="width:338px; height:225px;" id="section03_2" src="${path}/resource/images/aboutus02.JPG" alt="USE INFO">
 						    </a>
-						    <a class="imageLink" id="section03_3" src="${path}/resource/images/aboutus3.jpg" title="DC INFO">
-						      <img class="image" style="width:338px; height:225px;" id="section03_3" src="${path}/resource/images/aboutus3.jpg" alt="DC INFO">
+						    <a class="imageLink" id="section03_3" src="${path}/resource/images/aboutus03.JPG" title="DC INFO">
+						      <img class="image" style="width:338px; height:225px;" id="section03_3" src="${path}/resource/images/aboutus03.JPG" alt="DC INFO">
 						    </a>
-						    <a class="imageLink" id="section03_4" src="${path}/resource/images/aboutus4.jpg" title="TODAY'S COFFEE">
-						      <img class="image" style="width:338px; height:225px;" id="section03_4" src="${path}/resource/images/aboutus4.jpg" alt="TODAY'S COFFEE">
+						    <a class="imageLink" id="section03_4" src="${path}/resource/images/aboutus04.JPG" title="TODAY'S COFFEE">
+						      <img class="image" style="width:338px; height:225px;" id="section03_4" src="${path}/resource/images/aboutus04.JPG" alt="TODAY'S COFFEE">
 						    </a>
 						  </div>
 						  

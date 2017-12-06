@@ -12,7 +12,7 @@
       <!-- <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/> -->
 
       <form-login default-target-url="/main/calendar" login-page="/member/login" />
-      <form-login default-target-url="/admin/dcinfo/notice"
+      <form-login default-target-url="/admin/manage/list"
          login-page="/member/login2" />
 
       <logout logout-success-url="/member/login" />

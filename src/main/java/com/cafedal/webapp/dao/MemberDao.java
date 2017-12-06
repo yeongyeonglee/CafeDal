@@ -44,7 +44,9 @@ public interface MemberDao  {
 
 	int delete(String id);
 	
-	List<Member> getUseListRole(Integer page, String field);
+	//List<Member> getUseListRole(Integer page, String field);
+
+	List<Member> getUseListRole(Integer page, String field, String query);
 
 
 }
