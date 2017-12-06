@@ -50,7 +50,7 @@
 				 <div id="main"> 
 
 						<!-- Post -->
-							<article class="post">
+						<article class="post">
 								<header>
 									<div class="title">
 										<h2>제휴 - L.POINT 5% 추가 적립</h2>
@@ -72,6 +72,24 @@
 							</article>
 
 						<!-- Post -->
+						<article class="post">
+								<header>
+									<div class="title">
+										<h2>멤버십 앱-신메뉴 따뜻한 밀크티 1+1 쿠폰</h2>
+										<p>공차 멤버십 앱 회원님께 신메뉴 따뜻한 신메뉴 따뜻한 밀크티 1+1 쿠폰을 드립니다.</p>
+									</div>
+									<div class="meta">
+										<time class="published">2017. 12. 01</time>
+										<time class="published">2017. 12. 19</time> 
+										<a class="author"><span class="name">GongCha</span><img src="${path}/resource/images/logo-gongcha.PNG" alt="" /></a>
+									</div>
+								</header>
+								<img class="image featured" src="${path}/resource/images/b-gong2.PNG" style="width:750px ; height: 350px" alt="" />
+								<p class="p">- 행사 메뉴: 신메뉴 따뜻한 밀크티 3종(HOT/ICED, L사이즈에 한함) 말차폼 초콜렛 밀크티, 초콜렛폼 타로 밀크티, 윈터폼 블랙 밀크티<br />
+									- 행사 대상: 공차 멤버십 앱 회원 (터칭 적립 제외) * 12월 19일까지 신규 가입자 포함 행사 유의사항 <br />
+									- 미진행 매장: NC부천점,NC서면점,NC송파점,NC평촌범계점,강남파이낸스센터점,강서구청점,갤러리아센터시티점,계산역점,고대안암점,고속터미널점,고척스카이돔점,고투몰점,공주휴게소점 당진/대잔방향
+								</p>
+							</article>
 
 
 					</div>
@@ -83,9 +101,10 @@
 							<section id="intro">
 								<!-- <a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a> -->
 								<header>
-									<h2 style="margin-top: -2px; margin-bottom: -2px; font-size: 23px;"><a href="${path}/customer/useinfo/notice">■</a>
-									    <a href="${path}/customer/dcinfo/sub/gongcha">■</a>
-									    <a href="${path}/main/today">■</a></h2>
+									<h2 style="margin-top: -2px; margin-bottom: -2px; font-size: 15px;">
+										<a style=" padding-right: 20px;" href="${path}/customer/useinfo/notice">이용정보</a>
+									    <a style=" padding-right: 20px;" href="${path}/customer/dcinfo/sub/gongcha">할인정보</a>
+									    <a href="${path}/main/today">오늘의 카페</a></h2>
 					
 									<h2>GongCha</h2>
 									<p>망고스무디+펄 추가, 초코쿠앤크 스무디</p>

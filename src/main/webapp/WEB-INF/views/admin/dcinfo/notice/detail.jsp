@@ -116,9 +116,10 @@
 		<br>
 		<!-- **로그인 한 회원에게만 댓글 작성폼이 보이게 처리 -->
 		<c:if test="${sessionScope.userId != null}"></c:if>
-		<textarea class="comcontent"  name="content" placeholder="댓글을 작성해주세요"></textarea>
-		 <button class="combtn" type="submit">등록</button>
-
+		<ul class="comreg">
+		 <li><textarea class="comcontent"  name="content" placeholder="댓글을 작성해주세요"></textarea></li>
+		 <li><button class="combtn2" type="submit">등록</button></li>
+        </ul>
 	</div>
 </form>
 </div>

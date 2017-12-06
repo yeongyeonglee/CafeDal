@@ -25,7 +25,7 @@
 		<div class="navbar-header">
 		
 		
-			<a class="logo" href="index.html"><img src="img/logo.svg"
+			<a class="logo aa" href="index.html"><img src="img/logo.svg"
 				alt="Logo"></a>
 		</div>
 		<div class="navbar-collapse collapse">
@@ -147,11 +147,11 @@
 			<div
 				class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft"
 				data-wow-delay="0.8s">
-				<a href="#" target="_blank"> <img class="news-img pull-left"
+				<a class="aa" href="#" target="_blank"> <img class="news-img pull-left"
 					src="img/press-01.jpg"></a>
 					<p class="black">
-						<a class="p1"> STEP 1 : 스타벅스 커피 매장에서 즐기기 <br /> <br />
-						</a><small><a class="a1">스타벅스의 커피 메뉴에는 에스프레소, 콜드브루, 디카페인
+						<a class="p1 aa"> STEP 1 : 스타벅스 커피 매장에서 즐기기 <br /> <br />
+						</a><small><a class="a1 aa">스타벅스의 커피 메뉴에는 에스프레소, 콜드브루, 디카페인
 								으로 나누어져있습니다.<br> 에스프레소는 입안 가득히 커피와 달콤한 카라멜 향이 느껴지는 커피
 								음료입니다.<br> 다양한 원두를 즐기고 싶다면 에스프레소 메뉴중 오늘의 커피가 있습니다.<br>
 								매주 일주일 간격으로 하나의 원두 종류를 선정하여 신선하게 제공되는 드립커피로<br> 다른 커피 메뉴보다
@@ -173,11 +173,11 @@
 			<div
 				class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft"
 				data-wow-delay="1.2s">
-				<a href="#" target="_blank"> <img class="news-img pull-left"
+				<a href="#" target="_blank" class="aa"> <img class="news-img pull-left"
 					src="img/press-02.jpg"></a>
 					<p class=" black">
-						<a class="p1"> STEP 2 : 스타벅스 다양한 메뉴 즐기기<br /> <br />
-						</a><small><a class="a1"> 스타벅스에서는 프라푸치노, 티, 피지오등 다양한 음료
+						<a class="p1 aa"> STEP 2 : 스타벅스 다양한 메뉴 즐기기<br /> <br />
+						</a><small><a class="a1 aa"> 스타벅스에서는 프라푸치노, 티, 피지오등 다양한 음료
 								메뉴와 케익, 샌드위치등 푸드가 있습니다.<br> 음료와 푸드는 고정 메뉴와 한정 메뉴로 나눠져 한정
 								메뉴가 출시될 때 마다 다양한 이벤트를 즐길 수 있습니다.<br> 스타벅스에서는 커피 메뉴와 음료 메뉴를
 								커스텀을 할 수 있습니다.<br> 시럽 양 조절 , 샷 추가로 자신만의 메뉴를 만들어 즐길 수 있고 그
@@ -196,8 +196,8 @@
 				<a href="#" target="_blank"> <img class="news-img pull-left"
 					src="img/press-02.jpg"></a>
 					<p class="black">
-						<a class="p1">STEP 3 : 스타벅스 커피 집에서 즐기기<br /> <br /></a> <small><a
-							class="a1"> 스타벅스에서 판매하는 원두로 집에서 다양하게 즐길 수 있습니다.<br>
+						<a class="p1 aa">STEP 3 : 스타벅스 커피 집에서 즐기기<br /> <br /></a> <small><a
+							class="a1 aa"> 스타벅스에서 판매하는 원두로 집에서 다양하게 즐길 수 있습니다.<br>
 								스타벅스는 블론드 로스트, 미디엄 로스트와 다크 로스트의 세 가지 로스팅으로 분류됩니다.<br> 블론드
 								로스트는 향긋한 청량감으로 은은하고 부드러우며, 살짝 달콤한 풍미가 느껴지는 친근한 커피입니다.<br>
 								미디엄 로스트 커피는 너무 연하거나 너무 강하지 않은 그 중간의 입맛을 가진 분들에게 적합합니다.<br>
@@ -282,8 +282,8 @@
 				<a href="#" target="_blank"> <img class="news-img pull-left"
 					src="img/press-01.jpg">
 					<p class="black">
-						<a class="p1"> 1.할리스 커피 <br /> <br />
-						</a><small><a class="a1">부드러우면서도 깊고 진한 맛이 특징입니다. <br />
+						<a class="p1 aa"> 1.할리스 커피 <br /> <br />
+						</a><small><a class="a1 aa">부드러우면서도 깊고 진한 맛이 특징입니다. <br />
 								할리스커피만의 부드러움을 살리는 로스팅 방식과 ‘더블샷’<br /> 커피를 탄화될 정도로 강하게 볶아 쓴 맛이
 								강한 커피가 아닌<br /> 커피가 타지 않을 정도로 볶아 신맛과 쓴맛이 줄이고 <br /> 고품질 원두 본연의
 								풍부한 향과 감칠맛까지 납니다. <br /> 여기에 단순히 커피의 쓴맛이 아닌<br /> 깊고 진한 맛을 살리기
@@ -303,8 +303,8 @@
 				<a href="#" target="_blank"> <img class="news-img pull-left"
 					src="img/press-02.jpg">
 					<p class=" black">
-						<a class="p1"> 2. 할리스 음식<br /> <br />
-						</a><small><a class="a1"> 달달한 간식인 케이크, 아발랑쉬와 한 끼 식사로 든든한
+						<a class="p1 aa"> 2. 할리스 음식<br /> <br />
+						</a><small><a class="a1 aa"> 달달한 간식인 케이크, 아발랑쉬와 한 끼 식사로 든든한
 								파니니, 데니쉬 그리고 베이글 종류등이 있습니다. <br /> 카페에서 오래 있는 사람들을 대상으로 하루 종일
 								카페에서 보내도 모든 것을 해결할 수 있게 음식들이 다양하게 있습니다. <br /> 또한 시즌 메뉴를 선보여 항상
 								시기별 색다른 음식을 즐길 수 있습니다. <br /> 다른 카페와 다르게 허니 브레드가 바게트 볼로 되어있습니다.
@@ -323,8 +323,8 @@
 				<a href="#" target="_blank"> <img class="news-img pull-left"
 					src="img/press-02.jpg">
 					<p class="black">
-						<a class="p1">3. 할리스 추천 메뉴<br /> <br /></a> <small><a
-							class="a1"> 할리스의 추천 메뉴는 바닐라 딜라이트 입니다.<br /> 카페라떼에 마다가스카르산
+						<a class="p1 aa">3. 할리스 추천 메뉴<br /> <br /></a> <small><a
+							class="a1 aa"> 할리스의 추천 메뉴는 바닐라 딜라이트 입니다.<br /> 카페라떼에 마다가스카르산
 								천연바닐라빈으로 만든 바닐라 파우더를 듬뿍 넣은 바닐라라떼 입니다.<br /> 시럽의 가볍고 깔끔한 맛이 아닌
 								파우더의 깊고 진한 풍부한 맛입니다.<br /> 할리스하면 '바닐라 딜라이트'할 정도의 인기 만점 할리스의 대표
 								메뉴 입니다.<br /> 아이스로 즐기는 것도 좋지만 따뜻하게 마시는 것이 향과 맛을 제대로 즐길 수 있습니다.

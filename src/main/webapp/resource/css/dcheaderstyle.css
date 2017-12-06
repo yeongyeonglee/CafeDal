@@ -30,7 +30,7 @@
 
 #member-menu>.aboutus{
 	height: 50px;
-	margin-top: -200px;
+	margin-top: -180px;
 }
 
 #member-menu  li {
@@ -73,4 +73,8 @@
 	cursor: pointer;
 	text-decoration: none;
 }
+
+
+
+
 

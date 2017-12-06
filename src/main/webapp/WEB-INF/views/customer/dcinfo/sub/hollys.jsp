@@ -116,10 +116,10 @@
 								<!-- <a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a> -->
 								<header>
 									<header>
-									<h2 style="margin-top: -2px; margin-bottom: -2px; font-size: 23px;"><a href="${path}/customer/useinfo/notice">■</a>
-									    <a href="${path}/customer/dcinfo/sub/gongcha">■</a>
-									    <a href="${path}/main/today">■</a></h2>
-									<h2>Starbucks</h2>
+									<h2 style="margin-top: -2px; margin-bottom: -2px; font-size: 15px;">
+										<a style=" padding-right: 20px;" href="${path}/customer/useinfo/notice">이용정보</a>
+									    <a style=" padding-right: 20px;" href="${path}/customer/dcinfo/sub/gongcha">할인정보</a>
+									    <a href="${path}/main/today">오늘의 카페</a></h2>
 									<h2>Hollys</h2>
 									<p>바닐라 딜라이트, 벨지안 초코</a></p>
 								</header>
