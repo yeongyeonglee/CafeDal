@@ -8,11 +8,13 @@
   text-align:center;
 } */
 
-
+html{
+	display: block;
+}
 
 .box img {
-  width: 250px; 
-  height: 250px;
+	width: 250px;
+	height: 250px;
 }
 
 html, body{
@@ -30,7 +32,7 @@ h2, h4, h3 {
 h2 {
   font-weight:300;
   font-size:2.5em;
-  padding-top:1em;
+  /* padding-top:1em; */
   color: #000000;
 }
 
@@ -63,16 +65,16 @@ h5 {
   color: #CCC;
 }
 
-.range {	
+/* .range {	
   -webkit-box-sizing:border-box;
   -moz-box-sizing:   border-box;
   box-sizing:        border-box;
-  /* max-width:900px; */
-  /* margin:0 auto 5em auto; */
+  max-width:900px;
+  margin:0 auto 5em auto;
   margin-left:480px;
   padding: 0em;
   display: flex;
-}
+} */
 
 .con{
 	list-style: none;
@@ -89,7 +91,8 @@ h5 {
 }
 
 #map_canvas{
-	margin-left: 650px;
+	margin-left: 210px;
+	background: gray;
 }
 
 .box {
@@ -196,4 +199,100 @@ h5 {
   0% {transform: translate(0px, 0px) scale(0.9);}
   30% {transform: translate(0px, -30px) scale(0.98);}
   100% {transform: translate(0px, 0px) scale(1);}
+}
+
+
+/*---business-casual---*/
+/*!
+ * Start Bootstrap - Business Casual (https://startbootstrap.com/template-overviews/business-casual)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-casual/blob/master/LICENSE)
+ */
+
+body {
+  font-family: 'Lato', sans-serif;
+  /* background: url('../images/tcoffee4.jpg') no-repeat; no-repeat center center fixed
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover; */
+}
+
+main {
+	/* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
+	font-family: 'Lato', sans-serif;
+	background: url('../images/tcoffee1.jpg') no-repeat center center;
+	/* no-repeat center center fixed */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	}
+
+.main2 {
+	font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .text-heading {
+  font-family: "Josefin Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.tagline-upper {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.tagline-lower {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.text-expanded {
+  letter-spacing: 2px;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.text-lg {
+  font-size: 1.25rem;
+}
+
+.bg-faded {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.bg-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+hr.divider {
+  border-color: #292b2c;
+  max-width: 250px;
+}
+
+.map-container iframe {
+  pointer-events: none;
+}
+
+.map-container iframe.clicked {
+  pointer-events: auto;
+}
+
+/*---business-casual-fin-----*/
+
+.pp{
+	text-align: center;
+	padding-top: 30px;
+}
+
+.dbr{
+	padding-bottom: 10px;
 }

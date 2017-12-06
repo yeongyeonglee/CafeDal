@@ -20,7 +20,7 @@
 	</div> -->
 	<!-- 회원가입 폼 -->
 	<article class="half">
-	<h1><img src="${path}/images/logo2.png" alt="cafedal 회원가입" width="130px" height="100px"></h1>
+	<h1>CAFEDAL 회원가입</h1>
 	<!-- <div class="row"> -->
 		<form action="?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data">
 			<table id="tbl_info" class="table jointb" style="table-layout: fixed; margin-left: -30px;">
@@ -80,11 +80,11 @@
 					<td>
 						<form name="check" class="cm-check"  id="chbox">
 							<div class="cm-check">
-								<input type="checkbox" class="cafes" id="cafes1" name="cafes"  value="1 "/> 
+								<input type="checkbox"  id="cafes1" name="cafes"  value="1 "/> 
 								 	<label class="cm-check2" for="cafes1">공차</label> 
-								<input type="checkbox" class="cafes"  id="cafes2" name="cafes"  value="2 "/> 
+								<input type="checkbox"  id="cafes2" name="cafes"  value="2 "/> 
 									<label class="cm-check2" for="cafes2" >스타벅스</label> 
-								<input type="checkbox" class="cafes"  id="cafes3" name="cafes"  value="3 "/> 
+								<input type="checkbox" id="cafes3" name="cafes"  value="3 "/> 
 								    <label class="cm-check2"  for="cafes3" >이디야</label>
 								 <!-- <br /> -->
 							   <!-- <input type="checkbox"  id="cafes4" name="cafes"  value="4 "/> 
@@ -93,7 +93,7 @@
 									<label class="cm-check2" for="cafes4" >커피빈</label> 
 							   <input type="checkbox"  id="cafes5"name="cafes"  value="5 "/> 
 							       <label class="cm-check2" for="cafes5" >투썸플레이스</label> -->
-							   <input type="checkbox" class="cafes"  id="cafes6" name="cafes"  value="6 "/> 
+							   <input type="checkbox"  id="cafes6" name="cafes"  value="6 "/> 
 							       <label class="cm-check2" for="cafes6" >할리스커피</label>
 							</div>
 						</form>
@@ -110,7 +110,8 @@
 
 
 		<div class="submit-wrap" style="display: flex;">
-			<input class="submit2	" type="submit" onclick="location.href='login'" value="취소" 
+		
+			<input class="submit2" type="button" onclick="location.href='login'" value="취소" 
 			style="margin-top: 50px; margin-left: 105px; width: 150px; height: 50px;"/>
 			<input class="submit2" type="submit" onclick="location.href='joinHello'" value="확인"
 			style="margin-top: 50px; margin-left: 75px; width: 150px; height: 50px;" />
