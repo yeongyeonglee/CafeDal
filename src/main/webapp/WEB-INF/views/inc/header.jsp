@@ -21,7 +21,7 @@
 					</li>
 				<!-- </security:authorize> -->
 				<li>
-					<a id="mypage" href="${path}/mypage/edit">MY PAGE</a>
+					<a id="mypage" href="${path}/mypage/myp">MY PAGE</a>
 				</li>
 			</ul>
 		</div>
