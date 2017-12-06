@@ -65,5 +65,16 @@ public class ManageController {
    }*/
    
 
+	@RequestMapping("delete")
+	public String noticeDel(HttpServletRequest request) {
+
+		  String deleteArticleIds = request.getParameter("deleteArticleId");
+
+		  memberDao.delete(deleteArticleIds);
+
+		return "admin.manage.list" ;
+	}
+
+
    
 }

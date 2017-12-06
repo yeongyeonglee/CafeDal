@@ -7,54 +7,6 @@
 
 <link type="text/css" rel="stylesheet"
    href="${path}/resource/css/adminliststyle.css">
-  
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script type="text/javascript">
- 
-    $(document).ready(function(){
-        $("#massiveSelectCheckBox").click(function() {
-            
-            var isChecked = $(this).prop("checked");
-            $(".deleteArticleId").prop("checked", isChecked);
-            
-        });
-        
-        $("#massiveDeleteBtn").click(function() {
-            
-            var isChecked = false;
-            
-            /* 각각의 클래스를 다 보면서 선택이 됬는지 안됬는지 체크한다. */
-            $(".deleteArticleId").each(function(index, data){
-                if( data.checked ){
-               
-
-                    isChecked = data.checked;
-                }
-            });
-            
-            if(!isChecked){
-                alert("삭제할 대상을 선택하세요.");
-                return;
-            }
-            
-            /* 사용자에게 한번 더 컨펌 */
-            if( confirm("정말 삭제하시겠습니까?")){
-                alert("삭제되었습니다");
-                
-                var form = $("#massiveDeleteForm");
-                form.attr("method", "post");
-                form.attr("action", "<c:url value='delete?${_csrf.parameterName}=${_csrf.token}' />");
-                form.submit();
-            }
-            
-            /* form.attr("action", "<c:url value='list' />"); */
-        });
-    });
-    
-   /*  form.attr("action", "<c:url value='manage/delete?${_csrf.parameterName}=${_csrf.token}' />"); */
- 
-</script>
-   
 <style>
 .listnum ul{  
       padding-left: 900px;
@@ -108,39 +60,21 @@
    
  -->
 
-<%--    <form id="massiveDeleteForm">
-    
-        <c:forEach items="${list}" var="n">
-            <tr>
-                <td>
-                    <input type="checkbox" class="deleteArticleId" 
-                            name="deleteArticleId" value="${n.code }" />
-                </td> --%>
+
 
 <h3 class="hidden">회원정보 목록</h3>
-<<<<<<< HEAD
-      <form>
-=======
-      <form action="?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data"
-      		id="massiveDeleteForm">
->>>>>>> refs/remotes/origin/master
+      <form action="?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data">
          <table class="table-garo-admin">
                <tr>
-               		<th style="width: 30px">구분</th>
-                    <th id="tr_id">아이디</th>
+                   <th id="tr_id">아이디</th>
                     <th id="tr_pw">비밀번호</th>
-                    <th id="tr_name">이름</th>
-                    <th id="tr_mail">이메일</th>
-                    <th id="tr_birth">생일</th>
-                    <th id="tr_cafes">카페</th>
+                     <th id="tr_name">이름</th>
+                      <th id="tr_mail">이메일</th>
+                      <th id="tr_birth">생일</th>
+                      <th id="tr_cafes">카페</th>
                </tr>
             <c:forEach var="m" items="${list}">
-               <tr>	
-               		<td>
-                    <input type="checkbox" class="deleteArticleId" 
-                            name="deleteArticleId" value="${m.id }"
-                            style="margin-left:8px;"/> <!-- style="margin-left:5px;" --> 
-                    </td>
+               <tr>
                      <td id="tr_id">${m.id}</td>
                      <td id="tr_pw">${m.pwd}</td>
                      <td id="tr_name">${m.name}</td>
@@ -150,19 +84,15 @@
                </tr>
             </c:forEach>
           </table>
-          </form>
-          
-          <div class="ons">  
-			   <span id="massiveDeleteBtn2" class="reg-admin" style="cursor: pointer;">악성 회원 탈퇴</span>
-		  </div>
           
           <h3 class="hidden">회원목록 검색폼</h3>
-			<div class="d1" style="margin-top: 50px;">
-			   <form>
+			<div class="d1">
+			   <form >
+			
 			      <select
 			            name="f">
-			            <option selected="selected" value="id">아이디</option>
-			            <option value="name">이름</option>
+			            <option selected="selected" value="dtitle">아이디</option>
+			            <option value="dcontent">이름</option>
 			         </select> <input class="btn-search" type="text" name="q" placeholder="검색어 입력">
 			         <input class="btn-button" type="submit" value="▶" />
 			   

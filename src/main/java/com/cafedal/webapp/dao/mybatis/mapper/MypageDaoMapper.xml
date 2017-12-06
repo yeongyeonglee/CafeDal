@@ -25,6 +25,6 @@
   	   select * from mydcinfoview 
   	   where ${param2} like '%${param3}%' and id=#{param4}
   	   order by cafecode asc
-  	   limit ${(param1-1)*10}, 10
+  	   limit ${(param1-1)*4}, 4
   </select> 
 </mapper>

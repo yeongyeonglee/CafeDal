@@ -62,7 +62,27 @@
       <put-attribute name="body" value="/WEB-INF/views/mypage/deleteOk.jsp" />
    </definition>
    
-    <definition name="mypage.*"  template="/WEB-INF/views/inc/sub-layout.jsp" >
+   <definition name="mypage.mypd"  template="/WEB-INF/views/inc/login-layout.jsp" >
+      <put-attribute name="title" value="Tiles tutorial homepage" />
+      <put-attribute name="path" value="/" />
+      <put-attribute name="css" value="bootstrap.min.css" />
+      <put-attribute name="css" value="font-awesome.min.css" />
+      <put-attribute name="css" value="freelancer.min.css" />
+      <put-attribute name="css" value="magnific-popup.css" />
+      <put-attribute name="body" value="/WEB-INF/views/mypage/mypd.jsp" />
+   </definition>
+   
+   <definition name="mypage.myp"  template="/WEB-INF/views/inc/login-layout.jsp" >
+      <put-attribute name="title" value="Tiles tutorial homepage" />
+      <put-attribute name="path" value="/" />
+      <put-attribute name="css" value="bootstrap.min.css" />
+      <put-attribute name="css" value="font-awesome.min.css" />
+      <put-attribute name="css" value="freelancer.min.css" />
+      <put-attribute name="css" value="magnific-popup.css" />
+      <put-attribute name="body" value="/WEB-INF/views/mypage/myp.jsp" />
+   </definition>
+   
+   <definition name="mypage.*"  template="/WEB-INF/views/inc/sub-layout.jsp" >
       <put-attribute name="path" value="/" />
       <put-attribute name="css" value="{1}.css" />
       <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
