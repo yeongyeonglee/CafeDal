@@ -24,7 +24,7 @@
 				<img src="${path}/resource/images/logo.png" alt="로고" />
 			</div>
 
-			<form action="${path}/admin/dcinfo/notice?${_csrf.parameterName}=${_csrf.token}" method="post">
+			<form action="${path}/admin/manage/list?${_csrf.parameterName}=${_csrf.token}" method="post">
 				<div class="login_box">
 				
 					<div class="input_login">

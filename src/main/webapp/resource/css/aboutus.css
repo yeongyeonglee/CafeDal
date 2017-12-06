@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
 * {
   margin: 0;
@@ -188,8 +193,8 @@ section h1 {
 }
 
 #thx{
-	margin-top: 250px;
-    margin-left: -379px;
+	margin-top: 270px;
+    margin-left: -380px;
 }
 
 .expanding-grid a{
@@ -303,18 +308,19 @@ header {
 }
 
 .contentbox {
-	width:600px;
-	height:254px;
+	width:470px;
+	height:240px;
 	font-size: 20px;
     background: #ffffff;
     color: #000000;
     padding: 2em;
+    margin-left:114px;
     position: absolute;
     left: 0;
     top: 38%;
     left: 1239;
     opacity: 0.5;
-    font-family: "Raleway", Helvetica, sans-serif;
+    font-family:'Nanum Gothic';
     
 }
 

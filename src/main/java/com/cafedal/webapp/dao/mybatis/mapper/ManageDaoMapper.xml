@@ -21,4 +21,8 @@
        select cafename from memberview where role='ROLE_USER'
   </select>
   
+   <delete id="delete" parameterType="com.cafedal.webapp.entity.Manage" >
+  		 delete from member where id=#{id}  
+   </delete>
+  
 </mapper>

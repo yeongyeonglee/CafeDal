@@ -456,6 +456,13 @@ table.table-garo2 td {
 	width: 50px;
 }
 
+#massiveDeleteBtn2 {
+	width:90px; 
+	margin-left:280px;
+	color: white;
+	background: black;
+	font-size: 13px;
+}
 
 
 .eff-1 {
