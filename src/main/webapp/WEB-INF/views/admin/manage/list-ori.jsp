@@ -7,54 +7,6 @@
 
 <link type="text/css" rel="stylesheet"
    href="${path}/resource/css/adminliststyle.css">
-  
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script type="text/javascript">
- 
-    $(document).ready(function(){
-        $("#massiveSelectCheckBox").click(function() {
-            
-            var isChecked = $(this).prop("checked");
-            $(".deleteArticleId").prop("checked", isChecked);
-            
-        });
-        
-        $("#massiveDeleteBtn").click(function() {
-            
-            var isChecked = false;
-            
-            /* 각각의 클래스를 다 보면서 선택이 됬는지 안됬는지 체크한다. */
-            $(".deleteArticleId").each(function(index, data){
-                if( data.checked ){
-               
-
-                    isChecked = data.checked;
-                }
-            });
-            
-            if(!isChecked){
-                alert("삭제할 대상을 선택하세요.");
-                return;
-            }
-            
-            /* 사용자에게 한번 더 컨펌 */
-            if( confirm("정말 삭제하시겠습니까?")){
-                alert("삭제되었습니다");
-                
-                var form = $("#massiveDeleteForm");
-                form.attr("method", "post");
-                form.attr("action", "<c:url value='delete?${_csrf.parameterName}=${_csrf.token}' />");
-                form.submit();
-            }
-            
-            /* form.attr("action", "<c:url value='list' />"); */
-        });
-    });
-    
-   /*  form.attr("action", "<c:url value='manage/delete?${_csrf.parameterName}=${_csrf.token}' />"); */
- 
-</script>
-   
 <style>
 .listnum ul{  
       padding-left: 900px;
@@ -108,35 +60,21 @@
    
  -->
 
-<%--    <form id="massiveDeleteForm">
-    
-        <c:forEach items="${list}" var="n">
-            <tr>
-                <td>
-                    <input type="checkbox" class="deleteArticleId" 
-                            name="deleteArticleId" value="${n.code }" />
-                </td> --%>
+
 
 <h3 class="hidden">회원정보 목록</h3>
-      <form action="?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data"
-      		id="massiveDeleteForm">
+      <form action="?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data">
          <table class="table-garo-admin">
                <tr>
-               		<th style="width: 30px">구분</th>
-                    <th id="tr_id">아이디</th>
+                   <th id="tr_id">아이디</th>
                     <th id="tr_pw">비밀번호</th>
-                    <th id="tr_name">이름</th>
-                    <th id="tr_mail">이메일</th>
-                    <th id="tr_birth">생일</th>
-                    <th id="tr_cafes">카페</th>
+                     <th id="tr_name">이름</th>
+                      <th id="tr_mail">이메일</th>
+                      <th id="tr_birth">생일</th>
+                      <th id="tr_cafes">카페</th>
                </tr>
             <c:forEach var="m" items="${list}">
-               <tr>	
-               		<td>
-                    <input type="checkbox" class="deleteArticleId" 
-                            name="deleteArticleId" value="${m.id }"
-                            style="margin-left:8px;"/> <!-- style="margin-left:5px;" --> 
-                    </td>
+               <tr>
                      <td id="tr_id">${m.id}</td>
                      <td id="tr_pw">${m.pwd}</td>
                      <td id="tr_name">${m.name}</td>
@@ -146,10 +84,6 @@
                </tr>
             </c:forEach>
           </table>
-          
-          <div class="ons">  
-			   <span id="massiveDeleteBtn2" class="reg-admin" style="cursor: pointer;">악성 회원 탈퇴</span>
-		  </div>
           
           <h3 class="hidden">회원목록 검색폼</h3>
 			<div class="d1">
