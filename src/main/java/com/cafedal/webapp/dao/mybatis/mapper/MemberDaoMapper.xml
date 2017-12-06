@@ -48,7 +48,7 @@
   
   <select id="getUseListRole" resultType="com.cafedal.webapp.entity.Member">
        select id,pwd,name,mail,birth,cafes from member
-       where role='ROLE_USER'
+       where ${param2} like '%${param3}%' and role='ROLE_USER'
   	   order by id asc
   	   limit ${(param1-1)*10}, 10
   </select>

@@ -130,9 +130,9 @@
             <c:set var="strong" value="text-strong" />
          </c:if>
          <c:if test="${startNum+i <= lastNum }">
-            <li><a class="${strong }" href="?p=${startNum+i}">${startNum+i}</a></li>
+            <li><a class="${strong}" href="?p=${startNum+i}">${startNum+i}</a></li>
          </c:if>
-         <c:if test="${startNum+i > lastNum }">
+         <c:if test="${startNum+i > lastNum}">
             <li><a href="?p=${startNum+i}">${startNum+i}</a></li>
          </c:if>
       </c:forEach>

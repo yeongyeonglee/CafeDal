@@ -63,7 +63,7 @@
 
 
 <h3 class="hidden">회원정보 목록</h3>
-      <form action="?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data">
+      <form>
          <table class="table-garo-admin">
                <tr>
                    <th id="tr_id">아이디</th>
@@ -84,15 +84,15 @@
                </tr>
             </c:forEach>
           </table>
+          </form>
           
           <h3 class="hidden">회원목록 검색폼</h3>
-			<div class="d1">
-			   <form >
-			
+			<div class="d1" style="margin-top: 50px;">
+			   <form>
 			      <select
 			            name="f">
-			            <option selected="selected" value="dtitle">아이디</option>
-			            <option value="dcontent">이름</option>
+			            <option selected="selected" value="id">아이디</option>
+			            <option value="name">이름</option>
 			         </select> <input class="btn-search" type="text" name="q" placeholder="검색어 입력">
 			         <input class="btn-button" type="submit" value="▶" />
 			   
