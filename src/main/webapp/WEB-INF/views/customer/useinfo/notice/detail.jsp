@@ -100,7 +100,7 @@
 </div>
 <div class="path3">
 	<ul>
-		<li><a class="" href="../notice">목록</a></li>
+		<li><a id="infolist" href="../notice">목록</a></li>
 	</ul>
 
 
