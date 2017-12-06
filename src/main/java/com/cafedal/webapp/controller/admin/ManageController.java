@@ -41,8 +41,7 @@ public class ManageController {
    public String edit(@RequestParam(value = "p", defaultValue = "1") Integer page,
 		   @RequestParam(value = "f", defaultValue = "id") String field,
 		   Manage manage, Model model, HttpServletRequest request) throws IOException {
-      
-	  
+
 	   List<Member> list = memberDao.getUseListRole(page, field);
 	   //List<Member> list = memberDao.getUseListRole(id);
 	   //List<Manage> listcafe = manageDao.getUseListCafe(id);
@@ -53,15 +52,32 @@ public class ManageController {
        return "admin.manage.list";
    }
    
-	@RequestMapping("delete")
+	@RequestMapping(value="delete", method = RequestMethod.GET)
 	public String noticeDel(HttpServletRequest request) {
 
-		  String deleteArticleIds = request.getParameter("deleteArticleId");
+		  /*String deleteArticleIds = request.getParameter("deleteArticleId");
 
-		  memberDao.delete(deleteArticleIds);
+		  memberDao.delete(deleteArticleIds);*/
 
 		return "admin.manage.list" ;
 	}
+	
+	   @RequestMapping(value="delete", method = RequestMethod.POST)
+	   public String noticeDel(@RequestParam(value = "deleteArticleId", defaultValue = "") String id, Model model, Principal principal) throws IOException {
+		   System.out.println("deletearticleIds: "+id);
+		  /* List<Member> list = memberDao.getUseList(id);
+		   List<Mypage> listcafe = mypageDao.getUseListCafe(id);
+		   
+		   model.addAttribute("list", list);
+		   model.addAttribute("listcafe", listcafe);*/
+		   
+		   manageDao.delete(id);
+
+		   return "redirect:list";
+	   }
+	   
+	
+
 
    
 }
