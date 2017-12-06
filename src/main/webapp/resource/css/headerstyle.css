@@ -3,154 +3,148 @@
 @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 #header {
-	height: 280px;
-	z-index: 100;
-	width: 100%;
-	top: 100;
-	left: 0;
+   height: 280px;
+   z-index: 100;
+   width: 100%;
+   top: 100;
+   left: 0;
 }
 
 #header-1 {
-	height: 54px;
-	z-index: 100;
-	width: 100%;
-	top: 100;
-	left: 0;
+   height: 54px;
+   z-index: 100;
+   width: 100%;
+   top: 100;
+   left: 0;
 }
 
 #header>.content-container {
-	position: relative;
+   position: relative;
 }
 
 #header>.content-container>#member-menu, #logo {
-	position: absolute;
+   position: absolute;
 }
 
 #header>.content-container>#member-menu{
-	height: 54px;
+   height: 54px;
 }
 
 #logo{
-	margin-top: 40px;
+   margin-top: 40px;
 }
 
 #logo img {
-	width: 202px;
+   width: 202px;
     height: 202px;
-	margin-left: 850px;
-	margin-top: 98px;
+   margin-left: 850px;
+   margin-top: 98px;
 }
 
 #logo2 img {
-	width: 75px;
-	height: 25px;
-	margin-left: 1300px;
-	margin-top: 25px;
-	
+   width: 75px;
+   height: 25px;
+   margin-left: 1300px;
+   margin-top: 25px;
+   
 }
 
 /*-------------관리자 페이지---------------------------------*/
 
 #admin-header {
-	margin-top:-20px;
-	height: 35px;
-	z-index: 100;
-	width: 100%;
-	top: 100;
-	left: 0;
-	
-	margin-bottom: 100px;
-	border-bottom:1px solid #bbbbbb; 
+   margin-top:-20px;
+   height: 35px;
+   z-index: 100;
+   width: 100%;
+   top: 100;
+   left: 0;
+   
+   margin-bottom: 100px;
+   border-bottom:1px solid #bbbbbb; 
 }
 
 
 
 #admin-header>.content-container {
-	position: relative;
+   position: relative;
 }
 
 #admin-header>.content-container>#member-menu, #logo {
-	position: absolute;
+   position: absolute;
 }
 
 #admin-header #logo img {
-	width: 80px;
-	height: 80px;
-	margin-left: 850px;
+   width: 80px;
+   height: 80px;
+   margin-left: 850px;
 }
 
 
 #admin-header #logologo {
-	width: 25px;
-	height: 28px;
-	margin-left: 200px;
-	margin-top: 5px;
-	border-right:1px solid #bbbbbb; 
+   width: 25px;
+   height: 28px;
+   margin-left: 200px;
+   margin-top: 5px;
+   border-right:1px solid #bbbbbb; 
 
 }
 
 
 
 #admin-header #logo2   ul {
-	list-style: none;
+   list-style: none;
 }
 
 #admin-header #logo2  li {
-	float: left;
+   float: left;
 
 }
 
 #admin-header #logo3 {
-	margin-top: -20px;
+   margin-top: -20px;
 
 }
 
 /* ----------------member-menu--------------------------------------  */
 
 #member-menu {
-	/* display: inline-block; */
-	margin-right: 100px;
-	background: black;
-	width: 100%;
+   /* display: inline-block; */
+   margin-right: 100px;
+   background: black;
+   width: 100%;
 }
 
 #member-menu>.aboutus{
-	height: 24px;
+   height: 24px;
 }
 
 #member-menu  li {
-	float: left;
-	padding-left: 30px;
-	list-style: none;
+   float: left;
+   padding-left: 30px;
+   list-style: none;
+   background-color: black;
 }
 
 #member-menu  a {
-	font-family: 맑은고딕, 고딕, sans-serif;
-	font-size: 15px;
-	font-weight: bold;
-	color: white;
-	display: inline-block;
-	cursor: pointer;
+   font-family: 맑은고딕, 고딕, sans-serif;
+   font-size: 15px;
+   font-weight: bold;
+   color: white;
+   display: inline-block;
+   cursor: pointer;
 }
 
-#logout {
-	margin-right: 30px;
-	margin-left : 30px;
-	font-family: 맑은고딕, 고딕, sans-serif;
-	font-size: 15px;
-	font-weight: bold;
-	color: white;
-	display: inline-block;
-	border: none;
-	background : black;
-	cursor: pointer;
-}
+#logouts{
+   margin-right: 30px;
+   margin-left : 30px;
+   font-family: 맑은고딕, 고딕, sans-serif;
+   font-size: 15px;
 
-#mypage{
-	margin-right: 30px;
-}
-
-#id a{
-	cursor: pointer;
+   color: white;
+   display: inline-block;
+   border: none;
+   background : black;
+   cursor: pointer;
+   /* height: 50px; */
 }
 
