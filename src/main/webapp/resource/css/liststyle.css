@@ -618,7 +618,7 @@ fieldset .reg-field {
 
 .path3 {
 	display: inline-block;
-	margin-left: 850px;
+	margin-left: 870px;
 	margin-top: -20px;
 }
 
@@ -641,8 +641,11 @@ fieldset .reg-field {
 	padding: 1.1px 5px 1.1px 5px;
 }
 
+#infolist {
+	margin-left: 40px;
+}
 .prep-next {
-	margin-left: 770px;
+	margin-left: 810px;
 	margin-top: 40px;
 }
 
@@ -714,8 +717,7 @@ fieldset .reg-field {
 .comform .combtn {
 	height: 100px;
 	width: 50px;
-	margin-left: inherit;
-	margin-top: -100px;
+	margin-top: inherit;
 	background-color: #aa5555;
 	color:#fff;
 	border: none;
@@ -725,4 +727,27 @@ fieldset .reg-field {
 .comform .combtn:hover {
 	background-color: #dab4b4;
 	color:#400040;
+}
+
+.comform .combtn2 {
+	height: 106px;
+	width: 50px;
+	margin-top: inherit;
+	background-color: #aa5555;
+	color:#fff;
+	border: none;
+
+}
+
+.comform .combtn2:hover {
+	background-color: #dab4b4;
+	color:#400040;
+}
+
+.comreg {
+	margin-left: 170px;
+	margin-top: -25px;
+	list-style: none;
+	display: flex;
+	margin-bottom: -50px;
 }
