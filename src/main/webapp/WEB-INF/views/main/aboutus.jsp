@@ -2,29 +2,80 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="path" value="${pageContext.request.contextPath}" />
-<!DOCTYPE html>
-<html>
-<head>
+<!-- <!DOCTYPE html>
+<html> -->
+<!-- <head> -->
 <meta charset="UTF-8">
 <title>cafedal</title>
 <link href="${path}/css/style-header.css" type="text/css"
 	rel="stylesheet" />
 <link href="${path}/resource/css/aboutus.css" type="text/css"
 	rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- </head> -->
 
-</head>
 <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
-	$(function() {
-		$('a[href*=#]').on('click', function(e) {
-			e.preventDefault();
-			$('html, body').animate({
-				scrollTop : $($(this).attr('href')).offset().top
-			}, 500, 'linear');
+	<script type="text/javascript">
+		<!------------------------- 1번째 javascript------------------------->
+		$(function() {
+			$('a[href*=#]').on('click', function(e) {
+				e.preventDefault();
+				$('html, body').animate({
+					scrollTop : $($(this).attr('href')).offset().top
+				}, 500, 'linear');
+			});
 		});
-	});
-</script>
+		
+	
+		$(function() {
+			  
+			  //Old version below
+			  
+			  var image = document.querySelectorAll('.imageLink'),
+			      overlay = document.querySelector('.overlayContainer'),
+			      largeImage = document.querySelector('.largeImage'),
+			      caption = document.querySelector('.imageCaption'),
+			      href,
+			      alt;
+			  
+			  function hideOverlay() {
+			    overlay.removeEventListener('click', hideOverlay, false);
+			    overlay.classList.remove('opacity');
+			    
+			    setTimeout(function() {
+			      largeImage.removeAttribute('src');
+			      largeImage.removeAttribute('alt');
+			      overlay.classList.remove('display');
+			    }, 400);
+			  }
+			  
+			  function lightbox(event) {
+			    event.preventDefault();
+			    href = this.getAttribute('src');
+			    alt = this.children[0].getAttribute('alt');
+			    
+			    largeImage.setAttribute('src', href);
+			    largeImage.setAttribute('alt', alt);
+			    caption.innerHTML = alt;
+			    overlay.classList.add('display');
+			    
+			    setTimeout(function() { overlay.classList.add('opacity'); }, 25);
+			    setTimeout(function() { overlay.addEventListener('click', hideOverlay, false); }, 400);
+			  }
+			  
+			  
+			  /***Event Listener***/
+			  if ( overlay ) {
+			    for ( var i = 0; i < image.length; i++ ) {
+			      image[i].addEventListener('click', lightbox, false);
+			    }
+			  }
+			  
+			});
+	</script>
+											
 	<div class="layout">
 
 		<div class="page">
@@ -50,29 +101,70 @@
 						<div class="bar"></div>
 						<div class="site"></div>
 					</div>
-
-					<section id="section01" class="demo">
-						<h1>CafeDal</h1>
+					<!----------------------- 1번  CAFEDAL ----------------------->
+					<section id="section01" class="demo1">
+						<img src="${path}/resource/images/coffee1.jpg"
+							style="background: center center/cover no-repeat; width: 100%; height: 100%;"
+							alt="CafeDal" />
+						<h1 id="deco1">CafeDal</h1>
 						<a href="#section02"><span></span>Scroll</a>
 					</section>
-					<section id="section02" class="demo">
-						<h1>카페+달</h1>
-						<!-- <h2>카페와 달력을 합친 합성어</h2>
-						<h2>달력으로 카페 행사를 한 눈에</h2> -->
+					<!----------------------- 2번  CAFE+DAL----------------------->
+					<section id="section02" class="demo1">
+						<img src="${path}/resource/images/coffee10.jpg"
+							style="background: center center/cover no-repeat; width: 100%; height: 100%;"
+							alt="CafeDal" />
+						<div class="contentbox">
+							<header>
+								<h2>Cafe+Dal</h2>
+							</header>
+							<br />
+							<p>안녕하세요. CAFEDAL입니다.</p>
+							<p>저희 홈페이지는 회원님이 즐겨 찾는 카페들의 이벤트를</p>
+							<p>달력 하나로 한 눈에 볼 수 있습니다 :)</p>
+							<br />
+							<br />
+							<p>카페 관리자인 회원님은</p>
+							<p>카페 등록 서비스를 통해 등록이 가능하고</p>
+							<p>타 회원들에게 이벤트 정보를 제공할 수 있습니다 :)</p>
+						</div>
 						<a href="#section03"><span></span>Scroll</a>
 					</section>
-					<section id="section03" class="demo">
-						<h1>이용정보/할인정보</h1>
-						<a href="#section04"><span></span>Scroll</a>
-					</section>
-					<section id="section04" class="demo">
-						<h1>오늘의 커피</h1>
-						<a href="#section05"><span></span>Scroll</a>
-					</section>
-					<section id="section05" class="demo">
-						<h1>Scroll Down Button #5</h1>
-						<a href="#thanks"><span></span>Scroll</a>
-					</section>
+					
+					<!----------------------- 3번  이용정보/할인정보----------------------->
+					<div id="section03" class="demo2">
+						<img src="${path}/resource/images/coffee3.JPG"
+							style="background: center center/cover no-repeat; width: 100%; height: 100%;"
+							alt="CafeDal" />
+						<!-- <h1>informations</h1>
+						 <h1 class="header">Click Image to Enlarge</h1> -->
+						  <div class="imageContainer clearfix">
+						    <a class="imageLink" id="section03_1" src="${path}/resource/images/aboutus1.jpg" title="CALENDAR">
+						      <img class="image" style="width:338px; height:225px;" id="section03_1" src="${path}/resource/images/aboutus1.jpg" alt="CALENDAR">
+						    </a>
+						    <a class="imageLink" id="section03_2" src="${path}/resource/images/aboutus2.jpg" title="USE INFO">
+						      <img class="image" style="width:338px; height:225px;" id="section03_2" src="${path}/resource/images/aboutus2.jpg" alt="USE INFO">
+						    </a>
+						    <a class="imageLink" id="section03_3" src="${path}/resource/images/aboutus3.jpg" title="DC INFO">
+						      <img class="image" style="width:338px; height:225px;" id="section03_3" src="${path}/resource/images/aboutus3.jpg" alt="DC INFO">
+						    </a>
+						    <a class="imageLink" id="section03_4" src="${path}/resource/images/aboutus4.jpg" title="TODAY'S COFFEE">
+						      <img class="image" style="width:338px; height:225px;" id="section03_4" src="${path}/resource/images/aboutus4.jpg" alt="TODAY'S COFFEE">
+						    </a>
+						  </div>
+						  
+						  <div class="overlayContainer">
+						    <div class="imageBox">
+						      <div class="relativeContainer">
+						        <img class="largeImage" src="" alt="">
+						        <p class="imageCaption"></p>
+						      </div>  <!-- /relativeContainer -->
+						    </div>  <!-- /imageBox -->
+						  </div>  <!-- overlayContainer -->
+						<a id="thx" href="#thanks"><span></span>Scroll</a>
+					</div>
+				
+					<!----------------------- thx  ----------------------->
 					<section id="thanks">
 						<div>
 							<h2>Thanks!</h2>
@@ -82,5 +174,10 @@
 							</p>
 						</div>
 					</section>
+					</div>
+					</div>
+					</div>
+					</div>
+
 </body>
-</html>
+<!-- </html> -->
