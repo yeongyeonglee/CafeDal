@@ -38,26 +38,21 @@ public class ManageController {
    private MemberDao memberDao;
       
    @RequestMapping(value="list", method = RequestMethod.GET)
-   public String edit(String id, Manage manage, Model model, HttpServletRequest request) throws IOException {
+   public String edit(@RequestParam(value = "p", defaultValue = "1") Integer page,
+		   @RequestParam(value = "f", defaultValue = "id") String field,
+		   Manage manage, Model model, HttpServletRequest request) throws IOException {
       
-	   
-	   /*String memberid = principal.getName();
-	   
-	   System.out.println("¸â¹ö¾ÆÀÌµð : " +memberid);*/
-	   
-	   List<Member> list = memberDao.getUseListRole(id);
+	  
+	   List<Member> list = memberDao.getUseListRole(page, field);
+	   //List<Member> list = memberDao.getUseListRole(id);
 	   //List<Manage> listcafe = manageDao.getUseListCafe(id);
 	   
 	   model.addAttribute("list", list);
-	   //model.addAttribute("listcafe", listcafe);
+	   
 	   
        return "admin.manage.list";
    }
    
-   /*@RequestMapping(value="list", method = RequestMethod.POST)
-   public String edit(@RequestParam("id") String id, Model model, HttpServletRequest request) {
-         
-	   return "redirect:../edit2";
-   }*/
+
    
 }

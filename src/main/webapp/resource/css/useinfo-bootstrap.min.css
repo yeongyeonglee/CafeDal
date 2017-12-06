@@ -1357,15 +1357,7 @@ button, input, select, textarea {
 	line-height: inherit
 }
 
-a {
-	color: #337ab7;
-	text-decoration: none
-}
 
-a:focus, a:hover {
-	color: #23527c;
-	text-decoration: underline
-}
 
 a:focus {
 	outline: thin dotted;
@@ -1650,7 +1642,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 	border-bottom: 1px solid #eee
 }
 
-ol, ul {
+ol{
 	margin-top: 0;
 	margin-bottom: 10px
 }
@@ -1855,6 +1847,7 @@ pre code {
 @media ( min-width :1200px) {
 	.container {
 		width: 1170px
+		margin-left: 9px;
 	}
 }
 
@@ -2600,7 +2593,7 @@ caption {
 }
 
 th {
-	text-align: left
+	//text-align: left
 }
 
 .table {
@@ -7430,4 +7423,15 @@ button.close {
 	.hidden-print {
 		display: none !important
 	}
+}
+
+
+#logouts {
+	border: none;
+	background: black;
+	color: white;
+	margin-top: -1px;
+	font-weight: bolder;
+	text-decoration: none;
+	font-size: 14px;
 }

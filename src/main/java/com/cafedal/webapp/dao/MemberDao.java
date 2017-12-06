@@ -34,8 +34,8 @@ public interface MemberDao  {
 
     List<Member> getUseList(String id);
     
-    List<Member> getUseListRole(String id);
-
+    //List<Member> getUseListRole(String id);
+    
 	Member getib(String id);
 
 	int delete(String id, String name, String pwd, String mail, String birth, String role, String cafes);
@@ -43,6 +43,9 @@ public interface MemberDao  {
 	int delete(Member member);
 
 	int delete(String id);
+	
+	List<Member> getUseListRole(Integer page, String field);
+
 
 }
 

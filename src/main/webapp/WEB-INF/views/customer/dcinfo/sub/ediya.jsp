@@ -110,13 +110,13 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">새로워진 이디야 멤버스 선물이벤트</a></h2>
+										<h2>새로워진 이디야 멤버스 선물이벤트</h2>
 										<p>새로워진 이디야 멤버스의 슈퍼그레잇!한 선물 이벤트</p>
 									</div>
 									<div class="meta">
 										<time class="published">2017. 11. 28</time>
-										<time class="published">2017. 12. -- </time> 
-										<a href="#" class="author"><span class="name">Ediya</span><img src="${path}/resource/images/logo-ediya.PNG" alt="" /></a>
+										<time class="published">2017. 12. 18 </time> 
+										<a class="author"><span class="name">Ediya</span><img src="${path}/resource/images/logo-ediya.PNG" alt="" /></a>
 									</div>
 								</header>
 								<img class="image featured" src="${path}/resource/images/b-ediya1.PNG" alt="" style="width:650px; margin-left: 100px" />
@@ -125,109 +125,42 @@
 
 			
 							</article>
-
-						<!-- Post -->
-						
-						<!-- Post 2 -->
-							<!-- <article class="post">
+							
+							<!-- Post -->
+							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">2017 크리스마스 e-프리퀀시 이벤트</a></h2>
-										<p>크리스마스 음료 3잔 포함, 총 17잔의 음료를 구매하시면 2018 스타벅스 플래너(한정)를 드립니다.</p>
+										<h2>이디야 신한카드 발급 이벤트</h2>
+										<p>지금 이디야 신한카드를 신청하시면 이디야 모바일 상품권 1만원 또는 아메리카노 쿠폰 1매를 추가로 제공! </p>
 									</div>
 									<div class="meta">
-										<time class="published">2017. 10. 27</time>
-										<time class="published">2017. 12. 31</time> 
-										<a href="#" class="author"><span class="name">Ediya</span><img src="images/logo-ediya.PNG" alt="" /></a>
+										<time class="published">2017. 09. 01</time>
+										<time class="published">2017. 11. 30 </time> 
+										<a class="author"><span class="name">Ediya</span><img src="${path}/resource/images/logo-ediya.PNG" alt="" /></a>
 									</div>
 								</header>
-								<img class="image featured" src="images/b-star3.PNG" alt="" style="width:820px ; height: 500px" />
-								<p>- e 스티커 적립기간: 2017년 10월 27일 - 12월 31일<br />
-								   - 플래너 증정기간: 2017년 10월 27일 - 2018년 1월 7일<br />
-								   </p>
-				<footer>
-									<ul class="actions">
-										<li><a href="#" class="button big">Continue Reading</a></li>
-									</ul>
-									<ul class="stats">
-										<li><a href="#">General</a></li>
-										<li><a href="#" class="icon fa-heart">28</a></li>
-										<li><a href="#" class="icon fa-comment">128</a></li>
-									</ul>
-								</footer>
+								<img class="image featured" src="${path}/resource/images/b-ediya5.PNG" alt="" style="width:650px;" />
+								
 							</article>
- -->
-						<!-- Post 2 -->
-						
-						<!-- Post 3 -->
-						<!-- <article class="post">
+							
+							<!-- Post -->
+							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">신세계 면세점 이벤트</a></h2>
-										<p>골드,그린 회원님! 신세계 면세점에서 제공하는 혜택입니다!</p>
+										<h2>눈꽃빙수 할인쿠폰 증정 이벤트</h2>
+										<p>이디야 멤버스만의 혜택 -눈꽃빙수 1000원 쿠폰 증정!</p>
 									</div>
 									<div class="meta">
-										<time class="published">2017. 11. 9</time>
-										<time class="published">2018. 1. 31</time> 
-										<a href="#" class="author"><span class="name">Ediya</span><img src="images/logo-ediya.PNG" alt="" /></a>
+										<time class="published">2017. 08. 10</time>
+										<time class="published">2017. 08. 30 </time> 
+										<a class="author"><span class="name">Ediya</span><img src="${path}/resource/images/logo-ediya.PNG" alt="" /></a>
 									</div>
 								</header>
-								<img class="image featured" src="images/b-star4.PNG" alt="" style="width:820px ; height: 500px" />
-								<p>- 대상: 그린, 골드회원<br />
-								       신세계 인터넷면세점 적립금 1만원 + 신규가입시  스타벅스 아메리카노(tall) 기프티콘 추가증정<br />
-								   - 대상: 골드회원   <br />
-								     신세계 면세점 명동점, 부산점, 인천공항점 방문시 면세점 GOLD 멤버십 발급 + 1만원 선불카드 증정
-								      </p>
-				<footer>
-									<ul class="actions">
-										<li><a href="#" class="button big">Continue Reading</a></li>
-									</ul>
-									<ul class="stats">
-										<li><a href="#">General</a></li>
-										<li><a href="#" class="icon fa-heart">28</a></li>
-										<li><a href="#" class="icon fa-comment">128</a></li>
-									</ul>
-								</footer>
-							</article>  -->
-						<!-- Post 3 -->
-						
-						<!-- Post 4 -->
-					<!-- 	<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="#">현대카드 H-Coin 이벤트</a></h2>
-										<p>H-Coin 현금처럼 사용 & 사용한 H-Coin의 5% 할인</p>
-									</div>
-									<div class="meta">
-										<time class="published">2017. 11. 16</time>
-										<time class="published">2018. 11. 15</time> 
-										<a href="#" class="author"><span class="name">Ediya</span><img src="images/logo-ediya.PNG" alt="" /></a>
-									</div>
-								</header>
-								<img class="image featured" src="images/b-star5.PNG" alt="" style="width:820px ; height: 350px" />
-								<p>- H-Coin: M포인트를 전환하여 다양한 제휴처에서 현금처럼 100% 사용하는 포인트<br /> 
-								   - 이용방법: 현대카드 앱에서 M포인트를 H-Coin으로 전환하여 사용   <br />
-								   - H-Coin 사용시 아메리카노(tall)기프티콘을 1000분께 추첨 증정
-								      </p>
-				<footer>
-									<ul class="actions">
-										<li><a href="#" class="button big">Continue Reading</a></li>
-									</ul>
-									<ul class="stats">
-										<li><a href="#">General</a></li>
-										<li><a href="#" class="icon fa-heart">28</a></li>
-										<li><a href="#" class="icon fa-comment">128</a></li>
-									</ul>
-								</footer>
-							</article>  -->
-						<!-- Post 4 -->
-						
-
-						<!-- Pagination -->
-					<!-- 		<ul class="actions pagination">
-								<li><a href="" class="disabled button big previous">Previous Page</a></li>
-								<li><a href="#" class="button big next">Next Page</a></li>
-							</ul> -->
+								<img class="image featured" src="${path}/resource/images/b-ediya4.PNG" alt="" style="width:650px;" />
+								<p class="p">- 이디야 멤버스 우수회원 70만명과 신규 이디야 멤버스 회원분들께 빙수 1,000원 할인 쿠폰을 드립니다. <br />
+					
+								</p>
+							</article>
 
 					</div>
 
@@ -238,6 +171,10 @@
 							<section id="intro">
 								<!-- <a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a> -->
 								<header>
+									<h2 style="margin-top: -2px; margin-bottom: -2px; font-size: 15px;">
+										<a style=" padding-right: 20px;" href="${path}/customer/useinfo/notice">이용정보</a>
+									    <a style=" padding-right: 20px;" href="${path}/customer/dcinfo/sub/gongcha">할인정보</a>
+									    <a href="${path}/main/today">오늘의 카페</a></h2>
 									<h2>Ediya</h2>
 									<p>토피넛 라떼(+샷추가) & 바닐라라떼</p>
 								</header>

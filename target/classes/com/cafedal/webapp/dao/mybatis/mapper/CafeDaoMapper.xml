@@ -7,7 +7,7 @@
    <select id="getUseList" resultType="com.cafedal.webapp.entity.AdminCafe">
       select * from cafe
       where ${param2} like '%${param3}%' 
-      order by name asc
+      order by code asc
       limit ${(param1-1)*10}, 10
    </select> 
    

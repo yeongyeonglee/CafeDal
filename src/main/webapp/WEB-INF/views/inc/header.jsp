@@ -5,6 +5,11 @@
 <link type="text/css" rel="stylesheet"
 	href="${path}/resource/css/headerstyle.css">
 
+<style>
+
+
+</style>
+
 <header id="header">
 	<div class="content-container">
 		<div id="member-menu">
@@ -14,9 +19,9 @@
 				</li>
 				<!-- <security:authorize access="hasRole('ROLE_USER')"> -->
 					<li>
-						<form action="${path}/logout" method="post" >
+						<form  action="${path}/logout" method="post" >
 							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> 
-							<input type="submit" value="LOGOUT"  id="logout"/>
+							<input  type="submit" value="LOGOUT"  id="logouts" style="  font-weight: bold; "/>
 						</form>
 					</li>
 				<!-- </security:authorize> -->

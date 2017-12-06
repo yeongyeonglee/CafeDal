@@ -32,80 +32,24 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header -->
-				<!-- 	<header id="header">
-						<h1><a href="#">Cafe Dal</a></h1>
-						<nav class="links">
-							<ul>
-								<li><a href="#">GongCha</a></li>
-								<li><a href="#">Starbucks</a></li>
-								<li><a href="#">Ediya</a></li>
-								<li><a href="#">CoffeeBean</a></li>
-								<li><a href="#">TwoSome</a></li>
-								<li><a href="#">Hollys</a></li>
-							</ul>
-						</nav>
-						<nav class="main">
-							<ul>
-								<li class="search">
-									<a class="fa-search" href="#search">Search</a>
-									<form id="search" method="get" action="#">
-										<input type="text" name="query" placeholder="Search" />
-									</form>
-								</li>
-								<li class="menu">
-									<a class="fa-bars" href="#menu">Menu</a>
-								</li>
-							</ul>
-						</nav>
-					</header> -->
+				
 
 				<!-- Menu -->
 					<section id="menu">
 
 						<!-- Search -->
-							<section>
+	<!-- 						<section>
 								<form class="search" method="get" action="#">
 									<input type="text" name="query" placeholder="Search" />
 								</form>
-							</section>
+							</section> -->
 
-						<!-- Links -->
-				<!-- 			<section>
-								<ul class="links">
-									<li>
-										<a href="#">
-											<h3>Lorem ipsum</h3>
-											<p>Feugiat tempus veroeros dolor</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Dolor sit amet</h3>
-											<p>Sed vitae justo condimentum</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Feugiat veroeros</h3>
-											<p>Phasellus sed ultricies mi congue</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Etiam sed consequat</h3>
-											<p>Porta lectus amet ultricies</p>
-										</a>
-									</li>
-								</ul>
-							</section>
- -->
-						<!-- Actions -->
-							<section>
+       			<!-- Actions -->
+							<!-- <section>
 								<ul class="actions vertical">
 									<li><a href="#" class="button big fit">Log In</a></li>
 								</ul>
-							</section>
+							</section> -->
 
 					</section>
 
@@ -118,13 +62,13 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">비아 말차 10만개 판매 기념 이벤트</a></h2>
+										<h2>비아 말차 10만개 판매 기념 이벤트</h2>
 										<p>비아 말차 2개 구매시 추가로 1개를 더 드립니다.</p>
 									</div>
 									<div class="meta">
 										<time class="published">2017. 11. 21</time>
 										<time class="published">2017. 12. 20</time> 
-										<a href="#" class="author"><span class="name">Starbucks</span><img src="${path}/resource/images/logo-star.png" alt="" /></a>
+										<a class="author"><span class="name">Starbucks</span><img src="${path}/resource/images/logo-star.png" alt="" /></a>
 									</div>
 								</header>
 								<img class="image featured" src="${path}/resource/images/b-star1.PNG" alt="" style="width:820px ; height: 370px" />
@@ -140,13 +84,13 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">2017 크리스마스 e-프리퀀시 이벤트</a></h2>
+										<h2>2017 크리스마스 e-프리퀀시 이벤트</h2>
 										<p>크리스마스 음료 3잔 포함, 총 17잔의 음료를 구매하시면 2018 스타벅스 플래너(한정)를 드립니다.</p>
 									</div>
 									<div class="meta">
 										<time class="published">2017. 10. 27</time>
 										<time class="published">2017. 12. 31</time> 
-										<a href="#" class="author"><span class="name">Starbucks</span><img src="${path}/resource/images/logo-star.png" alt="" /></a>
+										<a class="author"><span class="name">Starbucks</span><img src="${path}/resource/images/logo-star.png" alt="" /></a>
 									</div>
 								</header>
 								<img class="image featured" src="${path}/resource/images/b-star3.PNG" alt="" style="width:820px ; height: 500px" />
@@ -162,13 +106,13 @@
 						<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">신세계 면세점 이벤트</a></h2>
+										<h2>신세계 면세점 이벤트</h2>
 										<p>골드,그린 회원님! 신세계 면세점에서 제공하는 혜택입니다!</p>
 									</div>
 									<div class="meta">
 										<time class="published">2017. 11. 9</time>
 										<time class="published">2018. 1. 31</time> 
-										<a href="#" class="author"><span class="name">Starbucks</span><img src="${path}/resource/images/logo-star.png" alt="" /></a>
+										<a class="author"><span class="name">Starbucks</span><img src="${path}/resource/images/logo-star.png" alt="" /></a>
 									</div>
 								</header>
 								<img class="image featured" src="${path}/resource/images/b-star4.PNG" alt="" style="width:820px ; height: 500px" />
@@ -185,13 +129,13 @@
 						<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">현대카드 H-Coin 이벤트</a></h2>
+										<h2>현대카드 H-Coin 이벤트</h2>
 										<p>H-Coin 현금처럼 사용 & 사용한 H-Coin의 5% 할인</p>
 									</div>
 									<div class="meta">
 										<time class="published">2017. 11. 16</time>
 										<time class="published">2018. 11. 15</time> 
-										<a href="#" class="author"><span class="name">Starbucks</span><img src="${path}/resource/images/logo-star.png" alt="" /></a>
+										<a class="author"><span class="name">Starbucks</span><img src="${path}/resource/images/logo-star.png" alt="" /></a>
 									</div>
 								</header>
 								<img class="image featured" src="${path}/resource/images/b-star5.PNG" alt="" style="width:820px ; height: 350px" />
@@ -219,8 +163,12 @@
 							<section id="intro">
 								<!-- <a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a> -->
 								<header>
+									<h2 style="margin-top: -2px; margin-bottom: -2px; font-size: 15px;">
+										<a style=" padding-right: 20px;" href="${path}/customer/useinfo/notice">이용정보</a>
+									    <a style=" padding-right: 20px;" href="${path}/customer/dcinfo/sub/gongcha">할인정보</a>
+									    <a href="${path}/main/today">오늘의 카페</a></h2>
 									<h2>Starbucks</h2>
-									<p>퍼스널 옵션으로 내가 원하는대로</a></p>
+									<p>퍼스널 옵션으로 내가 원하는대로</p>
 								</header>
 							</section>
 

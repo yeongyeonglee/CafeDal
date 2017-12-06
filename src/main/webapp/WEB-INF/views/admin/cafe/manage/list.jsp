@@ -83,9 +83,9 @@
 </style>
 <main class="main">
 
-<div style="margin-top: 30px; margin-bottom: -10px;">
+<div style="margin-top: 30px; margin-bottom: 30px;">
 
-	<label class="list-tit">카페 관리</label>
+	<label class="list-tit" style="margin-bottom: 10px;">카페 관리</label>
     
 </div>
 

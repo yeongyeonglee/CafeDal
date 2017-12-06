@@ -7,11 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.cafedal.webapp.dao.MemberCafeDao;
 import com.cafedal.webapp.dao.MemberDao;
+import com.cafedal.webapp.dao.MypageDao;
 import com.cafedal.webapp.dao.NoticeFileDao;
 import com.cafedal.webapp.dao.UseNoticeDao;
 import com.cafedal.webapp.entity.DcInfo;
 import com.cafedal.webapp.entity.Member;
 import com.cafedal.webapp.entity.MemberCafe;
+import com.cafedal.webapp.entity.Mypage;
 
 public class MyBatisMemberDao implements MemberDao {
 
@@ -88,13 +90,13 @@ public class MyBatisMemberDao implements MemberDao {
 	    return member;
 	}
 
-	@Override
+	/*@Override
 	public List<Member> getUseListRole(String id) {
 		MemberDao memberDao = sqlSession.getMapper(MemberDao.class);
 		List<Member> list = memberDao.getUseListRole(id);
 	      
 	    return list;
-	}
+	}*/
 
 	@Override
 	public int MemberInsert(String id, String name, String pwd, String mail, String birth, String role, String cafes) {
@@ -133,5 +135,12 @@ public class MyBatisMemberDao implements MemberDao {
 		return result;
 	}
 
+	@Override
+	public List<Member> getUseListRole(Integer page, String field) {
+		MemberDao memberDao = sqlSession.getMapper(MemberDao.class);
+		List<Member> list = memberDao.getUseListRole(page, field);
+	      
+	    return list;
+	}
 
 }

@@ -2,7 +2,10 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
-
+<meta name="description" content="Lavalike css-only menu effect" />
+<meta name="keywords" content="css-only menu hover effect transitions" />
+<meta name="author" content="PeHaa for PEPSized" />
+<link href='http://fonts.googleapis.com/css?family=Unica+One' rel='stylesheet' type='text/css'>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
 
 <!DOCTYPE html>
@@ -19,22 +22,23 @@
    <!-- header 부분 -->
    <tiles:insertAttribute name="header" />
    <!-- --------------------------- <visual> --------------------------------------- -->
-
+   <!-- visual 부분 -->
+  <%--  <tiles:insertAttribute name="visual" /> --%>
    <!-- --------------------------- <body> --------------------------------------- -->
    <div id="body">
       <div class="content-container clearfix">
 
-         <!-- --------------------------- aside --------------------------------------- -->
+        <%--  <!-- --------------------------- aside --------------------------------------- -->
          <!-- aside 부분 -->
-         <tiles:insertAttribute name="aside" />
+         <tiles:insertAttribute name="aside" /> --%>
          <!-- --------------------------- main --------------------------------------- -->
          
          <!-- content 부분 -->
-         <tiles:insertAttribute name="main" />
+         <tiles:insertAttribute name="main"/>
          
       </div>
    </div>
    <!-- ------------------- <footer> --------------------------------------- -->
-  <%--  <tiles:insertAttribute name="footer" /> --%>
+   <tiles:insertAttribute name="footer" />
 </body>
 </html>
