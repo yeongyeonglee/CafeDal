@@ -173,7 +173,7 @@
 												<time class="published">무난하면서 맛은 GOOD</time>
 												<a href="" class="author"><img src="${path}/resource/images/logo-hollys.PNG" alt="" /></a>
 											</header>
-											<a href="" class="image"><img src="${path}/resource/images/hollys1.PNG" alt="" /></a>
+											<a href="hollys" class="image"><img src="${path}/resource/images/hollys1.PNG" alt="" /></a>
 										</article>	
 
 								</div>

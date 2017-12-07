@@ -34,7 +34,7 @@
   </head>
 
 <main calss="main2">
-  <body class="back">
+  <body class="back" onload="initialize()">
   
 
 	    <div class="container" style="margin-top: 50px;">
@@ -152,9 +152,6 @@
 	  } 
 	 </script>
 
-	<br />
-	<br />
-	<br />
 </body>
 
 

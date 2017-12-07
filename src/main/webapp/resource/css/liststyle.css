@@ -582,11 +582,14 @@ fieldset .reg-field {
 	width: 1000px;
 	text-align: left;
 	border-bottom: 1px solid #c0c0c0;
-	border-top: 3px solid #7b4122;
+	border-top: 3px solid #000040;
 	display: inline-block;
 	background-color: #fdfdfd;
+	  
 }
-
+.top{
+  margin-top: 90px;	
+}
 .tit-content2 {
 	padding-left: 20px;
 	font-size: 12px;
@@ -680,6 +683,10 @@ fieldset .reg-field {
 	margin-left: 720px;
 }
 
+.listcom tr{
+	margin-bottom: 10px;
+}
+
 .com1 {
 	font-size: 15px;
 }
@@ -703,7 +710,7 @@ fieldset .reg-field {
 	width: 900px;
 	margin-left: 500px;
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 40px;
 	padding-right: 10px;
 	margin-bottom: 100px;
 }
@@ -835,4 +842,4 @@ fieldset .reg-field {
 #id a{
 	cursor: pointer;
 }
->>>>>>> refs/remotes/origin/master
+

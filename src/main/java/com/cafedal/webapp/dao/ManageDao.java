@@ -14,7 +14,7 @@ public interface ManageDao  {
 
    List<Manage> getUseListCafe(String id);
 
-   String delete(String deleteArticleIds);
+   void delete(String id);
 
     
 }

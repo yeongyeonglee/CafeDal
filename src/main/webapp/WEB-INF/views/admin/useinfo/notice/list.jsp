@@ -44,7 +44,7 @@
 
 <div style="margin-top:30px; margin-bottom: 40px;">
 
-   <label class="list-tit" style="padding-right:30px;">공지 관리</label>
+   <label class="list-tit" style="padding-right:30px;">이용정보 관리</label>
      <a href="../useinfo/notice">  
         <img src="${path}/resource/images/menu1.png" style="width: 50px; height: 40px; padding-right: 10px; margin-bottom: -10px" alt="이용"/></a>
      <a href="../dcinfo/notice">  
