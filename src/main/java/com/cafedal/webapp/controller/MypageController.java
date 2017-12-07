@@ -209,6 +209,48 @@ public class MypageController {
 	   return "redirect:../mypage/myp";
    }
    
+   @RequestMapping(value="mype", method = RequestMethod.GET)
+   public String mype(Member member, MemberCafe memberCafe,
+			String memberid, Mypage mypage, Principal principal, Model model, HttpServletRequest request) throws IOException {
+	   
+	   String id = principal.getName();
+	   
+	   List<Member> list = memberDao.getUseList(id);
+	   List<Mypage> listcafe = mypageDao.getUseListCafe(id);
+	   
+	   model.addAttribute("list", list);
+	   model.addAttribute("listcafe", listcafe);
+	   /*model.addAttribute("list", memberDao.getib(id));*/
+	   
+	   return "mypage.mype";
+	   
+   }
+   
+   @RequestMapping(value="mype", method = RequestMethod.POST)
+   public String mype(Member member, MemberCafe memberCafe, Model model, HttpServletRequest request, Principal principal) throws IOException {
+	   String id = principal.getName();
+	   
+	  /* List<Member> list = memberDao.getUseList(id);
+	   List<Mypage> listcafe = mypageDao.getUseListCafe(id);
+	   
+	   model.addAttribute("list", list);
+	   model.addAttribute("listcafe", listcafe);*/	
+	   
+	    int row = memberDao.update(member);
+		  
+		String cafes = member.getCafes();
+		String[] cafecode = cafes.split(",");
+		 
+		// memberCafeDao.update(memberCafe);
+		int row2 = memberCafeDao.delete(member.getId(), cafecode[0]);
+	
+		for(int i=0; i<cafecode.length; i++) {
+			memberCafeDao.insert(member.getId(), cafecode[i]);
+		}
+
+	   return "redirect:../mypage/myp";
+   }
+   
    @RequestMapping(value="mypd", method = RequestMethod.GET)
 	public String mypd(Mypage mypage, Principal principal, Model model, HttpServletRequest request) throws IOException {
 	      

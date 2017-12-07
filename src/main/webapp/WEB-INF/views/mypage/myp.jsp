@@ -43,6 +43,7 @@
     border:1px solid #eee;  
     text-align:center;  
     text-decoration:none;  
+    background-color: #f4f4f4;
 }  
 .listnum ul li a:hover, .listnum ul li a:focus {  
     color:#fff;  
@@ -63,11 +64,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">정보 수정</a>
+          	<li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/main/calendar">Home</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">카페 할인 정보</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">My Cafe</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/mypage/mype">정보 수정</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/mypage/mypd">회원 탈퇴</a>
@@ -79,7 +83,7 @@
 
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
-        <a href="${path}/main/calendar"><img class="img-fluid mb-5 d-block mx-auto" src="${path}/resource/images/mmy-coffee.png" style="height: 180px; margin-left: 420px;" alt=""></a>
+        <img class="img-fluid mb-5 d-block mx-auto" src="${path}/resource/images/mmy-coffee.png" style="height: 180px; margin-left: 420px;" alt="">
         <h1 class="text-uppercase mb-0">My Page</h1><br />
         <!-- <hr class="star-light"> -->
 	        <form action="?${_csrf.parameterName}=${_csrf.token}" method="post"
@@ -93,7 +97,7 @@
 		    <form action="?${_csrf.parameterName}=${_csrf.token}" method="post"
 		enctype="multipart/form-data">
 		<c:forEach var="m" items="${list}">
-			<table class="table-garo2">			
+			<table id="my-table" class="table-garo2">			
 				<tr id="tr_id">
 					<th>아이디</th>
 					<td colspan="4">${m.id}</td>
@@ -138,7 +142,59 @@
 
     <!-- Portfolio Grid Section -->
     <section class="portfolio" id="portfolio">
-      <h2 class="text-center text-uppercase text-white">정보 수정</h2>
+    	 <h2 class="text-center text-uppercase text-white">My Cafe</h2>
+      <div class="list-container">
+      <form action="?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data">
+		<table id="table1" class="table-garo2">
+	      <tr>
+	         <th class="w60">카페</th>
+	         <th class="tit w100">제목</th>
+	         <!-- <th class="w60">내용</th> -->
+	         <th class="w60">시작일자</th>
+	         <th class="w60">종료일자</th>
+	      </tr>
+		  <tbody>
+		     <c:forEach var="m" items="${list1}">
+		        <tr>
+		           <td>${m.cafename}</td>
+		           <td class="con w100"><a href="${path}/customer/dcinfo/notice/${m.dcinfonum}">${m.title}</a></td>
+		           <%-- <td>${m.content}</td> --%>
+		           <td><fmt:formatDate pattern="yyyy-MM-dd" value="${m.startdate}"/></td>   
+		           <td><fmt:formatDate pattern="yyyy-MM-dd" value="${m.finishdate}"/></td>         
+		        </tr>
+		     </c:forEach>
+		  </tbody>
+        </table>
+        <br /><br />
+<!-- 리스트 : 이전  1 2 3 4 5 ... 다음 --> <c:set var="page" value="${param.p}" />
+<c:set var="startNum" value="${page-((page-1)%5)}" /> <c:set
+   var="lastNum"
+   value="${fn:substringBefore(count%10 ==0 ? count/10 : count/10+1, '.')}" />
+
+<div class="listnum">
+      <ul class="listnum">
+         <c:forEach var="i" begin="0" end="4">
+            <c:set var="strong" value="" />
+            <c:if test="${page == startNum+i }">
+               <c:set var="strong" value="text-strong" />
+            </c:if>
+            <c:if test="${startNum+i <= lastNum }">
+               <li><a class="${strong }" href="?p=${startNum+i}">${startNum+i}</a></li>
+            </c:if>
+            <c:if test="${startNum+i > lastNum }">
+               <li><a href="?p=${startNum+i}">${startNum+i}</a></li>
+            </c:if>
+         </c:forEach>
+      </ul>
+      <div>
+         <c:if test="${lastNum >= startNum+5 }">
+            <a href="?p=${startNum+5}">다음</a>
+         </c:if>
+      </div>
+</div>
+    </form>
+		</div>
+     <%--  <h2 class="text-center text-uppercase text-white">정보 수정</h2>
       <div class="list-container">
       <c:forEach var="m" items="${list}">
     <form action="?${_csrf.parameterName}=${_csrf.token}" method="post"
@@ -202,7 +258,7 @@
 		</div>
 	</form>
 	</c:forEach>
-	</div>  
+	</div>   --%>
     
        <!--  <div class="row">
           <div class="col-md-6 col-lg-4">
@@ -270,7 +326,7 @@
 
     <!-- About Section -->
     <section class="bg-primary text-white mb-0" id="about">
-       	  <h2 class="text-center text-uppercase text-white">카페 할인 정보</h2>
+       	 <%--  <h2 class="text-center text-uppercase text-white">카페 할인 정보</h2>
       <div class="list-container">
       <form action="?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data">
 		<table id="table1" class="table-garo2">
@@ -286,7 +342,7 @@
 		        <tr>
 		           <td>${m.cafename}</td>
 		           <td class="con w100"><a href="${path}/customer/dcinfo/notice/${m.dcinfonum}">${m.title}</a></td>
-		           <%-- <td>${m.content}</td> --%>
+		           <td>${m.content}</td>
 		           <td><fmt:formatDate pattern="yyyy-MM-dd" value="${m.startdate}"/></td>   
 		           <td><fmt:formatDate pattern="yyyy-MM-dd" value="${m.finishdate}"/></td>         
 		        </tr>
@@ -322,7 +378,7 @@
 </div>
     </form>
 		</div>
-    </section>
+    </section> --%>
 
     <%-- <section id="contact">
               <h2 class="text-center text-uppercase text-white">회원 탈퇴</h2>

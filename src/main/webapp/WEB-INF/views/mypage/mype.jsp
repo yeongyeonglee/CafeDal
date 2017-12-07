@@ -54,27 +54,71 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
         <img class="img-fluid mb-5 d-block mx-auto" src="${path}/resource/images/mmy-coffee.png" style="height: 180px; margin-left: 420px;" alt="">
-        <h2 class="text-uppercase mb-0">회원 탈퇴</h2>
-        <!-- <hr class="star-light"> -->
-	       <div class="list-container">
-        <!-- <hr class="star-light mb-5"> -->
-       	<form action="?${_csrf.parameterName}=${_csrf.token}" method="post"
+        <h2 class="text-center text-uppercase text-white">정보 수정</h2>
+      <div class="list-container">
+      <c:forEach var="m" items="${list}">
+    <form action="?${_csrf.parameterName}=${_csrf.token}" method="post"
 		enctype="multipart/form-data">
-		<c:forEach var="m" items="${list}">
-			<label id="name-d">${m.name}</label>
-			<label>님 정말 탈퇴하시겠습니까?</label>
-		</c:forEach>
-	</form>
-	<br /><br /><br />
-	<form action="?${_csrf.parameterName}=${_csrf.token}" method="post"
-		enctype="multipart/form-data">
+		<table id="e-table" class="table table-garo2">
+			<tr id="tr_id">
+				<th>아이디</th>
+				<td colspan="6">${m.id}</td>
+			</tr>
+
+			<tr id="tr_pw">
+				<th>비밀번호</th>
+				<td colspan="6"><input name="pwd" id="pwd" type="text"
+					value='${m.pwd}'/></td>
+			</tr>
+
+			<tr id="tr_name">
+				<th>이름</th>
+				<td colspan="6"><input name="name" id="name" type="text" value='${m.name}'/>
+				</td>
+			</tr>
+
+			<tr id="tr_mail">
+				<th>이메일</th>
+				<td colspan="6"><input name="mail" id="mail" type="text" value='${m.mail}'/>
+				</td>
+			</tr>
+
+			<tr id="tr_birth">
+				<th>생일</th>
+				<td colspan="6">${m.birth}</td>
+			</tr>
+
+			<tr>
+				<th>카페</th>
+				<td colspan="6">
+					<form name="check" class="cm-check" id="chbox">
+						<div class="cm-check">
+							<input type="checkbox" id="cafes1" name="cafes" value="1" /> 
+								<label class="cm-check2" for="cafes1">공차</label> 
+							<input type="checkbox" id="cafes1" name="cafes" value="2" /> 
+								<label class="cm-check2" for="cafes1">스타벅스</label>
+							<input type="checkbox" id="cafes1" name="cafes" value="3" /> 
+								<label class="cm-check2" for="cafes1">이디야</label> 
+								<!-- <input type="checkbox" id="cafes"
+								name="cafes" value="4" /> <label class="cm-check2">커피빈</label> <input
+								type="checkbox" id="cafes" name="cafes" value="5" /> <label
+								class="cm-check2">투썸플레이스</label> --> 
+							<input type="checkbox" id="cafes1" name="cafes" value="6" /> 
+								<label class="cm-check2" for="cafes1">할리스커피</label>	
+						</div>
+					</form>
+				</td>
+			</tr>
+		</table>
 		<div class="button">
 		<input type="hidden" name="id" value="${m.id}" />
-		<input class="eff1" onclick="location.href='mypd?id=${m.id}'" type="submit" value="회원 탈퇴 하기" />
+		<input class="eff" type="submit" value="저장" />
+		<!-- <input type="button" onclick="location.href='edit'" class="eff1" value="취소" /> -->
 			<!-- <a class="eff-2" href="../mypage/edit">취소</a> -->
 		</div>
 	</form>
-      </div>
+	</c:forEach>
+	</div>  
     </header>
 
    <%--  <!-- Portfolio Grid Section -->

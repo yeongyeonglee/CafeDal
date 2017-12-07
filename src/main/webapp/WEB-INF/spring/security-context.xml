@@ -7,9 +7,9 @@
 
 	  <intercept-url pattern="/index" access="hasRole('ROLE_USER')" />
       <intercept-url pattern="/customer/**" access="hasRole('ROLE_USER')" />
-      <!-- <intercept-url pattern="/mypage/*" access="hasRole('ROLE_USER')" /> -->
+      <intercept-url pattern="/mypage/*" access="hasRole('ROLE_USER')" />
       <intercept-url pattern="/main/*" access="hasRole('ROLE_USER')" />
-      <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
+      <!-- <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/> -->
 
       <form-login default-target-url="/main/calendar" login-page="/member/login" />
       <form-login default-target-url="/admin/manage/list"
