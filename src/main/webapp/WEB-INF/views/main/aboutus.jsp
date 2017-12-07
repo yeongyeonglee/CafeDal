@@ -148,8 +148,8 @@
 						    <a class="imageLink" id="section03_3" src="${path}/resource/images/aboutus03.JPG" title="DC INFO">
 						      <img class="image" style="width:338px; height:225px;" id="section03_3" src="${path}/resource/images/aboutus03.JPG" alt="DC INFO">
 						    </a>
-						    <a class="imageLink" id="section03_4" src="${path}/resource/images/aboutus04.JPG" title="TODAY'S COFFEE">
-						      <img class="image" style="width:338px; height:225px;" id="section03_4" src="${path}/resource/images/aboutus04.JPG" alt="TODAY'S COFFEE">
+						    <a class="imageLink" id="section03_4" src="${path}/resource/images/aboutus04.jpg" title="TODAY'S COFFEE">
+						      <img class="image" style="width:338px; height:225px;" id="section03_4" src="${path}/resource/images/aboutus04.jpg" alt="TODAY'S COFFEE">
 						    </a>
 						  </div>
 						  

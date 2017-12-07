@@ -117,10 +117,12 @@
                             name="deleteArticleId" value="${n.code }" />
                 </td> --%>
 
+<<<<<<< HEAD
+
+
 <h3 class="hidden">회원정보 목록</h3>
 
       <form action="delete?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data"
-
       		id="massiveDeleteForm">
 
          <table class="table-garo-admin">
@@ -140,7 +142,7 @@
                             name="deleteArticleId" value="${m.id }"
                             style="margin-left:8px;"/> <!-- style="margin-left:5px;" --> 
                     </td>
-                     <td id="tr_id">${m.id}</td>
+                     <td id="tr_id" class="con w100"><a href="list2/${m.id}">${m.id}</a></td>
                      <td id="tr_pw">${m.pwd}</td>
                      <td id="tr_name">${m.name}</td>
                      <td id="tr_mail">${m.mail}</td>
@@ -155,46 +157,46 @@
           <div class="ons">  
 			   <span id="massiveDeleteBtn2" class="reg-admin" style="cursor: pointer;">악성 회원 탈퇴</span>
 		  </div>
-          
-          <h3 class="hidden">회원목록 검색폼</h3>
-			<div class="d1" style="margin-top: 50px;">
-			   <form>
-			      <select
-			            name="f">
-			            <option selected="selected" value="id">아이디</option>
-			            <option value="name">이름</option>
-			         </select> <input class="btn-search" type="text" name="q" placeholder="검색어 입력">
-			         <input class="btn-button" type="submit" value="▶" />
+         
+	          <h3 class="hidden">회원목록 검색폼</h3>
+				<div class="d1" style="margin-top: 50px;">
+				   <form>
+				      <select
+				            name="f">
+				            <option selected="selected" value="id">아이디</option>
+				            <option value="name">이름</option>
+				         </select> <input class="btn-search" type="text" name="q" placeholder="검색어 입력">
+				         <input class="btn-button" type="submit" value="▶" />
+				   
+				   </form>
+				</div>
+	
+			<!-- 리스트 : 이전  1 2 3 4 5 ... 다음 --> <c:set var="page" value="${param.p}" />
+			<c:set var="startNum" value="${page-((page-1)%5)}" /> <c:set
+			   var="lastNum"
+			   value="${fn:substringBefore(count%10 ==0 ? count/10 : count/10+1, '.')}" />
 			   
-			   </form>
-			</div>
-
-		<!-- 리스트 : 이전  1 2 3 4 5 ... 다음 --> <c:set var="page" value="${param.p}" />
-		<c:set var="startNum" value="${page-((page-1)%5)}" /> <c:set
-		   var="lastNum"
-		   value="${fn:substringBefore(count%10 ==0 ? count/10 : count/10+1, '.')}" />
-		   
-		  
-		   <div class="listnum">
-		      <ul class="listnum">
-		         <c:forEach var="i" begin="0" end="4">
-		            <c:set var="strong" value="" />
-		            <c:if test="${page == startNum+i }">
-		               <c:set var="strong" value="text-strong" />
-		            </c:if>
-		            <c:if test="${startNum+i <= lastNum }">
-		               <li><a class="${strong }" href="?p=${startNum+i}">${startNum+i}</a></li>
-		            </c:if>
-		            <c:if test="${startNum+i > lastNum }">
-		               <li><a href="?p=${startNum+i}">${startNum+i}</a></li>
-		            </c:if>
-		         </c:forEach>
-		      </ul>
-		      <div>
-		         <c:if test="${lastNum >= startNum+5 }">
-		            <a href="?p=${startNum+5}">다음</a>
-		         </c:if>
-		      </div>
-		   </div>
+			  
+			   <div class="listnum">
+			      <ul class="listnum">
+			         <c:forEach var="i" begin="0" end="4">
+			            <c:set var="strong" value="" />
+			            <c:if test="${page == startNum+i }">
+			               <c:set var="strong" value="text-strong" />
+			            </c:if>
+			            <c:if test="${startNum+i <= lastNum }">
+			               <li><a class="${strong }" href="?p=${startNum+i}">${startNum+i}</a></li>
+			            </c:if>
+			            <c:if test="${startNum+i > lastNum }">
+			               <li><a href="?p=${startNum+i}">${startNum+i}</a></li>
+			            </c:if>
+			         </c:forEach>
+			      </ul>
+			      <div>
+			         <c:if test="${lastNum >= startNum+5 }">
+			            <a href="?p=${startNum+5}">다음</a>
+			         </c:if>
+			      </div>
+			   </div>
 
 </main>
