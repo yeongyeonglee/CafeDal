@@ -86,7 +86,7 @@
 
 <div style="margin-top:30px; margin-bottom: 40px;">
 
-   <label class="list-tit" style="padding-right:30px;">회원 관리</label>
+   <label class="list-tit" style="padding-right:30px;">회원 관리 수정</label>
      <a href="../useinfo/notice">  
         <style="width: 50px; height: 40px; padding-right: 10px; margin-bottom: -10px" alt="이용"/></a>
      <a href="../dcinfo/notice">  
@@ -118,81 +118,65 @@
                 </td> --%>
 
 <h3 class="hidden">회원정보 목록</h3>
-      <form>
-      <form action="?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data"
-      		id="massiveDeleteForm">
+      <form action="?${_csrf.parameterName}=${_csrf.token}" method="post"
+		enctype="multipart/form-data">
+		<table class="table table-garo2">
+			<tr id="tr_id">
+				<th>아이디</th>
+				<td colspan="6">${n.id}</td>
+			</tr>
 
-         <table class="table-garo-admin">
-               <tr>
-               		<th style="width: 30px">구분</th>
-                    <th id="tr_id">아이디</th>
-                    <th id="tr_pw">비밀번호</th>
-                    <th id="tr_name">이름</th>
-                    <th id="tr_mail">이메일</th>
-                    <th id="tr_birth">생일</th>
-                    <th id="tr_cafes">카페</th>
-               </tr>
-            <c:forEach var="m" items="${list}">
-               <tr>	
-               		<td>
-                    <input type="checkbox" class="deleteArticleId" 
-                            name="deleteArticleId" value="${m.id }"
-                            style="margin-left:8px;"/> <!-- style="margin-left:5px;" --> 
-                    </td>
-                     <td id="tr_id" class="con w100"><a href="list2/${m.id}">${m.id}</a></td>
-                     <td id="tr_pw">${m.pwd}</td>
-                     <td id="tr_name">${m.name}</td>
-                     <td id="tr_mail">${m.mail}</td>
-                     <td id="tr_birth">${m.birth}</td>
-                     <td id="tr_cafes">${m.cafes}</td>
-               </tr>
-            </c:forEach>
-          </table>
-          </form>
-          
-          <div class="ons">  
-			   <span id="massiveDeleteBtn2" class="reg-admin" style="cursor: pointer;">악성 회원 탈퇴</span>
-		  </div>
-          
-          <h3 class="hidden">회원목록 검색폼</h3>
-			<div class="d1" style="margin-top: 50px;">
-			   <form>
-			      <select
-			            name="f">
-			            <option selected="selected" value="id">아이디</option>
-			            <option value="name">이름</option>
-			         </select> <input class="btn-search" type="text" name="q" placeholder="검색어 입력">
-			         <input class="btn-button" type="submit" value="▶" />
-			   
-			   </form>
-			</div>
+			<tr id="tr_pw">
+				<th>비밀번호</th>
+				<td colspan="6"><input name="pwd" id="pwd" type="text" value='${n.pwd}'
+					placeholder="비밀번호" /></td>
+			</tr>
 
-		<!-- 리스트 : 이전  1 2 3 4 5 ... 다음 --> <c:set var="page" value="${param.p}" />
-		<c:set var="startNum" value="${page-((page-1)%5)}" /> <c:set
-		   var="lastNum"
-		   value="${fn:substringBefore(count%10 ==0 ? count/10 : count/10+1, '.')}" />
-		   
-		  
-		   <div class="listnum">
-		      <ul class="listnum">
-		         <c:forEach var="i" begin="0" end="4">
-		            <c:set var="strong" value="" />
-		            <c:if test="${page == startNum+i }">
-		               <c:set var="strong" value="text-strong" />
-		            </c:if>
-		            <c:if test="${startNum+i <= lastNum }">
-		               <li><a class="${strong }" href="?p=${startNum+i}">${startNum+i}</a></li>
-		            </c:if>
-		            <c:if test="${startNum+i > lastNum }">
-		               <li><a href="?p=${startNum+i}">${startNum+i}</a></li>
-		            </c:if>
-		         </c:forEach>
-		      </ul>
-		      <div>
-		         <c:if test="${lastNum >= startNum+5 }">
-		            <a href="?p=${startNum+5}">다음</a>
-		         </c:if>
-		      </div>
-		   </div>
+			<tr id="tr_name">
+				<th>이름</th>
+				<td colspan="6"><input name="name" id="name" type="text" value='${n.name}' placeholder="이름" />
+				</td>
+			</tr>
 
+			<tr id="tr_mail">
+				<th>이메일</th>
+				<td colspan="6"><input name="mail" id="mail" type="text" value='${n.mail}' placeholder="이메일" />
+				</td>
+			</tr>
+
+			<tr id="tr_birth">
+				<th>생일</th>
+				<td colspan="6">${n.birth}</td>
+			</tr>
+
+			<tr>
+				<th><label>카페</label></th>
+				<td colspan="6">
+					<form name="check">
+						<div class="cm-check">
+							<input type="checkbox" id="cafes" name="cafes" value="1" /> 
+								<label class="cm-check2">공차</label> 
+							<input type="checkbox" id="cafes" name="cafes" value="2" /> 
+								<label class="cm-check2">스타벅스</label>
+							<input type="checkbox" id="cafes" name="cafes" value="3" /> <label
+								class="cm-check2">이디야</label>
+							<input type="checkbox" id="cafes" name="cafes" value="6" />
+								<label class="cm-check2">할리스커피</label>
+						</div>
+					</form>
+				</td>
+			</tr>
+		</table>
+		<%-- <input type="hidden" name="id" value="${list.id}" />
+		<input class="eff-2" type="submit" value="저장"></input>
+		<div class="button">
+			<a class="eff-1" href="../mypage/edit">취소</a>
+		</div> --%>
+		<div class="admin_editbutton">
+			<input type="hidden" name="id" value="${list.id}" />
+			<input class="eff" type="submit" value="저장" />
+			<input type="button" onclick="location.href='../list'" class="eff1" value="취소" />
+				<!-- <a class="eff-2" href="../mypage/edit">취소</a> -->
+		</div>
+	</form>
 </main>

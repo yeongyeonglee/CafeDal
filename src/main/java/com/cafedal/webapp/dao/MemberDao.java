@@ -34,7 +34,7 @@ public interface MemberDao  {
 
     List<Member> getUseList(String id);
     
-    //List<Member> getUseListRole(String id);
+    List<Member> getUseListRole2(String id);
     
 	Member getib(String id);
 

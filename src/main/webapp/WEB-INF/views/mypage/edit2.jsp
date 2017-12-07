@@ -83,7 +83,7 @@
 		<div class="button">
 		<input type="hidden" name="id" value="${list.id}" />
 		<input class="eff" type="submit" value="저장" />
-		<input type="button" onclick="location.href='edit'" class="eff1" value="취소" />
+		<input type="button" onclick="location.href='list'" value="취소" />
 			<!-- <a class="eff-2" href="../mypage/edit">취소</a> -->
 		</div>
 	</form>

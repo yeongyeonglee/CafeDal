@@ -26,6 +26,7 @@ import com.cafedal.webapp.entity.Manage;
 import com.cafedal.webapp.entity.Member;
 import com.cafedal.webapp.entity.MemberCafe;
 import com.cafedal.webapp.entity.Mypage;
+import com.cafedal.webapp.entity.UseCom;
 
 @Controller
 @RequestMapping("/admin/manage/*")
@@ -36,12 +37,15 @@ public class ManageController {
    
    @Autowired
    private MemberDao memberDao;
+   
+   @Autowired
+   private MemberCafeDao memberCafeDao;
       
    @RequestMapping("list")
-   public String edit(@RequestParam(value = "p", defaultValue = "1") Integer page,
+   public String list(@RequestParam(value = "p", defaultValue = "1") Integer page,
 		   @RequestParam(value = "f", defaultValue = "id") String field,
 		   @RequestParam(value = "q", defaultValue = "") String query,
-		   Manage manage, Model model, HttpServletRequest request) throws IOException {
+		   Model model, HttpServletRequest request) throws IOException {
       
 	  
 	   List<Member> list = memberDao.getUseListRole(page, field, query);
@@ -54,16 +58,32 @@ public class ManageController {
        return "admin.manage.list";
    }
    
-   /*@RequestMapping(value="list", method = RequestMethod.POST)
-   public String edit(@RequestParam(value = "p", defaultValue = "1") Integer page,
-		   @RequestParam(value = "f", defaultValue = "id") String field,
-		   @RequestParam(value = "f", defaultValue = "") String query,
-		   HttpServletRequest request) throws IOException {
+   @RequestMapping(value= "list2/{id}", method = RequestMethod.GET)
+   public String edit(@PathVariable("id") String id, Model model, UseCom usecom,Principal principal) throws IOException {
       
-	   
-       return "admin.manage.list";
-   }*/
+	  
+	   List<Member> list = memberDao.getUseListRole2(id);
+	   model.addAttribute("n", memberDao.getib(id));
+       return "admin.manage.list2";
+   }
    
+   @RequestMapping(value= "list2/{id}", method = RequestMethod.POST)
+   public String edit(@PathVariable("id") String id, Member member, MemberCafe memberCafe, Model model, HttpServletRequest request, Principal principal) throws IOException {
+	   		
+	   		int row = memberDao.update(member);
+			  
+			String cafes = member.getCafes();
+			String[] cafecode = cafes.split(",");
+			 
+			int row2 = memberCafeDao.delete(member.getId(), cafecode[0]);
+		
+			for(int i=0; i<cafecode.length; i++) {
+				memberCafeDao.insert(member.getId(), cafecode[i]);
+			}
+	   
+       return "redirect:../admin/manage/list";
+   }
+      
 
 	@RequestMapping("delete")
 	public String noticeDel(HttpServletRequest request) {
