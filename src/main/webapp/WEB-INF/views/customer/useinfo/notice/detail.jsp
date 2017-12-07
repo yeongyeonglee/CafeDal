@@ -31,7 +31,7 @@
 
 </div>
 
-<div class="tit-content">
+<div class="tit-content top">
 
 	<h2 style="padding-left: 20px;">${n.utitle}</h2>
 	<div class="tit-content2">
@@ -75,8 +75,13 @@
 			<tr class="com3">
 				<td><fmt:formatDate pattern="yyyy-MM-dd hh:mm:ss"
 						value="${comn.date}" /></td>
-				<td><a href="comedit?num=${comn.noticenum}&nnum=${comn.num}">수정</a>
+				
+				   <td>	<a href="comedit?num=${comn.noticenum}&nnum=${comn.num}">수정</a>
 					<a href="comdelete?num=${comn.noticenum}&nnum=${comn.num}">삭제</a></td>
+					
+					
+				<%-- 	  <td><c:if test="${sessionScope.userId!=${comn.writerid}"></c:if></td> --%>
+				
 				<td></td>
 			</tr>
 		</c:forEach>
@@ -104,11 +109,7 @@
 	</ul>
 
 
-	<%-- 	<li><a href="edit?num=${n.num}">수정</a></li> --%>
-
-
-	<%-- <li><a href="delete?num=${n.num}">삭제</a></li> --%>
-
+	
 </div>
 
 <div class="prep-next2">
