@@ -104,6 +104,7 @@
 				<td ><a href="comedit?num=${comn.noticenum}&nnum=${comn.num}">수정</a>
 				<a href="comdelete?num=${comn.noticenum}&nnum=${comn.num}">삭제</a></td>
 				<td></td>
+				
 			</tr>
 		</c:forEach>
    </tbody>
@@ -112,7 +113,7 @@
 <div>
 <form name="form1" action="?${_csrf.parameterName}=${_csrf.token}"
 	method="post" enctype="multipart/form-data">
-	<div class="comform" >
+	<div class="comform" style="margin-top: 10px;">
 		<br>
 		<!-- **로그인 한 회원에게만 댓글 작성폼이 보이게 처리 -->
 		<c:if test="${sessionScope.userId != null}"></c:if>

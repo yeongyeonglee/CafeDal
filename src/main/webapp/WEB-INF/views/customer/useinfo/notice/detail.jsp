@@ -25,9 +25,9 @@
 </div>
 
 <div style="margin-bottom: 40px; margin-top: -10px;">
-	<label
+	<!-- <label
 		style="margin-left: 460px; font-size: 30px; font-weight: bolder; margin-top: -50px;">이용
-		방법</label>
+		방법</label> -->
 
 </div>
 

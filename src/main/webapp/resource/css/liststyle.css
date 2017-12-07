@@ -680,6 +680,10 @@ fieldset .reg-field {
 	margin-left: 720px;
 }
 
+.listcom tr{
+	margin-bottom: 10px;
+}
+
 .com1 {
 	font-size: 15px;
 }
@@ -703,7 +707,7 @@ fieldset .reg-field {
 	width: 900px;
 	margin-left: 500px;
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 40px;
 	padding-right: 10px;
 	margin-bottom: 100px;
 }
