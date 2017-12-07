@@ -38,10 +38,10 @@
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/main/calendar">Home</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/mypage/mype">정보 수정</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/mypage/myp#portfolio">My Cafe</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/mypage/myp#portfolio">카페 할인 정보</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/mypage/mype">정보 수정</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/mypage/mypd">회원 탈퇴</a>
@@ -53,7 +53,7 @@
 
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
-        <a href="${path}/main/calendar"><img class="img-fluid mb-5 d-block mx-auto" src="${path}/resource/images/mmy-coffee.png" style="height: 180px; margin-left: 420px;" alt=""></a>
+        <img class="img-fluid mb-5 d-block mx-auto" src="${path}/resource/images/mmy-coffee.png" style="height: 180px; margin-left: 420px;" alt="">
         <h2 class="text-center text-uppercase text-white">정보 수정</h2>
       <div class="list-container">
       <c:forEach var="m" items="${list}">
@@ -68,18 +68,18 @@
 			<tr id="tr_pw">
 				<th>비밀번호</th>
 				<td colspan="6"><input name="pwd" id="pwd" type="text"
-					placeholder="비밀번호" /></td>
+					value='${m.pwd}'/></td>
 			</tr>
 
 			<tr id="tr_name">
 				<th>이름</th>
-				<td colspan="6"><input name="name" id="name" type="text" placeholder="이름" />
+				<td colspan="6"><input name="name" id="name" type="text" value='${m.name}'/>
 				</td>
 			</tr>
 
 			<tr id="tr_mail">
 				<th>이메일</th>
-				<td colspan="6"><input name="mail" id="mail" type="text" placeholder="이메일" />
+				<td colspan="6"><input name="mail" id="mail" type="text" value='${m.mail}'/>
 				</td>
 			</tr>
 

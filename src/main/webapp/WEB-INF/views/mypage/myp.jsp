@@ -68,10 +68,10 @@
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/main/calendar">Home</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/mypage/mype">정보 수정</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">My Cafe</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">카페 할인 정보</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/mypage/mype">정보 수정</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/mypage/mypd">회원 탈퇴</a>
@@ -83,7 +83,7 @@
 
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
-        <a href="${path}/main/calendar"><img class="img-fluid mb-5 d-block mx-auto" src="${path}/resource/images/mmy-coffee.png" style="height: 180px; margin-left: 420px;" alt=""></a>
+        <img class="img-fluid mb-5 d-block mx-auto" src="${path}/resource/images/mmy-coffee.png" style="height: 180px; margin-left: 420px;" alt="">
         <h1 class="text-uppercase mb-0">My Page</h1><br />
         <!-- <hr class="star-light"> -->
 	        <form action="?${_csrf.parameterName}=${_csrf.token}" method="post"
@@ -97,7 +97,7 @@
 		    <form action="?${_csrf.parameterName}=${_csrf.token}" method="post"
 		enctype="multipart/form-data">
 		<c:forEach var="m" items="${list}">
-			<table class="table-garo2">			
+			<table id="my-table" class="table-garo2">			
 				<tr id="tr_id">
 					<th>아이디</th>
 					<td colspan="4">${m.id}</td>
@@ -142,7 +142,7 @@
 
     <!-- Portfolio Grid Section -->
     <section class="portfolio" id="portfolio">
-    	 <h2 class="text-center text-uppercase text-white">카페 할인 정보</h2>
+    	 <h2 class="text-center text-uppercase text-white">My Cafe</h2>
       <div class="list-container">
       <form action="?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data">
 		<table id="table1" class="table-garo2">

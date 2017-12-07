@@ -38,10 +38,10 @@
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/main/calendar">Home</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/mypage/mype">정보 수정</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/mypage/myp#portfolio">My Cafe</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/mypage/myp#portfolio">카페 할인 정보</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/mypage/mype">정보 수정</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="${path}/mypage/mypd">회원 탈퇴</a>
@@ -53,7 +53,7 @@
 
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
-        <a href="${path}/main/calendar"><img class="img-fluid mb-5 d-block mx-auto" src="${path}/resource/images/mmy-coffee.png" style="height: 180px; margin-left: 420px;" alt=""></a>
+        <img class="img-fluid mb-5 d-block mx-auto" src="${path}/resource/images/mmy-coffee.png" style="height: 180px; margin-left: 420px;" alt="">
         <h2 class="text-uppercase mb-0">회원 탈퇴</h2>
         <!-- <hr class="star-light"> -->
 	       <div class="list-container">
