@@ -42,9 +42,9 @@ public class MyBatisManageDao implements ManageDao {
 	}
 	
 	@Override
-	public String delete(String id) {
+	public void delete(String id) {
 		ManageDao manageDao = sqlSession.getMapper(ManageDao.class);
-		return manageDao.delete(id);
+		manageDao.delete(id);
 	}
 
 

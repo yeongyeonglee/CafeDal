@@ -19,7 +19,7 @@
             
         });
         
-        $("#massiveDeleteBtn").click(function() {
+        $("#massiveDeleteBtn2").click(function() {
             
             var isChecked = false;
             
@@ -33,17 +33,17 @@
             });
             
             if(!isChecked){
-                alert("삭제할 대상을 선택하세요.");
+                alert("탈퇴 대상을 선택하세요.");
                 return;
             }
             
             /* 사용자에게 한번 더 컨펌 */
-            if( confirm("정말 삭제하시겠습니까?")){
-                alert("삭제되었습니다");
+            if( confirm("정말 탈퇴시키시겠습니까?")){
+                alert("탈퇴되었습니다");
                 
                 var form = $("#massiveDeleteForm");
-                form.attr("method", "post");
-                form.attr("action", "<c:url value='delete?${_csrf.parameterName}=${_csrf.token}' />");
+               /*  form.attr("method", "post");
+                form.attr("action", "delete?${_csrf.parameterName}=${_csrf.token}"); */
                 form.submit();
             }
             
@@ -88,9 +88,9 @@
 
    <label class="list-tit" style="padding-right:30px;">회원 관리</label>
      <a href="../useinfo/notice">  
-        <style="width: 50px; height: 40px; padding-right: 10px; margin-bottom: -10px" alt="이용"/></a>
+        <style="width: 50px; height: 40px; padding-right: 10px; margin-bottom: -10px" alt="이용" /></a>
      <a href="../dcinfo/notice">  
-        <style="width: 50px; height: 40px; padding-right: 10px; margin-bottom: -10px" alt="할인"/></a>
+        <style="width: 50px; height: 40px; padding-right: 10px; margin-bottom: -10px" alt="할인" /></a>
 
 </div>
 
@@ -118,12 +118,11 @@
                 </td> --%>
 
 <h3 class="hidden">회원정보 목록</h3>
-<<<<<<< HEAD
-      <form>
-=======
-      <form action="?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data"
+
+      <form action="delete?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data"
+
       		id="massiveDeleteForm">
->>>>>>> refs/remotes/origin/master
+
          <table class="table-garo-admin">
                <tr>
                		<th style="width: 30px">구분</th>
@@ -152,6 +151,7 @@
           </table>
           </form>
           
+          </form>
           <div class="ons">  
 			   <span id="massiveDeleteBtn2" class="reg-admin" style="cursor: pointer;">악성 회원 탈퇴</span>
 		  </div>
