@@ -26,8 +26,8 @@
 
 
 <div style="margin-bottom:40px; margin-top: -10px;">
-<label style="margin-left:460px; font-size: 30px; font-weight: bolder; margin-top: -50px;" >할인 정보</label>
-
+<!-- <label style="margin-left:460px; font-size: 30px; font-weight: bolder; margin-top: -50px;" >할인 정보</label>
+ -->
 </div>
 
 	<div class="tit-content">
