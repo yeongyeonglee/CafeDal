@@ -74,7 +74,7 @@ public class ManageController {
    }
    
    @RequestMapping(value= "list2/{id}", method = RequestMethod.POST)
-   public String edit(@PathVariable("id") String id, Member member, MemberCafe memberCafe, Model model, HttpServletRequest request, Principal principal) throws IOException {
+   public String edit(@PathVariable("id") String id, Member member, MemberCafe memberCafe, Model model, HttpServletRequest request) throws IOException {
 	   		
 	   		int row = memberDao.update(member);
 			  

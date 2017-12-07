@@ -104,6 +104,7 @@ public class MyBatisMemberCafeDao implements MemberCafeDao {
 		
 		return result;
 	}
+
 }
 
 	
