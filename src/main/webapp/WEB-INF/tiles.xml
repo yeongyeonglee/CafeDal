@@ -71,6 +71,16 @@
       <put-attribute name="body" value="/WEB-INF/views/mypage/deleteOk.jsp" />
    </definition>
    
+   <definition name="mypage.mype"  template="/WEB-INF/views/inc/login-layout.jsp" >
+      <put-attribute name="title" value="Tiles tutorial homepage" />
+      <put-attribute name="path" value="/" />
+      <put-attribute name="css" value="bootstrap.min.css" />
+      <put-attribute name="css" value="font-awesome.min.css" />
+      <put-attribute name="css" value="freelancer.min.css" />
+      <put-attribute name="css" value="magnific-popup.css" />
+      <put-attribute name="body" value="/WEB-INF/views/mypage/mype.jsp" />
+   </definition>
+   
    <definition name="mypage.mypd"  template="/WEB-INF/views/inc/login-layout.jsp" >
       <put-attribute name="title" value="Tiles tutorial homepage" />
       <put-attribute name="path" value="/" />
