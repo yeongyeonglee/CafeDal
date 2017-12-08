@@ -151,4 +151,18 @@ public class MyBatisMemberDao implements MemberDao {
 	    return list;
 	}
 
+	@Override
+	public Member getId(String name, String mail) {
+		
+		MemberDao memberDao = sqlSession.getMapper(MemberDao.class);
+		return memberDao.getId(name, mail);
+	}
+
+	@Override
+	public Member getPwd(String id, String name, String mail) {
+		
+		MemberDao memberDao = sqlSession.getMapper(MemberDao.class);	
+		return memberDao.getPwd(id, name, mail);
+	}
+
 }

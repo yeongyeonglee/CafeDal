@@ -16,21 +16,20 @@
 		    <article class="half">
 			        <h1><img src="${path}/images/logo2.png" alt="cafedal" width="130px" height="100px"></h1>
 			        <div class="tabs">
-				            <span class="tab signin active"><a href="#signin">아이디 찾기</a></span>
+				            <span class="tab signin active"><a href="${path}/member/idpwdFind#signin">아이디 찾기</a></span>
 				            <span class="tab signup"><a href="#signup">비밀번호 찾기</a></span>
 			        </div>
 			        <div class="content">
 				            <div class="signin-cont cont">
-					                <form action="idFind?${_csrf.parameterName}=${_csrf.token}" method="get">
-						                    <input type="text" name="name" id="name" class="inpt" required="required" placeholder="이름을 입력하세요">                 
-						                    <input type="text" name="mail" id="mail" class="inpt" required="required" placeholder="이메일을 입력하세요">                						 
+					                <form>
+						                    <h4 style="padding:40px; text-align: center;">${list.name}님의 비밀번호는</h4><br/><h4 id="red">${list.pwd}</h4><h4 style="text-align: center;">입니다.</h4>             						 
 						                    <div class="submit-wrap"> 
-												   <input type="submit" value="아이디 찾기" class="submit" />
+												   <input onclick="location.href='${path}/member/login'" type="button" value="로그인하러가기" class="submit" />
 						                    </div>
         					        </form>
     				        </div>
     				        
-    				        <div class="signup-cont cont">
+    				        <%-- <div class="signup-cont cont">
               						<form action="pwdFind?${_csrf.parameterName}=${_csrf.token}" method="get">
                 							<input type="text" name="id" id="id" class="inpt" required="required" placeholder="아이디를 입력하세요">                						   
 						                    <input type="text" name="name" id="name" class="inpt" required="required" placeholder="이름을 입력하세요">			                  
@@ -40,7 +39,7 @@
 							                        <input type="submit" value="비밀번호 찾기" class="submit" />
 						                    </div>
         					        </form>
-                            </div>
+                            </div> --%>
 			        </div>
 		    </article>
 		    <div class="half bg"></div>

@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -45,7 +49,7 @@ body .container h1 {
 }
 body .container .tabs {
   width: 100%;
-  margin-bottom: 29px;
+  margin-bottom: 35px;
   border-bottom: 1px solid #d9d9d9;
 }
 body .container .tabs .tab {
@@ -230,4 +234,42 @@ body .container .content .signup-cont {
   color: inherit;
   font-weight: 700;
   text-decoration: none;
+}
+
+#check-button{
+  margin-top: 150px;
+  font-size: 12px;
+  line-height: 42px;
+  display: block;
+  width: 100%;
+  height: 42px;
+  cursor: pointer;
+  vertical-align: middle;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #263238;
+  border: 1px solid #263238;
+  background: transparent;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+#check-button:hover {
+  background-color: #263238;
+  color: #ffffff;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;	
+}
+
+#red {
+	color: red;
+	margin-top: -60px;
+	text-align: center;
+}
+
+h4{		
+	font-family: 'Nanum Gothic', serif;
 }

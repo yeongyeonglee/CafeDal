@@ -48,6 +48,8 @@ public interface MemberDao  {
 
 	List<Member> getUseListRole(Integer page, String field, String query);
 
-
+	Member getId(String name, String mail);
+	
+	Member getPwd(String id, String name, String mail);
 }
 
