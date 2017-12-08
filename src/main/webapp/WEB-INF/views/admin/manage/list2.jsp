@@ -86,11 +86,9 @@
 
 <div style="margin-top:30px; margin-bottom: 40px;">
 
-   <label class="list-tit" style="padding-right:30px;">회원 관리 수정</label>
-     <a href="../useinfo/notice">  
-        <style="width: 50px; height: 40px; padding-right: 10px; margin-bottom: -10px" alt="이용"/></a>
-     <a href="../dcinfo/notice">  
-        <style="width: 50px; height: 40px; padding-right: 10px; margin-bottom: -10px" alt="할인"/></a>
+   <label class="list-tit" style="padding-right:30px;">댓글 관리</label>
+
+   <h3 style="margin-left:500px;">할인 정보 댓글</h3>
 
 </div>
 
@@ -118,64 +116,64 @@
                 </td> --%>
 
 <h3 class="hidden">회원정보 목록</h3>
+<h2>할인 정보 댓글</h2>
       <form action="?${_csrf.parameterName}=${_csrf.token}" method="post"
 		enctype="multipart/form-data">
-		<table class="table table-garo2">
-			<tr id="tr_id">
-				<th>아이디</th>
-				<td colspan="6">${n.id}</td>
-			</tr>
-
-			<tr id="tr_pw">
-				<th>비밀번호</th>
-				<td colspan="6"><input name="pwd" id="pwd" type="text" value='${n.pwd}'
-					placeholder="비밀번호" /></td>
-			</tr>
-
-			<tr id="tr_name">
-				<th>이름</th>
-				<td colspan="6"><input name="name" id="name" type="text" value='${n.name}' placeholder="이름" />
-				</td>
-			</tr>
-
-			<tr id="tr_mail">
-				<th>이메일</th>
-				<td colspan="6"><input name="mail" id="mail" type="text" value='${n.mail}' placeholder="이메일" />
-				</td>
-			</tr>
-
-			<tr id="tr_birth">
-				<th>생일</th>
-				<td colspan="6">${n.birth}</td>
-			</tr>
-
-			<tr>
-				<th><label>카페</label></th>
-				<td colspan="6">
-					<form name="check">
-						<div class="cm-check">
-							<input type="checkbox" id="cafes" name="cafes" value="1" /> 
-								<label class="cm-check2">공차</label> 
-							<input type="checkbox" id="cafes" name="cafes" value="2" /> 
-								<label class="cm-check2">스타벅스</label>
-							<input type="checkbox" id="cafes" name="cafes" value="3" /> <label
-								class="cm-check2">이디야</label>
-							<input type="checkbox" id="cafes" name="cafes" value="6" />
-								<label class="cm-check2">할리스커피</label>
-						</div>
-					</form>
-				</td>
-			</tr>
+		<table class="table-garo-admin" style="margin-top:-70px;">
+		   		<thead>
+			      <tr>
+			         <th class="w60" style="width:30px;">날짜</th>
+			         <th class="tit w100">댓글</th>
+			      </tr>
+		   		</thead>
+		   <tbody>
+		    <!-- 공지 ------------------------------------------------ -->
+		    
+			         <c:forEach var="a" items="${n}">
+				         <tr>           
+					            <td>${a.date}</td>
+					            <td class="con w100">${a.content}</td>
+				      	 </tr>
+			   		 </c:forEach>
+		      
+		     <!------------------------------------------------------- -->
+		     
+		     
+		   </tbody>
 		</table>
-		<%-- <input type="hidden" name="id" value="${list.id}" />
-		<input class="eff-2" type="submit" value="저장"></input>
-		<div class="button">
-			<a class="eff-1" href="../mypage/edit">취소</a>
-		</div> --%>
+		<br />
+		<br />
+		   <h3 style="margin-left:500px;">이용 정보 댓글</h3>
+		<table class="table-garo-admin">
+		   		<thead>
+			      <tr>
+			         <th class="w60" style="width:30px;">날짜</th>
+			         <th class="tit w100">댓글</th>
+			      </tr>
+		   		</thead>
+		   <tbody>
+		    <!-- 공지 ------------------------------------------------ -->
+		    
+			         <c:forEach var="b" items="${m}">
+				         <tr>           
+					            <td>${b.date}</td>
+					            <td class="con w100">${b.content}</td>
+				      	 </tr>
+			   		 </c:forEach>
+		      
+		     <!------------------------------------------------------- -->
+		     
+		     
+		   </tbody>
+		</table>
 		<div class="admin_editbutton">
 			<input type="hidden" name="id" value="${list.id}" />
-			<input class="eff" type="submit" value="저장" />
-			<input type="button" onclick="location.href='../list'" class="eff1" value="취소" />
+			<input type="button" onclick="location.href='../list'" value="목록"
+			style="    width: 90px; height:30px;
+            margin-left: 100px;
+            color: white;
+            background: black;
+            font-size: 13px;"	 />
 				<!-- <a class="eff-2" href="../mypage/edit">취소</a> -->
 		</div>
 	</form>

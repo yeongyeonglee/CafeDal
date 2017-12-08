@@ -16,10 +16,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.cafedal.webapp.dao.AdCmtDao;
+import com.cafedal.webapp.dao.DcComDao;
 import com.cafedal.webapp.dao.ManageDao;
 import com.cafedal.webapp.dao.MemberCafeDao;
 import com.cafedal.webapp.dao.MemberDao;
 import com.cafedal.webapp.dao.MypageDao;
+import com.cafedal.webapp.dao.UseComDao;
+import com.cafedal.webapp.entity.AdCmtView;
 import com.cafedal.webapp.entity.DcCom;
 import com.cafedal.webapp.entity.DcInfo;
 import com.cafedal.webapp.entity.Manage;
@@ -40,6 +44,15 @@ public class ManageController {
    
    @Autowired
    private MemberCafeDao memberCafeDao;
+   
+   @Autowired
+   private AdCmtDao adCmtDao;
+   
+   @Autowired
+   private DcComDao dcComDao;
+   
+   @Autowired
+   private UseComDao useComDao;
       
    @RequestMapping("list")
    public String list(@RequestParam(value = "p", defaultValue = "1") Integer page,
@@ -68,12 +81,24 @@ public class ManageController {
    public String edit(@PathVariable("id") String id, Model model, UseCom usecom,Principal principal) throws IOException {
       
 	  
-	   List<Member> list = memberDao.getUseListRole2(id);
+	   /*List<Member> list = memberDao.getUseListRole2(id);
 	   model.addAttribute("n", memberDao.getib(id));
+       return "admin.manage.list2";*/
+	   
+	   /*List<AdCmtView> list = adCmtDao.getUseList(id);
+	   model.addAttribute("n", list);*/
+	   
+	   List<DcCom> list = dcComDao.getUseList(id);
+	   List<UseCom> list2 = useComDao.getUseList(id);
+	   model.addAttribute("n", list);
+	   model.addAttribute("m", list2);
+	   
        return "admin.manage.list2";
+	   
+	   
    }
    
-   @RequestMapping(value= "list2/{id}", method = RequestMethod.POST)
+  /* @RequestMapping(value= "list2/{id}", method = RequestMethod.POST)
    public String edit(@PathVariable("id") String id, Member member, MemberCafe memberCafe, Model model, HttpServletRequest request) throws IOException {
 	   		
 	   		int row = memberDao.update(member);
@@ -88,7 +113,7 @@ public class ManageController {
 			}
 	   
        return "redirect:../admin/manage/list";
-   }
+   }*/
       
 
    

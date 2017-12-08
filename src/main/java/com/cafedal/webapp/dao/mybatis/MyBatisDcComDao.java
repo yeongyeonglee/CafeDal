@@ -7,8 +7,9 @@ import java.util.List;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.cafedal.webapp.dao.AdCmtDao;
 import com.cafedal.webapp.dao.DcComDao;
-
+import com.cafedal.webapp.entity.AdCmtView;
 import com.cafedal.webapp.entity.DcCom;
 
 
@@ -63,6 +64,14 @@ public class MyBatisDcComDao implements DcComDao {
 	public int delete(int num) {
 		DcComDao dccomDao = sqlSession.getMapper(DcComDao.class);
 		return  dccomDao.delete(num);
+	}
+
+	@Override
+	public List<DcCom> getUseList(String id) {
+		DcComDao dcComDao = sqlSession.getMapper(DcComDao.class);
+		List<DcCom> list = dcComDao.getUseList(id);
+
+        return list;
 	}
 
 

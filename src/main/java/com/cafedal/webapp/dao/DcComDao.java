@@ -22,4 +22,6 @@ public interface DcComDao {
 
 	int delete(int num);
 
+	List<DcCom> getUseList(String id);
+
 }

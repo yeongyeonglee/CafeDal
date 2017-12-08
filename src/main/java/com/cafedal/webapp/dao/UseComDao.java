@@ -22,5 +22,7 @@ public interface UseComDao {
 
 	int delete(int num);
 
+	List<UseCom> getUseList(String id);
+
 	
 }

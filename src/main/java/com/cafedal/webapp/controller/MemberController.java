@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.cafedal.webapp.dao.AdCmtDao;
 import com.cafedal.webapp.dao.MemberCafeDao;
 import com.cafedal.webapp.dao.MemberDao;
 import com.cafedal.webapp.dao.UseNoticeDao;
@@ -30,6 +31,9 @@ public class MemberController {
 	
 	@Autowired
 	private MemberCafeDao memberCafeDao;
+	
+	@Autowired
+	private AdCmtDao adCmtDao;
 	
 	@RequestMapping(value="login")
 	public String login() { 

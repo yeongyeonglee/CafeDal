@@ -25,6 +25,10 @@
 	<select id="get" resultType="com.cafedal.webapp.entity.UseCom">
 		select * from usecomment where  num=#{nnum} AND noticenum= #{num}
 	</select>
+	
+	<select id="getUseList" resultType="com.cafedal.webapp.entity.UseCom">
+       select * from usecomment where writerid=#{id}
+  	</select>
 
 	<update id="update" parameterType="com.cafedal.webapp.entity.UseCom">
 		update usecomment set content=#{content} where num=#{num}

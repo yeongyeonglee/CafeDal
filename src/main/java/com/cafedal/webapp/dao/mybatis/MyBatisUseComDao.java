@@ -5,9 +5,9 @@ import java.util.List;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 
-
+import com.cafedal.webapp.dao.DcComDao;
 import com.cafedal.webapp.dao.UseComDao;
-
+import com.cafedal.webapp.entity.DcCom;
 import com.cafedal.webapp.entity.UseCom;
 
 
@@ -59,6 +59,14 @@ public class MyBatisUseComDao implements UseComDao {
 	public int delete(int num) {
 		UseComDao usecomDao = sqlSession.getMapper(UseComDao.class);
 		return  usecomDao.delete(num);
+	}
+
+	@Override
+	public List<UseCom> getUseList(String id) {
+		UseComDao useComDao = sqlSession.getMapper(UseComDao.class);
+		List<UseCom> list = useComDao.getUseList(id);
+
+        return list;
 	}
 
 
