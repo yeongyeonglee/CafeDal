@@ -141,6 +141,18 @@
 
 
 
+
+
+
+
+<div class="logoline">
+<a href="notice?f=cafecode&q=1"><img class=" ggcc"  src="${path}/resource/images/logo-gongcha.PNG"></a>
+<a href="notice?f=cafecode&q=2"><img class="margin1 sstt" src="${path}/resource/images/starbucks.png"></a>
+<a href="notice?f=cafecode&q=3"><img class="margin2 eedd" src="${path}/resource/images/logo-ediya.PNG"></a>
+<a href="notice?f=cafecode&q=6"><img class="margin2 hhoo" src="${path}/resource/images/logo-hollys.PNG"></a>
+</div>
+
+
 <section id="gongcha" class="pad-xl">
 
 	<h3 class="hidden">공지사항 검색폼</h3>

@@ -800,6 +800,10 @@ fieldset .reg-field {
    color: #7b4122;
 }
 
+.admin_editbutton{
+	margin-left:1296px;
+}
+
 /*---------댓글 css----------------------------*/
 .listcom {
    width: 500px;

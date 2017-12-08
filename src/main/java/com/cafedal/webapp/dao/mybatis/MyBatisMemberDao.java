@@ -90,13 +90,13 @@ public class MyBatisMemberDao implements MemberDao {
 	    return member;
 	}
 
-	/*@Override
-	public List<Member> getUseListRole(String id) {
+	@Override
+	public List<Member> getUseListRole2(String id) {
 		MemberDao memberDao = sqlSession.getMapper(MemberDao.class);
-		List<Member> list = memberDao.getUseListRole(id);
+		List<Member> list = memberDao.getUseListRole2(id);
 	      
 	    return list;
-	}*/
+	}
 
 	@Override
 	public int MemberInsert(String id, String name, String pwd, String mail, String birth, String role, String cafes) {

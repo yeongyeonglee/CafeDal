@@ -61,6 +61,11 @@
   	   select * from member where id='${param1}'and name='${param2}'and mail='${param3}'
   </select>
   
+  <select id="getUseListRole2" resultType="com.cafedal.webapp.entity.Member">
+       select id,pwd,name,mail,birth,cafes from member
+       where id=#{id} 
+  </select>
+  
   <delete id="delete" parameterType="com.cafedal.webapp.entity.Member">
 	       delete from member where id=#{id}
   </delete>

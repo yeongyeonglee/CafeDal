@@ -18,7 +18,8 @@
 		   (select ifnull(max(cast(num as unsigned)),0)+1 from membercafe m),
 		   #{memberid}, 
 		   #{cafecode})
-  </insert>	
+  </insert>
+  
   <delete id="delete" parameterType="com.cafedal.webapp.entity.MemberCafe">
 	       delete from membercafe where memberid=#{memberid}
   </delete>
