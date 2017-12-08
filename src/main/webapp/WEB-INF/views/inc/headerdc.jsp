@@ -22,7 +22,7 @@
 					</li>
 				<!-- </security:authorize> -->
 				<li>
-					<a style="text-decoration: none" href="${path}/mypage/edit">MY PAGE</a>
+					<a style="text-decoration: none" href="${path}/mypage/myp">MY PAGE</a>
 				</li>
 			</ul>
 		</div>

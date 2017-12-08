@@ -287,5 +287,8 @@ public class MypageController {
          
 	   return "redirect:../NewFile";
    }*/
+   
+  
+ 
 }
    
