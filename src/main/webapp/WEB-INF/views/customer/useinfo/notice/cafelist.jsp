@@ -147,8 +147,7 @@
 			<div
 				class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft"
 				data-wow-delay="0.8s">
-				<a class="aa" href="#" target="_blank"> <img class="news-img pull-left"
-					src="img/press-01.jpg"></a>
+				<a class="aa" href="#" target="_blank"> </a>
 					<p class="black">
 						<a class="p1 aa"> STEP 1 : 스타벅스 커피 매장에서 즐기기 <br /> <br />
 						</a><small><a class="a1 aa">스타벅스의 커피 메뉴에는 에스프레소, 콜드브루, 디카페인
@@ -173,8 +172,7 @@
 			<div
 				class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft"
 				data-wow-delay="1.2s">
-				<a href="#" target="_blank" class="aa"> <img class="news-img pull-left"
-					src="img/press-02.jpg"></a>
+				<a href="#" target="_blank" class="aa"> </a>
 					<p class=" black">
 						<a class="p1 aa"> STEP 2 : 스타벅스 다양한 메뉴 즐기기<br /> <br />
 						</a><small><a class="a1 aa"> 스타벅스에서는 프라푸치노, 티, 피지오등 다양한 음료
@@ -193,8 +191,7 @@
 			<div
 				class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft"
 				data-wow-delay="1.5s">
-				<a href="#" target="_blank"> <img class="news-img pull-left"
-					src="img/press-02.jpg"></a>
+				<a href="#" target="_blank"> </a>
 					<p class="black">
 						<a class="p1 aa">STEP 3 : 스타벅스 커피 집에서 즐기기<br /> <br /></a> <small><a
 							class="a1 aa"> 스타벅스에서 판매하는 원두로 집에서 다양하게 즐길 수 있습니다.<br>
@@ -279,8 +276,7 @@
 			<div
 				class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft"
 				data-wow-delay="0.8s">
-				<a href="#" target="_blank"> <img class="news-img pull-left"
-					src="img/press-01.jpg">
+				<a href="#" target="_blank"> </a>
 					<p class="black">
 						<a class="p1 aa"> 1.할리스 커피 <br /> <br />
 						</a><small><a class="a1 aa">부드러우면서도 깊고 진한 맛이 특징입니다. <br />
@@ -300,8 +296,7 @@
 			<div
 				class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft"
 				data-wow-delay="1.2s">
-				<a href="#" target="_blank"> <img class="news-img pull-left"
-					src="img/press-02.jpg">
+				<a href="#" target="_blank"> </a>
 					<p class=" black">
 						<a class="p1 aa"> 2. 할리스 음식<br /> <br />
 						</a><small><a class="a1 aa"> 달달한 간식인 케이크, 아발랑쉬와 한 끼 식사로 든든한
@@ -320,8 +315,7 @@
 			<div
 				class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft"
 				data-wow-delay="1.5s">
-				<a href="#" target="_blank"> <img class="news-img pull-left"
-					src="img/press-02.jpg">
+				<a href="#" target="_blank"> </a>
 					<p class="black">
 						<a class="p1 aa">3. 할리스 추천 메뉴<br /> <br /></a> <small><a
 							class="a1 aa"> 할리스의 추천 메뉴는 바닐라 딜라이트 입니다.<br /> 카페라떼에 마다가스카르산
