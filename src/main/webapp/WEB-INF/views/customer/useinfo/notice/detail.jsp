@@ -33,7 +33,7 @@
 
 <div class="tit-content top">
 
-<<<<<<< HEAD
+
 	<h2 style="padding-left: 20px;">${n.utitle}</h2>
 	<div class="tit-content2">
 		<ul class="info">
@@ -45,26 +45,10 @@
 			<li style="margin-left: 780px;">조회수 &nbsp; ${n.hit}</li>
 		</ul>
 	</div>
-=======
-   <h2 style="padding-left: 20px;">${n.utitle}</h2>
-   <div class="tit-content2">
-      <ul class="info">
-         <li class="part">${n.cname}</li>
-         <li class="inq_cnt part">카페 달</li>
-         <li class="inq_cnt part"><c:forEach var="clist" items="${clist}">
-                  댓글 ${clist.count}
-               </c:forEach></li>
-         <li style="margin-left: 780px;">조회수 &nbsp; ${n.hit}</li>
-      </ul>
-   </div>
->>>>>>> refs/remotes/origin/master
+
 </div>
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> refs/remotes/origin/master
 <div>
 	<h3 class="hidden">이용방법 내용</h3>
 	<table class="table-garo2">
