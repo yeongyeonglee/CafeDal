@@ -117,7 +117,7 @@ public class UseInfoController {
 	/* public String noticeReg(String title, String content) */
 	public String noticeReg(UseNotice usenotice, HttpServletRequest request,Principal principal) throws IOException {
 
-		String id = principal.getName();
+		//String id = principal.getName();
 		
 		
 		int row = usenoticeDao.insert(usenotice);
@@ -129,7 +129,7 @@ public class UseInfoController {
 	@RequestMapping(value = "notice/edit", method = RequestMethod.GET)
 	public String noticeEdit(@RequestParam("num") int num, Model model,Principal principal) {
 		
-		String id = principal.getName();
+		//String id = principal.getName();
 
 		model.addAttribute("n", usenoticeDao.get(num));
 		
@@ -139,7 +139,7 @@ public class UseInfoController {
 	@RequestMapping(value = "notice/edit", method = RequestMethod.POST)
 	public String noticeEdit(@RequestParam("num") int num,UseNotice usenotice,HttpServletRequest request,Principal principal) throws IOException {
 
-		String id = principal.getName();
+		//String id = principal.getName();
 		
 		
 		
@@ -151,7 +151,7 @@ public class UseInfoController {
 	
 	@RequestMapping("notice/delete")
 	public String noticeDel(@RequestParam("num") int num,Principal principal ){
-		String id = principal.getName();
+		//String id = principal.getName();
 	
 		usenoticeDao.delete(num);
 		
